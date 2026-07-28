@@ -1,0 +1,85 @@
+import { useEffect, useState } from "react";
+import { NavLink, Outlet } from "react-router-dom";
+import logoDark from "../assets/logo-dark.png";
+import logoWhite from "../assets/logo-white.png";
+import { site } from "../data";
+
+export default function Layout() {
+  const [theme, setTheme] = useState(() => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const savedTheme = localStorage.getItem("theme");
+    return savedTheme || (prefersDark ? "dark" : "light");
+  });
+
+  useEffect(() => {
+    document.documentElement.setAttribute("data-theme", theme);
+  }, [theme]);
+
+  const toggleTheme = () => {
+    const nextTheme = theme === "dark" ? "light" : "dark";
+    setTheme(nextTheme);
+    localStorage.setItem("theme", nextTheme);
+  };
+
+  return (
+    <>
+      <a className="skip-link" href="#main">
+        Skip to content
+      </a>
+
+      <header className="site-header">
+        <div className="container nav-wrap">
+          <NavLink to="/" className="brand" aria-label="Andrena Yacoub home">
+            <img
+              className="brand-logo"
+              src={theme === "dark" ? logoWhite : logoDark}
+              alt="Andrena Yacoub"
+            />
+          </NavLink>
+
+          <nav className="nav-links">
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/about">About</NavLink>
+            <NavLink to="/work">My Work</NavLink>
+            <NavLink to="/contact">Contact</NavLink>
+            <a href={site.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </nav>
+
+          <div className="header-actions">
+            <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
+              {theme === "dark" ? "☀︎" : "◐"}
+            </button>
+            <a
+              className="social-logo-btn"
+              href={site.linkedin}
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Open Andrena Yacoub on LinkedIn"
+              title="LinkedIn"
+            >
+              in
+            </a>
+          </div>
+        </div>
+      </header>
+
+      <main id="main">
+        <Outlet />
+      </main>
+
+      <footer>
+        <div className="container footer-bar">
+          <p>© 2026 Andrena Yacoub</p>
+          <div className="footer-links">
+            <a href="mailto:ayacoub@gmail.com">ayacoub@gmail.com</a>
+            <a href={site.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn
+            </a>
+          </div>
+        </div>
+      </footer>
+    </>
+  );
+}
