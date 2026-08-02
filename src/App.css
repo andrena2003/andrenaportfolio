@@ -786,6 +786,32 @@ svg {
   border-top: 1px solid var(--color-border);
 }
 
+.contact-kicker-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.contact-availability {
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  color: var(--color-text-faint);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.contact-availability i {
+  width: .5rem;
+  height: .5rem;
+  border-radius: 50%;
+  background: #5ca66f;
+}
+
 .contact-primary h1 {
   max-width: 12ch;
   font-family: var(--font-display);

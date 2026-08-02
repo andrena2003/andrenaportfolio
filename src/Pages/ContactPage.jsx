@@ -5,7 +5,10 @@ export default function ContactPage() {
     <section className="section container contact-page">
       <div className="contact-hero">
         <div className="contact-primary">
-          <span className="eyebrow">Contact</span>
+          <div className="contact-kicker-row">
+            <span className="eyebrow">Contact</span>
+            <span className="contact-availability"><i /> Open to opportunities</span>
+          </div>
           <h1>Let’s work together.</h1>
           <p className="contact-lede">
             I’m open to roles and projects across marketing, UI/UX, and content.
