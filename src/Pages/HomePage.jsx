@@ -1,8 +1,18 @@
 import { Link } from "react-router-dom";
 import { projects, site } from "../data";
 import SlotText from "../SlotText";
+import hairByAthraaLogo from "../assets/hair-by-athraa-logo.png";
+import tastebudsLogo from "../assets/tastebuds-logo.png";
+import fitarrayLogo from "../assets/fitarray-logo-hd.png";
 
 export default function HomePage() {
+  const featuredProjects = [
+    "mera-sparkling-tea-launch",
+    "tastebuds",
+    "hair-by-athraa",
+    "group-fitness-app",
+  ].map((slug) => projects.find((project) => project.slug === slug));
+
   return (
     <>
       <section className="hero container" id="home">
@@ -48,6 +58,20 @@ export default function HomePage() {
               </Link>
             </div>
           </div>
+
+          <div className="project-widget-grid" aria-label="Featured projects">
+            {featuredProjects.map((project, index) => (
+              <Link className={`project-widget project-widget-${index + 1} project-widget-${project.slug}`} to={`/project/${project.slug}`} key={project.slug}>
+                <span className="widget-project-mark" aria-hidden="true">
+                  {project.slug === "mera-sparkling-tea-launch" && <><strong>MERA</strong><small>sparkling tea</small></>}
+                  {project.slug === "tastebuds" && <img className="widget-logo widget-logo-tastebuds" src={tastebudsLogo} alt="" />}
+                  {project.slug === "hair-by-athraa" && <img className="widget-logo widget-logo-athraa" src={hairByAthraaLogo} alt="" />}
+                  {project.slug === "group-fitness-app" && <img className="widget-logo widget-logo-fitarray" src={fitarrayLogo} alt="" />}
+                </span>
+                <span className="widget-project-label">View project ↗</span>
+              </Link>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -58,49 +82,6 @@ export default function HomePage() {
         <p>Portfolio-ready</p>
       </section>
 
-      <section className="section container home-work" aria-labelledby="home-work-heading">
-        <div className="section-head home-work-head">
-          <div>
-            <span className="eyebrow">Portfolio</span>
-            <h2 id="home-work-heading">Selected work, kept simple.</h2>
-          </div>
-          <Link className="project-link" to="/work">
-            View all work
-          </Link>
-        </div>
-
-        <div className="home-work-grid">
-          {projects.slice(0, 3).map((project, index) => (
-            <Link
-              className="home-work-card"
-              to={`/project/${project.slug}`}
-              key={project.slug}
-              style={{ "--card-delay": `${index * 90}ms` }}
-            >
-              <div className={`home-work-visual tone-${(index % 4) + 1}`}>
-                {project.image ? (
-                  <img src={project.image} alt={project.imageAlt || `${project.title} preview`} />
-                ) : (
-                  <div className="home-work-preview" aria-hidden="true">
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <div className="preview-lines">
-                      <i />
-                      <i />
-                      <i />
-                    </div>
-                  </div>
-                )}
-              </div>
-              <div className="home-work-card-copy">
-                <span className="home-work-index">{String(index + 1).padStart(2, "0")}</span>
-                <h3>{project.title}</h3>
-                <p>{project.summary}</p>
-                <span className="home-work-type">{project.type}</span>
-              </div>
-            </Link>
-          ))}
-        </div>
-      </section>
     </>
   );
 }

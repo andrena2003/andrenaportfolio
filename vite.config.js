@@ -15,6 +15,6 @@ export default defineConfig(async ({ command }) => {
 
   return {
     plugins,
-    base: '/andrenaportfolio/',
+    base: '/',
   }
 })

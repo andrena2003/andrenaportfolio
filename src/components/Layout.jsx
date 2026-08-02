@@ -41,10 +41,6 @@ export default function Layout() {
             <NavLink to="/">Home</NavLink>
             <NavLink to="/about">About</NavLink>
             <NavLink to="/work">My Work</NavLink>
-            <NavLink to="/contact">Contact</NavLink>
-            <a href={site.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
           </nav>
 
           <div className="header-actions">
@@ -71,7 +67,7 @@ export default function Layout() {
 
       <footer>
         <div className="container footer-bar">
-          <p>© 2026 Andrena Yacoub</p>
+          <p>Located in Vancouver, BC</p>
           <div className="footer-links">
             <a href="mailto:ayacoub@gmail.com">ayacoub@gmail.com</a>
             <a href={site.linkedin} target="_blank" rel="noreferrer">
