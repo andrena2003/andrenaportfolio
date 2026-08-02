@@ -6,6 +6,7 @@ import tastebudsTiktokTopPerformers from "./assets/tastebuds-tiktok-top-performe
 import tastebudsWebsiteOverview from "./assets/tastebuds-website-overview.png";
 import tastebudsOpenGraphPreview from "./assets/tastebuds-open-graph-preview.png";
 import meraCampaignHero from "./assets/mera-campaign-hero.png";
+import meraMetaAdArt from "./assets/mera-meta-ad-art.png";
 import fitarraySplash from "./assets/fitarray-splash.png";
 import fitarrayLogin from "./assets/fitarray-login.png";
 import fitarrayDashboard from "./assets/fitarray-dashboard.png";
@@ -28,8 +29,8 @@ export const projects = [
     title: "MERA Sparkling Tea",
     type: "Integrated marketing campaign",
     summary:
-      "A portfolio concept for launching a premium sparkling tea through a focused brand position, creator-led content, local sampling, and a measurable 90-day campaign.",
-    tools: ["Campaign strategy", "Brand positioning", "Content marketing", "Paid social", "Analytics"],
+      "A full-funnel digital marketing concept for launching a premium sparkling tea through Google Search, Meta advertising, SEO, local discovery, email, and conversion-focused measurement.",
+    tools: ["Google Ads", "Meta Ads", "SEO & local", "Landing-page CRO", "Email marketing", "GA4 reporting"],
     image: meraCampaignHero,
     imageAlt: "MERA sparkling tea cans styled with citrus and hibiscus in a plum and coral campaign setting.",
     imageCaption: "Hero art direction for MERA’s fictional launch campaign. Brand and campaign created as a portfolio concept.",
@@ -59,7 +60,7 @@ export const projects = [
       ],
     },
     role: "Marketing strategist & creative lead",
-    timeline: "90-day launch concept",
+    timeline: "90-day campaign plan",
     context:
       "MERA is a fictional zero-proof sparkling tea made for socially active, wellness-minded adults who want an elevated alternative to alcohol and overly sweet soft drinks.",
     challenge:
@@ -67,9 +68,10 @@ export const projects = [
     objective:
       "Build awareness and trial in Metro Vancouver among adults aged 22–35, establish MERA as the drink for a clearer kind of socializing, and create a repeatable path from discovery to first purchase.",
     responsibilities: [
-      "Defined the target audience, category opportunity, value proposition, campaign idea, voice, and channel roles.",
-      "Planned a 90-day launch across paid social, organic content, creators, email, retail sampling, and community events.",
-      "Created the measurement framework, test plan, content pillars, budget allocation, and visual campaign direction.",
+      "Planned Google Search and Meta campaigns across prospecting, retargeting, creative testing, and weekly optimization.",
+      "Developed SEO, local-search, Google Business Profile, keyword, and competitor-research recommendations.",
+      "Designed a conversion-focused landing page, email nurture flow, analytics event plan, and monthly ROI report.",
+      "Connected campaign findings to practical recommendations for ownership and the next phase of business growth.",
     ],
     keyConcepts: [
       { title: "Audience", body: "Metro Vancouver adults aged 22–35 who care about taste and social ritual, but are increasingly choosing low- or no-alcohol options." },
@@ -101,18 +103,133 @@ export const projects = [
       "Phase 3 — Turn trial into habit: retargeting, serving-ritual content, customer reactions, email replenishment, and referral rewards.",
     ],
     uxDecisions: [
-      { title: "Paid social · 35%", body: "Use short-form video and retargeting to scale winning creator hooks and drive the discovery bundle." },
-      { title: "Sampling & events · 30%", body: "Prioritize direct taste experience at neighbourhood venues, markets, and wellness-adjacent community events." },
-      { title: "Creators · 20%", body: "Partner with credible Vancouver micro-creators for occasion-led content, honest reactions, and reusable ad assets." },
-      { title: "Owned content · 15%", body: "Support conversion and retention with landing-page storytelling, email, organic social, and customer education." },
+      { title: "Google Search · 25%", body: "Capture high-intent searches for sparkling tea, zero-proof drinks, and alcohol alternatives in Metro Vancouver." },
+      { title: "Meta advertising · 35%", body: "Use Reels, Stories, Feed, and retargeting to test lifestyle, taste, and occasion-led creative." },
+      { title: "Creators & sampling · 25%", body: "Turn local tastings and micro-creator reactions into credible content and reusable ad assets." },
+      { title: "SEO, email & CRO · 15%", body: "Build long-term discovery and improve conversion through landing-page tests, local search, and nurture flows." },
     ],
+    marketingExecution: {
+      googleAds: {
+        objective: "Capture active demand and convert high-intent local searches into discovery-pack orders.",
+        budget: "$1,500 concept budget · 30 days",
+        searchAd: {
+          label: "Sponsored",
+          url: "mera.ca/discovery-pack",
+          headline: "MERA Sparkling Tea | Zero-Proof Drinks",
+          secondaryHeadline: "A brighter way to stay present",
+          description: "Discover three botanical flavours made for dinner, celebrations, and everything after. Shop the MERA discovery pack.",
+          sitelinks: ["Shop Flavours", "Discovery Pack", "Find MERA", "Our Story"],
+        },
+        keywordGroups: [
+          { group: "High intent", terms: ["sparkling tea canada", "buy sparkling tea", "zero proof drinks"] },
+          { group: "Local discovery", terms: ["non alcoholic drinks vancouver", "alcohol alternatives vancouver", "zero proof shop near me"] },
+          { group: "Occasion", terms: ["non alcoholic party drinks", "sober curious drinks", "drinks for dinner party"] },
+        ],
+        optimization: [
+          "Use exact and phrase match first; review search terms twice weekly.",
+          "Add recipe, homemade, jobs, and free as negative keywords.",
+          "Shift budget toward keywords producing qualified add-to-cart actions, not clicks alone.",
+        ],
+      },
+      meta: {
+        objective: "Drive discovery-pack purchases while building a reusable pool of engaged local prospects.",
+        budget: "$2,100 concept budget · $70/day",
+        creative: meraMetaAdArt,
+        audiences: [
+          "Prospecting · Metro Vancouver, ages 22–35, broad with Advantage+ expansion",
+          "Interest test · zero-proof, specialty tea, wellness, dining, and local events",
+          "Retargeting · 30-day site visitors, video viewers, social engagers, and cart abandoners",
+        ],
+        placements: ["Instagram Reels", "Instagram Stories", "Instagram Feed", "Facebook Feed"],
+        tests: [
+          "Hook: ‘Stay for the whole night’ vs. ‘Meet your new dinner drink’",
+          "Format: lifestyle still vs. creator reaction vs. flavour close-up",
+          "Offer: 10% first order vs. free local delivery threshold",
+        ],
+        targets: ["CTR ≥ 1.5%", "Landing-page CVR ≥ 4%", "CPA ≤ $24", "ROAS ≥ 2.5×"],
+      },
+      seo: {
+        priorityKeywords: [
+          "sparkling tea Canada",
+          "zero-proof drinks Vancouver",
+          "non-alcoholic drinks Vancouver",
+          "botanical sparkling tea",
+          "alcohol alternative drinks",
+          "premium non-alcoholic beverages",
+        ],
+        competitorFindings: [
+          { title: "Premium zero-proof brands", body: "Strong storytelling and packaging, but often broad and non-local. MERA can win with Vancouver-specific discovery and occasion content." },
+          { title: "Functional beverages", body: "Benefits are easy to understand, but the social ritual is weaker. MERA should lead with the occasion and support it with product proof." },
+          { title: "Sparkling water", body: "High familiarity and distribution, but lower perceived celebration value. MERA can own a more elevated dinner-and-night-out position." },
+        ],
+        actions: [
+          { title: "Technical foundation", body: "Improve Core Web Vitals, mobile speed, indexability, image alt text, structured data, sitemap coverage, and broken links." },
+          { title: "On-page SEO", body: "Create one clear keyword target per page, rewrite titles and descriptions, strengthen internal links, and add product and FAQ schema." },
+          { title: "Content growth", body: "Publish occasion-led content around dinner pairings, sober-curious hosting, botanical ingredients, and Vancouver zero-proof guides." },
+          { title: "Authority building", body: "Earn relevant links and mentions through local restaurants, markets, wellness partners, creators, and beverage publications." },
+        ],
+        localActions: [
+          "Complete the Google Business Profile with the correct category, service area, hours, products, and order link.",
+          "Publish weekly product or event updates and upload consistent, high-quality local photography.",
+          "Request reviews after purchase or sampling, respond to every review, and monitor common customer language.",
+          "Add UTM-tagged website links so profile visits, calls, directions, and orders can be measured in GA4.",
+        ],
+      },
+      landingPage: {
+        eyebrow: "Three flavours · one clear night",
+        title: "Stay for the whole night.",
+        copy: "A botanical sparkling tea for celebrations, dinners, and the moments you want to remember.",
+        cta: "Shop the discovery pack",
+        proof: ["Zero-proof", "Three botanical flavours", "Made for social occasions"],
+        decisions: [
+          "Keep one primary offer and call to action above the fold.",
+          "Follow the hero with flavour proof, serving occasions, reviews, and a short FAQ.",
+          "Use a sticky mobile CTA and reduce checkout distractions.",
+          "A/B test headline, offer, product image, CTA wording, and review placement.",
+        ],
+      },
+      measurement: {
+        tools: ["Google Analytics 4", "Google Search Console", "Meta Business Suite", "Google Ads", "Looker Studio"],
+        events: ["view_item", "select_offer", "add_to_cart", "begin_checkout", "purchase", "generate_lead"],
+        reporting: [
+          { label: "Awareness", value: "Reach, impressions, video completion, branded search" },
+          { label: "Acquisition", value: "CTR, CPC, engaged sessions, new users" },
+          { label: "Conversion", value: "CVR, CPA, revenue, ROAS, email sign-ups" },
+          { label: "Retention", value: "Repeat purchase, email revenue, unsubscribe rate" },
+        ],
+      },
+      email: {
+        goal: "Turn first interest into trial, then turn trial into a repeat social ritual.",
+        flow: [
+          { step: "01", title: "Welcome", body: "Deliver the first-order offer and introduce MERA’s zero-proof positioning." },
+          { step: "02", title: "Find your flavour", body: "Match each flavour to a mood, meal, and serving ritual." },
+          { step: "03", title: "Social proof", body: "Share creator reactions, customer quotes, and local stockists." },
+          { step: "04", title: "Convert", body: "Use a time-bound reminder for the discovery pack or free-delivery threshold." },
+          { step: "05", title: "Replenish", body: "Trigger a post-purchase check-in, review request, and reorder message." },
+        ],
+      },
+      monthlyReport: {
+        snapshot: [
+          { value: "250K", label: "Target local impressions" },
+          { value: "1.5%+", label: "Paid-media CTR target" },
+          { value: "4%+", label: "Landing-page CVR target" },
+          { value: "≤ $24", label: "Customer acquisition target" },
+        ],
+        actions: [
+          "Scale the highest-converting audience and creative combination by 15–20% at a time.",
+          "Pause keywords and ads that spend without producing qualified actions.",
+          "Turn winning search queries into SEO pages and email topics.",
+          "Share a concise monthly report with ownership: results, insights, risks, and next actions.",
+        ],
+      },
+    },
     deliverables: [
-      "Campaign brief, audience profile, and competitive positioning",
-      "Brand message house, tagline, voice, and visual direction",
-      "90-day launch calendar and channel strategy",
-      "Six content pillars with sample hooks and calls to action",
-      "Creator brief, sampling activation, and partnership plan",
-      "Budget allocation, KPI dashboard, and A/B testing roadmap",
+      "Google Search campaign structure, ad copy, keyword groups, negatives, budget, and optimization plan",
+      "Meta campaign plan, audience structure, placements, creative concepts, retargeting, and A/B tests",
+      "SEO audit priorities, keyword map, competitor research, content plan, and local-search roadmap",
+      "Google Business Profile optimization and ongoing post, review, photo, and UTM-tracking plan",
+      "High-converting landing-page concept, email nurture flow, and conversion-rate testing roadmap",
+      "GA4 event map, Search Console and Meta reporting framework, ROI dashboard, and monthly recommendations",
     ],
     outcome:
       "The finished concept connects strategy and execution in one launch system: a clear market position, a recognizable creative platform, a channel-specific content plan, and targets that make the work accountable. Because MERA is a portfolio concept, all results shown are campaign goals rather than claimed performance.",

@@ -18,6 +18,7 @@ export default function ProjectPage() {
     project.timeline && ["Timeline", project.timeline],
     project.type && ["Type", project.type],
   ].filter(Boolean);
+  const marketing = project.marketingExecution;
 
   return (
     <section className={`section container project-page ${project.brandIdentity ? "project-page-brand" : ""}`}>
@@ -219,6 +220,115 @@ export default function ProjectPage() {
         <div className="case-section">
           <div className="section-head case-section-head"><div><span className="eyebrow">Channel mix</span><h2>Where the launch budget works hardest.</h2></div></div>
           <div className="decision-grid">{project.uxDecisions.map((item) => <article className="decision-card" key={item.title}><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
+        </div>
+      )}
+
+      {marketing && (
+        <div className="marketing-execution">
+          <section className="case-section marketing-channel-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">Google Ads</span><h2>Capture demand at the moment of intent.</h2></div>
+              <p>{marketing.googleAds.objective}</p>
+            </div>
+            <div className="google-campaign-layout">
+              <article className="google-search-ad" aria-label="MERA responsive Google search ad concept">
+                <div className="google-ad-kicker"><strong>{marketing.googleAds.searchAd.label}</strong><span> · {marketing.googleAds.searchAd.url}</span><b>⋮</b></div>
+                <h3>{marketing.googleAds.searchAd.headline}</h3>
+                <h4>{marketing.googleAds.searchAd.secondaryHeadline}</h4>
+                <p>{marketing.googleAds.searchAd.description}</p>
+                <div className="google-sitelinks">{marketing.googleAds.searchAd.sitelinks.map((item) => <span key={item}>{item}</span>)}</div>
+              </article>
+              <div className="campaign-plan-panel">
+                <div className="campaign-plan-topline"><span>Search campaign</span><strong>{marketing.googleAds.budget}</strong></div>
+                <div className="keyword-groups">
+                  {marketing.googleAds.keywordGroups.map((item) => (
+                    <article key={item.group}><h3>{item.group}</h3>{item.terms.map((term) => <span key={term}>“{term}”</span>)}</article>
+                  ))}
+                </div>
+                <ul className="case-list compact-list">{marketing.googleAds.optimization.map((item) => <li key={item}>{item}</li>)}</ul>
+              </div>
+            </div>
+          </section>
+
+          <section className="case-section marketing-channel-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">Meta advertising</span><h2>A campaign system built to test and learn.</h2></div>
+              <p>{marketing.meta.objective}</p>
+            </div>
+            <div className="meta-campaign-layout">
+              <figure className="meta-ad-mockup">
+                <div className="meta-ad-header"><span className="meta-avatar">M</span><span><strong>MERA Sparkling Tea</strong><small>Sponsored · Instagram</small></span><b>•••</b></div>
+                <div className="meta-ad-art">
+                  <img src={marketing.meta.creative} alt="MERA sparkling tea Meta advertisement showing three cans at a Vancouver rooftop gathering" />
+                  <div className="meta-ad-copy"><span>ZERO-PROOF · FULL NIGHT</span><h3>Stay for the whole night.</h3></div>
+                </div>
+                <figcaption><span><strong>mera.ca</strong><small>Meet your new dinner drink.</small></span><b>Shop now</b></figcaption>
+              </figure>
+              <div className="meta-plan-panel">
+                <div className="campaign-plan-topline"><span>Sales campaign</span><strong>{marketing.meta.budget}</strong></div>
+                <article><h3>Audience structure</h3><ul>{marketing.meta.audiences.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                <article><h3>Placements</h3><div className="marketing-tags">{marketing.meta.placements.map((item) => <span key={item}>{item}</span>)}</div></article>
+                <article><h3>Creative tests</h3><ul>{marketing.meta.tests.map((item) => <li key={item}>{item}</li>)}</ul></article>
+                <div className="target-strip">{marketing.meta.targets.map((item) => <span key={item}>{item}</span>)}</div>
+              </div>
+            </div>
+          </section>
+
+          <section className="case-section marketing-channel-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">SEO & local discovery</span><h2>Build visibility that compounds beyond paid media.</h2></div>
+              <p>Keyword and competitor research guide the site structure, content priorities, and local-search actions.</p>
+            </div>
+            <div className="seo-keywords" aria-label="Priority MERA keywords">{marketing.seo.priorityKeywords.map((item) => <span key={item}>{item}</span>)}</div>
+            <div className="competitor-lens"><span className="eyebrow">Competitor lens</span><div>{marketing.seo.competitorFindings.map((item) => <article key={item.title}><h3>{item.title}</h3><p>{item.body}</p></article>)}</div></div>
+            <div className="seo-action-grid">{marketing.seo.actions.map((item) => <article key={item.title}><span>↗</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
+            <div className="local-seo-layout">
+              <div className="business-profile-card" aria-label="Google Business Profile optimization concept">
+                <div className="business-profile-cover"><span>MERA</span><small>SPARKLING TEA</small></div>
+                <div><span className="profile-label">Google Business Profile · concept</span><h3>MERA Sparkling Tea</h3><p>Beverage company · Vancouver, BC</p><div className="profile-actions"><span>Website</span><span>Directions</span><span>Order</span></div></div>
+              </div>
+              <article className="local-action-panel"><span className="eyebrow">Local SEO</span><h3>Make every profile visit measurable.</h3><ul className="case-list">{marketing.seo.localActions.map((item) => <li key={item}>{item}</li>)}</ul></article>
+            </div>
+          </section>
+
+          <section className="case-section marketing-channel-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">Landing page & CRO</span><h2>Turn campaign attention into action.</h2></div>
+              <p>The paid-media promise continues directly into one focused offer, supported by taste, occasion, and trust.</p>
+            </div>
+            <div className="landing-cro-layout">
+              <article className="mera-landing-preview">
+                <img src={project.image} alt="MERA discovery pack landing page hero" />
+                <div className="landing-preview-copy"><span>{marketing.landingPage.eyebrow}</span><h3>{marketing.landingPage.title}</h3><p>{marketing.landingPage.copy}</p><b>{marketing.landingPage.cta} →</b></div>
+                <div className="landing-proof">{marketing.landingPage.proof.map((item) => <span key={item}>✓ {item}</span>)}</div>
+              </article>
+              <article className="cro-plan"><span className="eyebrow">Conversion plan</span><h3>What gets tested.</h3><ol>{marketing.landingPage.decisions.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></article>
+            </div>
+          </section>
+
+          <section className="case-section marketing-channel-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">Email marketing</span><h2>A five-message path from interest to reorder.</h2></div>
+              <p>{marketing.email.goal}</p>
+            </div>
+            <div className="email-flow">{marketing.email.flow.map((item) => <article key={item.step}><span>{item.step}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
+          </section>
+
+          <section className="case-section marketing-channel-section measurement-section">
+            <div className="section-head case-section-head">
+              <div><span className="eyebrow">Measurement & reporting</span><h2>One view from impression to revenue.</h2></div>
+              <p>Targets are clearly labelled as projections because MERA is a portfolio concept—not a live client campaign.</p>
+            </div>
+            <div className="measurement-tools">{marketing.measurement.tools.map((item) => <span key={item}>{item}</span>)}</div>
+            <div className="measurement-layout">
+              <div className="report-dashboard">
+                <div className="report-dashboard-head"><span>Monthly performance report</span><strong>Concept dashboard</strong></div>
+                <div className="report-metrics">{marketing.monthlyReport.snapshot.map((item) => <article key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}</div>
+                <div className="report-funnel">{marketing.measurement.reporting.map((item) => <article key={item.label}><strong>{item.label}</strong><span>{item.value}</span></article>)}</div>
+              </div>
+              <article className="report-actions"><span className="eyebrow">Monthly optimization</span><h3>What I would recommend to ownership.</h3><ul className="case-list">{marketing.monthlyReport.actions.map((item) => <li key={item}>{item}</li>)}</ul><div className="event-map"><strong>GA4 events</strong>{marketing.measurement.events.map((item) => <code key={item}>{item}</code>)}</div></article>
+            </div>
+          </section>
         </div>
       )}
 
