@@ -20,7 +20,7 @@ export const site = {
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
-  intro: "I plan campaigns, design the interfaces that support them, and create the content that carries them.",
+  intro: "I connect campaign strategy, digital experiences, and social content so every touchpoint tells the same story.",
 };
 
 export const projects = [
@@ -86,6 +86,18 @@ export const projects = [
       { title: "Taste needs proof", body: "A new beverage earns trust through sensory language, reactions, serving rituals, and in-person trial—not polished packaging alone." },
       { title: "Local relevance builds credibility", body: "Neighbourhood venues, micro-creators, and community events can make a fictional launch strategy feel specific, useful, and culturally connected." },
     ],
+    iteration: {
+      label: "Rejected direction",
+      title: "From functional wellness to a social promise.",
+      beforeLabel: "Early direction · Wellness first",
+      before:
+        "The first concept led with functional benefits: no sugar crash, botanical ingredients, and a healthier night out. It was informative, but it flattened MERA into a category already crowded with kombucha and adaptogen drinks and made the voice feel clinical.",
+      afterLabel: "Selected direction · Social occasion",
+      after:
+        "The shift to “Stay for the whole night” moved the promise from what is missing from the can to what the drink helps people do: stay sharp, stay present, and keep connecting.",
+      takeaway:
+        "That reframing gave the brand an ownable role and became the reason behind the coral-and-plum visual system, occasion-led creative, and sampling-first launch plan.",
+    },
     designProcess: [
       { phase: "01 · Diagnose", title: "Map the category", body: "Compared sparkling water, functional drinks, and zero-proof beverages to find an ownable role based on social confidence rather than restriction." },
       { phase: "02 · Position", title: "Choose one memorable promise", body: "Built the campaign around staying present for the whole night, supported by premium flavour, visual energy, and an optimistic voice." },
@@ -265,6 +277,18 @@ export const projects = [
       "Captured restaurant visits on mobile and turned them into Reels, TikToks, and web stories.",
       "Scheduled Instagram in Meta Business Suite and posted TikToks at tested peak times.",
     ],
+    iteration: {
+      label: "Campaign pivot",
+      title: "Performance changed the content plan.",
+      beforeLabel: "Weeks 1–2 · Polished but familiar",
+      before:
+        "The first two weeks leaned on polished restaurant photography and straightforward recommendations. The posts were useful, but they blended into the wider Vancouver food-account category and gave people little reason to stop or share.",
+      afterLabel: "The pivot · Humor and discovery",
+      after:
+        "The hotpot meme and hidden-diner Reel outperformed the safer posts, so the plan shifted toward humor, emotional hooks, and places that felt like a local secret. That direction carried into the top-performing cozy Japanese cafe TikTok.",
+      takeaway:
+        "The Border Burrito invitation was not treated as a lucky outcome; it followed a deliberate shift toward formats that made local discovery feel more personal and shareable.",
+    },
     outcome:
       "The campaign reached thousands of local viewers and led to a collaboration invitation from Border Burrito.",
     keyConcepts: [
@@ -355,7 +379,21 @@ export const projects = [
       "Designed mobile-first screens with clear hierarchy for services, booking steps, and salon information.",
     ],
     outcome:
-      "The final Figma case study presents a refined booking experience with stronger structure, more consistent UI patterns, and a clearer path from interest to appointment.",
+      "The current outcome is a complete high-fidelity booking prototype with a mapped path from service discovery to appointment. Because it has not yet been tested with real users, I treat its clarity as a design hypothesis—not a proven result.",
+    iteration: {
+      label: "Validation plan",
+      title: "What still needs to be proven.",
+      beforeLabel: "Current evidence · Design review",
+      before:
+        "The prototype improves hierarchy, service organization, and booking continuity, but a polished interface alone cannot prove that first-time users will complete the flow confidently.",
+      afterLabel: "Next step · Five walkthroughs",
+      after:
+        "I would ask five first-time users to find a haircut and its price, book an appointment for a specific day, and locate the salon’s hours or address without prompts.",
+      takeaway:
+        "I would record unassisted completion, rough task time, and every hesitation or backtrack, then revise the service-selection and confirmation states before reporting any success rate.",
+    },
+    reflection:
+      "This project strengthened my ability to turn a service journey into a calm mobile flow. The biggest limitation is the lack of user evidence; the next iteration should be driven by observed booking behaviour rather than visual preference alone.",
     process: [
       "Restructured discovery and booking flow.",
       "Built a premium editorial-inspired interface.",
@@ -370,7 +408,7 @@ export const projects = [
     type: "Interactive Figma prototype",
     summary:
       "A mobile fitness experience that helps users discover exercises, build workouts, follow active sessions, and understand their progress in one focused app.",
-    tools: ["Figma", "Interactive prototyping", "Mobile UI", "User flows", "Usability testing"],
+    tools: ["Figma", "Interactive prototyping", "Mobile UI", "User flows", "Information architecture"],
     figmaUrl: "https://www.figma.com/design/EJUoY1Vu8sDPIRqRgXewcI/fitness-app--Protype-?node-id=124-1037&t=38IHLCmxR2maeFit-1",
     figmaLabel: "Open interactive prototype",
     role: "UI/UX designer and prototyper",

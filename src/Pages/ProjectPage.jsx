@@ -179,6 +179,26 @@ export default function ProjectPage() {
         </div>
       )}
 
+      {project.iteration && (
+        <section className="case-section iteration-section" aria-labelledby={`${project.slug}-iteration-heading`}>
+          <div className="iteration-heading">
+            <span className="eyebrow">{project.iteration.label}</span>
+            <h2 id={`${project.slug}-iteration-heading`}>{project.iteration.title}</h2>
+          </div>
+          <div className="iteration-compare">
+            <article>
+              <p className="case-label">{project.iteration.beforeLabel}</p>
+              <p>{project.iteration.before}</p>
+            </article>
+            <article>
+              <p className="case-label">{project.iteration.afterLabel}</p>
+              <p>{project.iteration.after}</p>
+            </article>
+          </div>
+          <p className="iteration-takeaway"><strong>Why it matters:</strong> {project.iteration.takeaway}</p>
+        </section>
+      )}
+
       {project.brandIdentity && (project.objective || project.responsibilities?.length > 0 || project.deliverables?.length > 0) && (
         <div className="brief-deliverables-grid">
           <article className="brief-deliverable-card">

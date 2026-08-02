@@ -917,6 +917,62 @@ svg {
   line-height: 1.7;
 }
 
+.iteration-section {
+  gap: clamp(1.5rem, 3vw, 2.25rem);
+  padding-block: clamp(2rem, 5vw, 4rem);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.iteration-heading {
+  display: grid;
+  grid-template-columns: minmax(9rem, .28fr) minmax(0, 1fr);
+  gap: clamp(1rem, 4vw, 3rem);
+  align-items: end;
+}
+
+.iteration-heading h2 {
+  max-width: 16ch;
+  font-family: var(--font-display);
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: .95;
+}
+
+.iteration-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.iteration-compare article {
+  display: grid;
+  align-content: start;
+  gap: .9rem;
+  padding: clamp(1.3rem, 3vw, 2.2rem);
+  border-left: 1px solid var(--color-border);
+}
+
+.iteration-compare article:first-child {
+  border-left: 0;
+}
+
+.iteration-compare article > p:last-child,
+.iteration-takeaway {
+  color: var(--color-text-muted);
+  line-height: 1.75;
+}
+
+.iteration-takeaway {
+  max-width: 72ch;
+  margin-left: auto;
+  font-size: clamp(1rem, 1.35vw, 1.2rem);
+}
+
+.iteration-takeaway strong {
+  color: var(--color-text);
+}
+
 .case-section {
   display: grid;
   gap: 1.5rem;
@@ -1590,6 +1646,20 @@ footer {
   .project-card-topline .project-discipline {
     max-width: 18rem;
     text-align: right;
+  }
+
+  .iteration-heading,
+  .iteration-compare {
+    grid-template-columns: 1fr;
+  }
+
+  .iteration-compare article {
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .iteration-compare article:first-child {
+    border-top: 0;
   }
   .project-coverflow{padding:.65rem}.coverflow-stage{min-height:22rem}.coverflow-card{width:min(78%,22rem);--shift:calc(var(--cover-offset) * 38%)}
   .coverflow-console{grid-template-columns:auto minmax(0,1fr) auto}.coverflow-console>a{grid-column:2;grid-row:2}.coverflow-console>button:last-child{grid-column:3;grid-row:1/3}
