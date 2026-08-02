@@ -264,11 +264,12 @@ export const projects = [
     slug: "mitsubishi-motors-website-redesign",
     title: "Mitsubishi Motors Website Redesign",
     discipline: "design",
-    disciplineLabel: "UI/UX Case Study",
-    type: "Responsive website redesign",
+    disciplines: ["design", "marketing"],
+    disciplineLabel: "UI/UX + Digital Marketing",
+    type: "Website redesign & growth strategy",
     summary:
-      "An end-to-end automotive website concept that simplifies vehicle discovery, comparison, configuration, financing, dealer search, and ownership tasks across desktop and mobile.",
-    tools: ["Figma", "UX strategy", "Information architecture", "Responsive UI", "Interactive prototyping"],
+      "An end-to-end automotive website concept and digital growth plan that connects vehicle discovery, comparison, configuration, dealer leads, SEO, paid acquisition, and conversion measurement.",
+    tools: ["Figma", "UX strategy", "SEO", "Paid acquisition", "CRO", "GA4 measurement"],
     figmaUrl: "https://www.figma.com/design/FpBadHeu1QwzbAqgL0npOg/Mitsubishi-Motors-%E2%80%94-Website-Redesign-UX-Case-Study?node-id=17-2&t=8T44F1nmuyvRtfIn-1",
     figmaLabel: "Open full Figma case study",
     image: mitsubishiHomepage,
@@ -281,11 +282,12 @@ export const projects = [
     challenge:
       "Automotive websites carry a large amount of product, pricing, financing, inventory, and ownership information. The challenge was to make that depth easier to scan without separating the experience into disconnected tools.",
     objective:
-      "Create one clear, responsive journey that helps shoppers compare models, understand costs, configure a vehicle, find local inventory, and move toward a test drive with less friction.",
+      "Create one clear, responsive journey that helps shoppers compare models, understand costs, configure a vehicle, find local inventory, and move toward a measurable dealer or test-drive lead with less friction.",
     responsibilities: [
       "Mapped the customer journey across discovery, model research, comparison, configuration, financing, inventory, dealer, and ownership tasks.",
       "Reorganized the information architecture and established consistent navigation, card, form, pricing, and call-to-action patterns.",
       "Designed 18 high-fidelity screens, including a mobile configurator, and connected the major paths in Figma.",
+      "Developed a proposed SEO, paid-media, local-discovery, conversion, and analytics plan around the redesigned customer journey.",
     ],
     keyConceptsTitle: "One system for the full vehicle journey.",
     keyConcepts: [
@@ -319,6 +321,33 @@ export const projects = [
       { phase: "03 · Systemize", title: "Create reusable interface patterns", body: "Built consistent headers, vehicle cards, comparison modules, pricing panels, forms, filters, and action states with a restrained red, black, and white system." },
       { phase: "04 · Adapt", title: "Carry the decisions to mobile", body: "Condensed the configurator into a focused mobile flow while preserving option visibility, estimated price, and progress through the build." },
     ],
+    marketingStrategy: {
+      title: "Turn vehicle research into measurable local demand.",
+      intro:
+        "The marketing layer treats the redesigned website as the centre of an acquisition and lead-generation system. These are proposed campaign and measurement recommendations—not live Mitsubishi results.",
+      funnel: [
+        { step: "01", title: "Reach", body: "Use model-led Search and Meta creative to introduce the right vehicle, offer, and local reason to click." },
+        { step: "02", title: "Consider", body: "Match each campaign to a useful model, comparison, PHEV education, or ownership-cost landing experience." },
+        { step: "03", title: "Convert", body: "Move qualified visitors into build-and-price, inventory, financing, dealer, and test-drive actions." },
+        { step: "04", title: "Retain", body: "Use the customer account, service reminders, warranty content, and dealer communication to support ownership." },
+      ],
+      channels: [
+        { title: "SEO & content", body: "Build search visibility around model pricing, trim comparisons, PHEV range and charging, incentives, ownership costs, and local inventory. Strengthen titles, internal links, vehicle schema, dealer schema, and Core Web Vitals." },
+        { title: "Google Search", body: "Capture high-intent searches such as ‘Outlander PHEV price,’ ‘Mitsubishi SUV Vancouver,’ and ‘book Mitsubishi test drive,’ then send each query to its closest matching page and action." },
+        { title: "Meta retargeting", body: "Retarget model viewers, comparison users, and incomplete configurations with the exact vehicle or feature they explored, while excluding completed test-drive and dealer leads." },
+        { title: "Local dealer growth", body: "Connect optimized dealer pages and Google Business Profiles to live inventory, directions, calls, test drives, and service booking with consistent details and UTM-tagged links." },
+      ],
+      measurement: {
+        tools: ["Google Analytics 4", "Search Console", "Google Ads", "Meta Business Suite", "Dealer CRM"],
+        events: ["view_vehicle", "compare_vehicle", "start_build", "complete_build", "find_dealer", "submit_test_drive", "book_service"],
+        kpis: [
+          { label: "Discovery", value: "Organic non-brand clicks and qualified model-page engagement" },
+          { label: "Intent", value: "Comparison, configurator, finance, and inventory-start rates" },
+          { label: "Leads", value: "Test-drive and dealer-lead conversion rate, CPL, and lead quality" },
+          { label: "Business", value: "Lead-to-appointment rate, dealer follow-up, and attributed outcomes" },
+        ],
+      },
+    },
     deliverables: [
       "Customer journey and revised information architecture",
       "Homepage, vehicle gallery, model-detail, and trim-comparison screens",
@@ -326,6 +355,7 @@ export const projects = [
       "Inventory search, dealer locator, and dealer-detail flows",
       "Test-drive, service-booking, and customer-account screens",
       "Responsive mobile configurator and high-fidelity Figma prototype",
+      "SEO, paid-media, local dealer, conversion, and analytics growth recommendations",
     ],
     galleryLabel: "Selected product screens",
     galleryTitle: "A connected path from discovery to ownership.",

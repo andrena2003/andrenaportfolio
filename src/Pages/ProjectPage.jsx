@@ -19,6 +19,7 @@ export default function ProjectPage() {
     project.type && ["Type", project.type],
   ].filter(Boolean);
   const marketing = project.marketingExecution;
+  const growth = project.marketingStrategy;
 
   return (
     <section className={`section container project-page project-page-${project.slug} ${project.brandIdentity ? "project-page-brand" : ""}`}>
@@ -234,6 +235,46 @@ export default function ProjectPage() {
           <div className="section-head case-section-head"><div><span className="eyebrow">Design process</span><h2>{project.designProcessTitle || "From category insight to launch system."}</h2></div></div>
           <div className={project.brandIdentity ? "process-editorial" : "process-timeline"}>{project.designProcess.map((item) => <article className="process-step" key={item.phase}><span>{item.phase}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
         </div>
+      )}
+
+      {growth && (
+        <section className="case-section growth-strategy-section">
+          <div className="section-head case-section-head">
+            <div><span className="eyebrow">Digital marketing strategy</span><h2>{growth.title}</h2></div>
+            <p>{growth.intro}</p>
+          </div>
+
+          <div className="growth-funnel" aria-label="Marketing funnel">
+            {growth.funnel.map((item) => (
+              <article key={item.step}>
+                <span>{item.step}</span>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="growth-channel-grid">
+            {growth.channels.map((item) => (
+              <article key={item.title}>
+                <h3>{item.title}</h3>
+                <p>{item.body}</p>
+              </article>
+            ))}
+          </div>
+
+          <div className="growth-measurement">
+            <article>
+              <span className="eyebrow">Measurement plan</span>
+              <h3>Connect marketing activity to dealer outcomes.</h3>
+              <div className="measurement-tools">{growth.measurement.tools.map((item) => <span key={item}>{item}</span>)}</div>
+              <div className="growth-event-map"><strong>Priority events</strong>{growth.measurement.events.map((item) => <code key={item}>{item}</code>)}</div>
+            </article>
+            <div className="growth-kpis">
+              {growth.measurement.kpis.map((item) => <article key={item.label}><span>{item.label}</span><p>{item.value}</p></article>)}
+            </div>
+          </div>
+        </section>
       )}
 
       {project.uxDecisions?.length > 0 && (

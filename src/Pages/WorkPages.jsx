@@ -13,7 +13,9 @@ export default function WorkPages() {
   const [activeFilter, setActiveFilter] = useState("all");
   const visibleProjects = activeFilter === "all"
     ? projects
-    : projects.filter((project) => project.discipline === activeFilter);
+    : projects.filter((project) =>
+        project.discipline === activeFilter || project.disciplines?.includes(activeFilter)
+      );
 
   return (
     <section className="section container">

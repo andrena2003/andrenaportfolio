@@ -1190,6 +1190,144 @@ svg {
   max-height: none;
 }
 
+.growth-strategy-section {
+  gap: clamp(1.5rem, 4vw, 2.5rem);
+  padding-block: clamp(2rem, 5vw, 4rem);
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.growth-funnel {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  border-top: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.growth-funnel article {
+  display: grid;
+  align-content: start;
+  gap: .75rem;
+  min-height: 14rem;
+  padding: clamp(1.1rem, 2.5vw, 1.6rem);
+  border-left: 1px solid var(--color-border);
+}
+
+.growth-funnel article:first-child {
+  border-left: 0;
+}
+
+.growth-funnel article > span {
+  color: #d10512;
+  font-size: var(--text-xs);
+  font-weight: 900;
+  letter-spacing: .1em;
+}
+
+.growth-funnel h3,
+.growth-channel-grid h3,
+.growth-measurement h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.45rem, 2.4vw, 2rem);
+  line-height: 1;
+}
+
+.growth-funnel p,
+.growth-channel-grid p,
+.growth-measurement p {
+  color: var(--color-text-muted);
+  font-size: .86rem;
+  line-height: 1.65;
+}
+
+.growth-channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.growth-channel-grid article {
+  display: grid;
+  align-content: start;
+  gap: .8rem;
+  padding: clamp(1.2rem, 3vw, 1.8rem);
+  border-top: 2px solid #d10512;
+  background: color-mix(in srgb, var(--color-card) 78%, transparent);
+}
+
+.growth-measurement {
+  display: grid;
+  grid-template-columns: minmax(18rem, .75fr) minmax(0, 1.25fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  padding: clamp(1.4rem, 4vw, 2.5rem);
+  border-radius: var(--radius-lg);
+  background: #171719;
+  color: #f7f7f6;
+}
+
+.growth-measurement > article {
+  display: grid;
+  align-content: start;
+  gap: 1.2rem;
+}
+
+.growth-measurement .measurement-tools span {
+  border-color: rgba(255, 255, 255, .2);
+  color: rgba(255, 255, 255, .74);
+}
+
+.growth-event-map {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .45rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, .14);
+}
+
+.growth-event-map strong {
+  flex-basis: 100%;
+  font-size: .7rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.growth-event-map code {
+  padding: .4rem .55rem;
+  border-radius: .45rem;
+  background: rgba(255, 255, 255, .08);
+  color: #ff7477;
+  font-size: .67rem;
+}
+
+.growth-kpis {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-top: 1px solid rgba(255, 255, 255, .14);
+  border-left: 1px solid rgba(255, 255, 255, .14);
+}
+
+.growth-kpis article {
+  display: grid;
+  align-content: start;
+  gap: .55rem;
+  min-height: 9rem;
+  padding: 1.2rem;
+  border-right: 1px solid rgba(255, 255, 255, .14);
+  border-bottom: 1px solid rgba(255, 255, 255, .14);
+}
+
+.growth-kpis span {
+  color: #ff7477;
+  font-size: .7rem;
+  font-weight: 900;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+.growth-kpis p {
+  color: rgba(255, 255, 255, .72);
+}
+
 .gallery-item {
   display: grid;
   gap: 0.7rem;
@@ -1673,6 +1811,19 @@ footer {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .growth-funnel,
+  .growth-channel-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .growth-funnel article:nth-child(odd) {
+    border-left: 0;
+  }
+
+  .growth-measurement {
+    grid-template-columns: 1fr;
+  }
+
   .case-study-grid article,
   .case-study-grid article:first-child {
     border-left: 0;
@@ -1759,8 +1910,21 @@ footer {
   }
 
   .concept-grid,
-  .project-gallery-mixed {
+  .project-gallery-mixed,
+  .growth-funnel,
+  .growth-channel-grid,
+  .growth-kpis {
     grid-template-columns: 1fr;
+  }
+
+  .growth-funnel article {
+    min-height: 0;
+    border-left: 0;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .growth-funnel article:first-child {
+    border-top: 0;
   }
 
   .project-gallery-mixed .gallery-item:last-child {
