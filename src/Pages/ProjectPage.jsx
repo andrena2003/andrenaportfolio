@@ -21,7 +21,7 @@ export default function ProjectPage() {
   const marketing = project.marketingExecution;
 
   return (
-    <section className={`section container project-page ${project.brandIdentity ? "project-page-brand" : ""}`}>
+    <section className={`section container project-page project-page-${project.slug} ${project.brandIdentity ? "project-page-brand" : ""}`}>
       <div className="project-page-hero">
         <div>
           <span className="eyebrow">{project.type || "Project"}</span>
@@ -364,7 +364,7 @@ export default function ProjectPage() {
               <h2>{project.galleryTitle || "Templates, top posts, and campaign touchpoints."}</h2>
             </div>
           </div>
-          <div className={`project-gallery ${project.galleryLayout === "screens" ? "project-gallery-screens" : ""}`}>
+          <div className={`project-gallery ${project.galleryLayout === "screens" ? "project-gallery-screens" : ""} ${project.galleryLayout === "mixed" ? "project-gallery-mixed" : ""}`}>
             {project.gallery.map((item) => (
               <figure className="gallery-item" key={item.caption}>
                 <img src={item.image} alt={item.alt} />

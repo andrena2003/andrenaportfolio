@@ -64,6 +64,13 @@ const routes = [
     image: "/social/fitarray-case-study.png",
     type: "article",
   },
+  {
+    path: "/project/mitsubishi-motors-website-redesign",
+    title: "Mitsubishi Motors Website Redesign — UX Case Study | Andrena Yacoub",
+    description: "An 18-screen automotive website redesign connecting vehicle discovery, comparison, configuration, financing, dealers, and ownership tasks.",
+    image: "/social/mitsubishi-case-study.png",
+    type: "article",
+  },
 ];
 
 function escapeHtml(value) {

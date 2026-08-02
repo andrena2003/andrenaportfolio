@@ -14,6 +14,11 @@ import fitarrayExercises from "./assets/fitarray-exercises.png";
 import fitarrayWorkoutDetail from "./assets/fitarray-workout-detail.png";
 import fitarrayStats from "./assets/fitarray-stats.png";
 import fitarrayProfile from "./assets/fitarray-profile.png";
+import mitsubishiHomepage from "./assets/mitsubishi-homepage.png";
+import mitsubishiVehicleGallery from "./assets/mitsubishi-vehicle-gallery.png";
+import mitsubishiModelDetail from "./assets/mitsubishi-model-detail.png";
+import mitsubishiBuildPrice from "./assets/mitsubishi-build-price.png";
+import mitsubishiMobileConfigurator from "./assets/mitsubishi-mobile-configurator.png";
 
 export const site = {
   email: "ayacoub@gmail.com",
@@ -253,6 +258,92 @@ export const projects = [
       "Found an ownable position in the zero-proof beverage category.",
       "Built a 90-day integrated launch plan around awareness, trial, and repeat purchase.",
       "Defined a transparent measurement and creative-testing framework.",
+    ],
+  },
+  {
+    slug: "mitsubishi-motors-website-redesign",
+    title: "Mitsubishi Motors Website Redesign",
+    discipline: "design",
+    disciplineLabel: "UI/UX Case Study",
+    type: "Responsive website redesign",
+    summary:
+      "An end-to-end automotive website concept that simplifies vehicle discovery, comparison, configuration, financing, dealer search, and ownership tasks across desktop and mobile.",
+    tools: ["Figma", "UX strategy", "Information architecture", "Responsive UI", "Interactive prototyping"],
+    figmaUrl: "https://www.figma.com/design/FpBadHeu1QwzbAqgL0npOg/Mitsubishi-Motors-%E2%80%94-Website-Redesign-UX-Case-Study?node-id=17-2&t=8T44F1nmuyvRtfIn-1",
+    figmaLabel: "Open full Figma case study",
+    image: mitsubishiHomepage,
+    imageAlt: "Redesigned Mitsubishi Motors homepage featuring the 2026 Outlander PHEV and three vehicle cards.",
+    imageCaption: "Homepage concept for a streamlined Mitsubishi Motors Canada journey. Independent portfolio redesign; not commissioned by Mitsubishi Motors.",
+    role: "UX/UI designer",
+    timeline: "Independent redesign concept",
+    context:
+      "This independent portfolio project reimagines the Mitsubishi Motors Canada website around the decisions people make before and after purchasing a vehicle—from finding a model to configuring it, locating a dealer, and booking service.",
+    challenge:
+      "Automotive websites carry a large amount of product, pricing, financing, inventory, and ownership information. The challenge was to make that depth easier to scan without separating the experience into disconnected tools.",
+    objective:
+      "Create one clear, responsive journey that helps shoppers compare models, understand costs, configure a vehicle, find local inventory, and move toward a test drive with less friction.",
+    responsibilities: [
+      "Mapped the customer journey across discovery, model research, comparison, configuration, financing, inventory, dealer, and ownership tasks.",
+      "Reorganized the information architecture and established consistent navigation, card, form, pricing, and call-to-action patterns.",
+      "Designed 18 high-fidelity screens, including a mobile configurator, and connected the major paths in Figma.",
+    ],
+    keyConceptsTitle: "One system for the full vehicle journey.",
+    keyConcepts: [
+      { title: "Discover", body: "Lead with recognizable models, useful starting prices, and simple filters so shoppers can narrow the range quickly." },
+      { title: "Compare", body: "Keep trim differences, key specifications, and pricing visible at the point where people are making trade-offs." },
+      { title: "Configure", body: "Show selected colour, package, interior, accessories, and estimated price together instead of hiding the total across steps." },
+      { title: "Continue", body: "Connect the purchase journey to financing, inventory, test drives, dealer support, service booking, and a customer account." },
+    ],
+    iteration: {
+      label: "Structural shift",
+      title: "From separate pages to one connected journey.",
+      beforeLabel: "Early direction · Page-first",
+      before:
+        "The first structure treated model pages, financing, inventory, dealers, and service as separate destinations. Each page worked alone, but the transitions between researching, pricing, and taking action felt fragmented.",
+      afterLabel: "Selected direction · Journey-first",
+      after:
+        "The final system keeps a clear next step in every major screen: compare a trim, continue to financing, find local inventory, reserve a vehicle, book a test drive, or manage ownership tasks.",
+      takeaway:
+        "Organizing the redesign around decisions—not departments—created a more continuous experience and gave the interface a consistent hierarchy across 18 screens.",
+    },
+    researchTitle: "UX priorities identified through a heuristic review.",
+    research: [
+      { title: "Comparison needs context", body: "Price, range, seating, drivetrain, warranty, and trim differences need to remain close together so users can evaluate options without remembering details across pages." },
+      { title: "The total should stay visible", body: "Configuration choices feel more trustworthy when the selected options and estimated price update in the same view." },
+      { title: "Local action is part of the journey", body: "Dealer distance, available inventory, test-drive booking, and service access should feel connected to product research rather than like separate websites." },
+    ],
+    designProcessTitle: "From complex sitemap to responsive product system.",
+    designProcess: [
+      { phase: "01 · Audit", title: "Identify the high-friction decisions", body: "Reviewed the major tasks in an automotive journey and prioritized the information needed to discover, compare, configure, finance, and locate a vehicle." },
+      { phase: "02 · Structure", title: "Map one connected flow", body: "Organized the site around vehicles, shopping tools, dealers, service, and ownership while defining a clear next action for each screen." },
+      { phase: "03 · Systemize", title: "Create reusable interface patterns", body: "Built consistent headers, vehicle cards, comparison modules, pricing panels, forms, filters, and action states with a restrained red, black, and white system." },
+      { phase: "04 · Adapt", title: "Carry the decisions to mobile", body: "Condensed the configurator into a focused mobile flow while preserving option visibility, estimated price, and progress through the build." },
+    ],
+    deliverables: [
+      "Customer journey and revised information architecture",
+      "Homepage, vehicle gallery, model-detail, and trim-comparison screens",
+      "Build-and-price configurator and financing calculator",
+      "Inventory search, dealer locator, and dealer-detail flows",
+      "Test-drive, service-booking, and customer-account screens",
+      "Responsive mobile configurator and high-fidelity Figma prototype",
+    ],
+    galleryLabel: "Selected product screens",
+    galleryTitle: "A connected path from discovery to ownership.",
+    galleryLayout: "mixed",
+    gallery: [
+      { image: mitsubishiVehicleGallery, alt: "Mitsubishi vehicle gallery with filters and three model cards.", caption: "Vehicle discovery · Filters, starting prices, key benefits, and comparison actions make the range easier to scan." },
+      { image: mitsubishiModelDetail, alt: "Outlander PHEV model detail page with key specifications and calls to action.", caption: "Model detail · Range, seating, drivetrain, warranty, and next steps stay close to the vehicle story." },
+      { image: mitsubishiBuildPrice, alt: "Mitsubishi Outlander PHEV build and price configurator.", caption: "Build & price · Selected options and the estimated total remain visible in one configuration view." },
+      { image: mitsubishiMobileConfigurator, alt: "Mobile Mitsubishi Outlander PHEV configurator.", caption: "Responsive configurator · The same decisions are condensed into a focused mobile experience." },
+    ],
+    outcome:
+      "The result is an 18-screen high-fidelity concept that connects the full customer journey through one consistent interface system. It demonstrates clearer hierarchy and continuity across key tasks, but it has not been validated with Mitsubishi customers or live conversion data.",
+    reflection:
+      "This project strengthened my ability to design a large product ecosystem instead of a single page. The next step would be task-based usability testing with shoppers and owners—especially around model comparison, price configuration, dealer inventory, and service booking—before treating the proposed improvements as proven outcomes.",
+    process: [
+      "Mapped the automotive journey from model discovery to ownership support.",
+      "Designed a reusable responsive system across 18 screens.",
+      "Connected product, pricing, dealer, and service actions into one flow.",
     ],
   },
   {

@@ -32,6 +32,7 @@ const socialImages = {
   tastebuds: "/social/tastebuds-case-study.png",
   "hair-by-athraa": "/social/hair-by-athraa-case-study.png",
   "group-fitness-app": "/social/fitarray-case-study.png",
+  "mitsubishi-motors-website-redesign": "/social/mitsubishi-case-study.png",
 };
 
 function updateMeta(selector, attribute, content) {
