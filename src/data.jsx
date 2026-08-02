@@ -20,13 +20,15 @@ export const site = {
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
-  intro: "Great design should be memorable. It should move and inspire people.",
+  intro: "I plan campaigns, design the interfaces that support them, and create the content that carries them.",
 };
 
 export const projects = [
   {
     slug: "mera-sparkling-tea-launch",
     title: "MERA Sparkling Tea",
+    discipline: "marketing",
+    disciplineLabel: "Marketing / Brand Strategy",
     type: "Integrated marketing campaign",
     summary:
       "A full-funnel digital marketing concept for launching a premium sparkling tea through Google Search, Meta advertising, SEO, local discovery, email, and conversion-focused measurement.",
@@ -244,6 +246,8 @@ export const projects = [
   {
     slug: "tastebuds",
     title: "TasteBuds Vancouver",
+    discipline: "social",
+    disciplineLabel: "Content / Social",
     type: "Social media networking project",
     summary:
       "A seven-week local foodie campaign created for Instagram, TikTok, and the web. I led content planning and management, and contributed to content creation and videography.",
@@ -330,6 +334,8 @@ export const projects = [
   {
     slug: "hair-by-athraa",
     title: "Hair By Athra'a",
+    discipline: "design",
+    disciplineLabel: "UI/UX Case Study",
     type: "UI/UX Strategy case study",
     summary:
       "A salon booking experience focused on clarity, confidence, and elegant mobile UI.",
@@ -357,22 +363,10 @@ export const projects = [
     ],
   },
   {
-    slug: "interior-design-redesign",
-    title: "Interior Design Website Redesign",
-    type: "Figma redesign",
-    summary:
-      "A redesign focused on readability, layout, and stronger visual hierarchy.",
-    tools: ["Figma", "Web UI", "Visual hierarchy"],
-    figmaUrl: "",
-    process: [
-      "Improved typography and spacing.",
-      "Refined alignment and content hierarchy.",
-      "Created a cleaner and more polished browsing experience.",
-    ],
-  },
-  {
     slug: "group-fitness-app",
     title: "FitArray Fitness App Prototype",
+    discipline: "design",
+    disciplineLabel: "UI/UX Case Study",
     type: "Interactive Figma prototype",
     summary:
       "A mobile fitness experience that helps users discover exercises, build workouts, follow active sessions, and understand their progress in one focused app.",
@@ -443,35 +437,22 @@ export const projects = [
       "Connected and refined the main flows as an interactive prototype.",
     ],
   },
-  {
-    slug: "react-portfolio-system",
-    title: "React Portfolio System",
-    type: "Front-end build",
-    summary:
-      "A responsive portfolio site built to showcase case studies and internship-ready work.",
-    tools: ["React", "Vite", "Responsive UI"],
-    process: [
-      "Built reusable page structure.",
-      "Added routing and project pages.",
-      "Created a warm editorial visual direction.",
-    ],
-  },
 ];
 export const skillGroups = [
   {
-    title: "Design",
-    skills: ["Photoshop", "Illustrator", "Figma", "Brand Identity"],
+    title: "Marketing & Brand",
+    skills: ["Campaign Strategy", "Brand Positioning", "Google & Meta Ads", "SEO & Local Search"],
   },
   {
-    title: "Social Media",
-    skills: ["Content Creation", "Brand Strategy", "Content Marketing", "Campaign Planning"],
+    title: "UI/UX Design",
+    skills: ["Figma", "User Flows", "Wireframing", "Interactive Prototyping"],
   },
   {
-    title: "Web",
-    skills: ["HTML & CSS", "JavaScript", "React", "Responsive Design"],
+    title: "Content & Social",
+    skills: ["Content Planning", "Social Strategy", "Copywriting", "Email Marketing"],
   },
   {
-    title: "Creative Process",
-    skills: ["Research", "Wireframing", "Storytelling", "Prototyping"],
+    title: "Tools & Measurement",
+    skills: ["Adobe Creative Suite", "GA4", "Search Console", "HTML & CSS"],
   },
 ];

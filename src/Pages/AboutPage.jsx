@@ -7,12 +7,12 @@ export default function AboutPage() {
       <div className="about-hero">
         <div className="about-hero-copy">
           <span className="eyebrow">About</span>
-          <h2>New media changed how I see the world.</h2>
+          <h2>I connect strategy, design, and content.</h2>
           <p>
-            Before learning design and web development, I looked at websites, apps,
-            posters, and brands as finished things. Now I see the choices behind
-            them: spacing, hierarchy, color, accessibility, emotion, and the way a
-            person moves through information.
+            I look at a campaign as one connected experience: the position that
+            makes it distinct, the interface that helps people take action, and
+            the content that earns their attention. That perspective lets me move
+            between marketing, UI/UX, and social without losing the larger goal.
           </p>
         </div>
         <figure className="about-portrait">
@@ -24,19 +24,17 @@ export default function AboutPage() {
         <article className="story-card about-story-card">
           <p className="case-label">My perspective</p>
           <h3 className="story-heading">
-            I use design and code to make ideas feel clearer, more useful, and more alive.
+            I turn ideas into clear, useful experiences people can understand and act on.
           </h3>
           <p className="muted">
-            New media made me notice details I used to miss. A button is not just
-            a button anymore. It is a decision about trust. A layout is not just
-            decoration; it is a path someone follows. Web development changed my
-            life because it showed me that creativity can become something real,
-            interactive, and helpful for other people.
+            A campaign message, a landing-page hierarchy, and a social post are
+            different parts of the same journey. I use research, visual systems,
+            prototyping, and performance thinking to make that journey feel
+            consistent from first impression to conversion.
           </p>
           <p className="muted">
-            I am building my skills across UI/UX, visual design,
-            So I can create digital experiences that feel thoughtful,
-            organized, and personal.
+            I’m growing across marketing strategy, UI/UX, and content so I can
+            create work that feels thoughtful, organized, and personal.
           </p>
         </article>
 
@@ -44,7 +42,7 @@ export default function AboutPage() {
           <p className="case-label">Resume</p>
           <h3>View or download my resume.</h3>
           <p className="muted">
-            A quick look at my education, experience, and creative technology skills.
+            A quick look at my education, experience, and multidisciplinary creative skills.
           </p>
           <div className="resume-actions">
             <a className="pill-btn" href="/files/andrena-yacoub-resume.pdf" target="_blank" rel="noreferrer">
@@ -61,11 +59,11 @@ export default function AboutPage() {
         <div className="section-head case-section-head">
           <div>
             <span className="eyebrow">Skills</span>
-            <h2 id="skills-heading">The tools and thinking I’m growing.</h2>
+            <h2 id="skills-heading">Strategy first. Design and content in support.</h2>
           </div>
           <p>
-            I’m interested in the space where visuals, systems, and interaction
-            meet: making work that looks polished and also makes sense to use.
+            My strongest work connects a clear market position with an intuitive
+            experience, useful content, and measurable next steps.
           </p>
         </div>
 
@@ -93,13 +91,13 @@ export default function AboutPage() {
         <div className="timeline-item">
           <h3>Present</h3>
           <p className="muted">
-            I’m building Figma case studies, React projects, and a portfolio that shows both design thinking and web development.
+            I’m building campaign strategies, Figma prototypes, and content systems that show how creative decisions support real goals.
           </p>
         </div>
         <div className="timeline-item">
           <h3>Future</h3>
           <p className="muted">
-            I want to keep growing in new media, contribute to thoughtful digital projects, and find an internship where I can learn from real creative teams.
+            I want to grow with a collaborative team where marketing, brand, product, and content work together instead of in separate silos.
           </p>
         </div>
       </div>

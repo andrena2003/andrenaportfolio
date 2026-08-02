@@ -216,6 +216,24 @@ svg {
   background: var(--color-card);
 }
 
+.header-contact-btn svg {
+  width: 1.15rem;
+  height: 1.15rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.header-contact-btn.active,
+.header-contact-btn:hover {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-inverse);
+  transform: translateY(-1px);
+}
+
 .social-logo-btn {
   width: 44px;
   min-width: 44px;
@@ -339,6 +357,21 @@ svg {
   margin-top: 1.5rem;
 }
 
+.text-cta {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  color: var(--color-text-muted);
+  font-weight: 800;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.35rem;
+}
+
+.text-cta:hover {
+  color: var(--color-primary);
+}
+
 .project-coverflow{min-width:0;display:grid;align-content:center;gap:.75rem;padding:1rem}
 .coverflow-topline{display:flex;justify-content:space-between;gap:1rem;padding:.1rem .35rem;color:var(--color-text-faint);font-size:.68rem;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .coverflow-stage{position:relative;min-height:29rem;overflow:hidden;perspective:1400px}
@@ -357,7 +390,7 @@ svg {
 
 .project-widget-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:1.15rem;min-height:34rem}
 .project-widget{position:relative;isolation:isolate;min-width:0;min-height:0;contain:paint;display:grid;place-items:center;overflow:hidden;padding:1.5rem;text-align:center;transition:filter 260ms}.project-widget:hover{filter:brightness(1.07)}
-.widget-project-mark{display:grid;place-items:center;gap:.15rem}.widget-project-mark small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.widget-project-label{position:absolute;right:.8rem;bottom:.65rem;opacity:0;font-size:.68rem;font-weight:800;transition:opacity var(--transition)}.project-widget:hover .widget-project-label{opacity:1}
+.widget-project-mark{display:grid;place-items:center;gap:.15rem}.widget-project-mark small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.widget-project-discipline{position:absolute;z-index:2;top:.9rem;left:1rem;max-width:calc(100% - 2rem);font-size:.66rem;font-weight:800;letter-spacing:.08em;text-align:left;text-transform:uppercase;opacity:.74}.widget-project-label{position:absolute;right:.9rem;bottom:.75rem;opacity:0;font-size:.68rem;font-weight:800;transition:opacity var(--transition)}.project-widget:hover .widget-project-label{opacity:1}
 .widget-logo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain}.widget-logo-tastebuds{transform:scale(1.35)}.widget-logo-athraa{transform:scale(1.24)}.project-widget-4 .widget-project-mark{width:100%;height:100%;overflow:hidden;padding:0 3%}.widget-logo-fitarray{width:94%;max-width:32rem;transform:none}
 .project-widget-1{grid-column:1/6;grid-row:1/4;color:#f7e9d8;background:#3b1026;border-radius:2.5rem .9rem .9rem .9rem}.project-widget-1 strong{font-family:var(--font-body);font-size:clamp(2.2rem,4vw,4rem);font-weight:500;letter-spacing:.13em}.project-widget-1 small{color:#f3a184}
 .project-widget-2{grid-column:6/9;grid-row:1/4;color:#f4ff22;background:#000;border-radius:2.5rem 2.5rem .9rem .9rem}.project-widget-2 strong{font-family:var(--font-body);font-size:clamp(1.2rem,2.15vw,2.1rem);font-weight:900;letter-spacing:.02em}.project-widget-2 i{width:78%;height:2rem;border-bottom:.52rem solid #f4ff22;border-radius:0 0 50% 50%}
@@ -746,6 +779,38 @@ svg {
   margin-top: 1rem;
   display: grid;
   gap: 0.8rem;
+}
+
+.contact-panel {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  gap: clamp(1.5rem, 4vw, 3rem);
+  align-items: start;
+  padding: clamp(1.5rem, 5vw, 4rem);
+}
+
+.contact-copy {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-intro {
+  max-width: 52ch;
+  color: var(--color-text-muted);
+  font-size: clamp(1.05rem, 1.5vw, 1.3rem);
+  line-height: 1.65;
+}
+
+.contact-field {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .75rem 1.15rem;
+}
+
+.contact-location {
+  color: var(--color-text-faint);
+  font-size: var(--text-sm);
 }
 
 .contact-field a,
@@ -1318,6 +1383,32 @@ footer {
   border-top: 1px solid var(--color-border);
 }
 
+.work-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .65rem;
+  margin: 0 0 2rem;
+}
+
+.work-filters button {
+  min-height: 44px;
+  padding: .7rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: transparent;
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+  font-weight: 800;
+  transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.work-filters button:hover,
+.work-filters button.is-active {
+  border-color: var(--color-primary);
+  background: var(--color-primary);
+  color: var(--color-inverse);
+}
+
 .project-card {
   display: grid;
   grid-template-columns: minmax(8rem, 0.28fr) minmax(0, 1fr);
@@ -1362,6 +1453,15 @@ footer {
   line-height: 1.65;
 }
 
+.project-copy .project-format {
+  margin: -.2rem 0 .75rem;
+  color: var(--color-primary);
+  font-size: var(--text-xs);
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
 .project-tools span {
   border-radius: var(--radius-full);
   background: transparent;
@@ -1384,7 +1484,8 @@ footer {
 @media (max-width: 980px) {
   .hero-grid,
   .about-layout,
-  .hero-connect {
+  .hero-connect,
+  .contact-panel {
     grid-template-columns: 1fr;
   }
 
@@ -1473,6 +1574,22 @@ footer {
 
   .hero-title {
     font-size: clamp(3rem, 14vw, 4.8rem);
+  }
+
+  .project-card {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .project-card-topline {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .project-card-topline .project-discipline {
+    max-width: 18rem;
+    text-align: right;
   }
   .project-coverflow{padding:.65rem}.coverflow-stage{min-height:22rem}.coverflow-card{width:min(78%,22rem);--shift:calc(var(--cover-offset) * 38%)}
   .coverflow-console{grid-template-columns:auto minmax(0,1fr) auto}.coverflow-console>a{grid-column:2;grid-row:2}.coverflow-console>button:last-child{grid-column:3;grid-row:1/3}

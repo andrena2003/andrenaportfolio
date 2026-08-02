@@ -5,11 +5,12 @@ export default function ProjectCard({ project, tone = "tone-1", index = 0 }) {
     <article className={`project-card ${tone}`}>
       <div className="project-card-topline">
         <span>{String(index + 1).padStart(2, "0")}</span>
-        {project.type && <span>{project.type}</span>}
+        {project.disciplineLabel && <span className="project-discipline">{project.disciplineLabel}</span>}
       </div>
 
       <div className="project-copy">
         <h3>{project.title}</h3>
+        {project.type && <p className="project-format">{project.type}</p>}
         <p>{project.summary}</p>
         {project.tools?.length > 0 && (
           <div className="project-tools" aria-label={`${project.title} tools`}>

@@ -22,18 +22,18 @@ export default function HomePage() {
 
             <h1 className="hero-title">
               <SlotText
-                words={["UI/UX", "Marketing", "Brand", "Graphic"]}
+                words={["Marketing", "UI/UX", "Content", "Brand"]}
                 interval={3000}
               />
-              <span>Designer</span>
+              <span>Strategist</span>
             </h1>
 
             <p className="hero-description">{site.intro}</p>
 
             <div className="studio-meta" aria-label="Focus areas">
-              <span>Digital design</span>
-              <span>Visual systems</span>
-              <span>Marketing</span>
+              <span>Marketing & brand</span>
+              <span>UI/UX design</span>
+              <span>Content & social</span>
             </div>
 
             <div className="intro-row" aria-label="Contact links">
@@ -56,12 +56,21 @@ export default function HomePage() {
               <Link to="/work" className="pill-btn">
                 Discover My Work →
               </Link>
+              <Link to="/contact" className="text-cta">
+                Start a conversation
+              </Link>
             </div>
           </div>
 
           <div className="project-widget-grid" aria-label="Featured projects">
             {featuredProjects.map((project, index) => (
-              <Link className={`project-widget project-widget-${index + 1} project-widget-${project.slug}`} to={`/project/${project.slug}`} key={project.slug}>
+              <Link
+                className={`project-widget project-widget-${index + 1} project-widget-${project.slug}`}
+                to={`/project/${project.slug}`}
+                key={project.slug}
+                aria-label={`${project.title} — ${project.disciplineLabel}`}
+              >
+                <span className="widget-project-discipline">{project.disciplineLabel}</span>
                 <span className="widget-project-mark" aria-hidden="true">
                   {project.slug === "mera-sparkling-tea-launch" && <><strong>MERA</strong><small>sparkling tea</small></>}
                   {project.slug === "tastebuds" && <img className="widget-logo widget-logo-tastebuds" src={tastebudsLogo} alt="" />}

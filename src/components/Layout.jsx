@@ -3,6 +3,7 @@ import { NavLink, Outlet } from "react-router-dom";
 import logoDark from "../assets/logo-dark.png";
 import logoWhite from "../assets/logo-white.png";
 import { site } from "../data";
+import PageMeta from "./PageMeta";
 
 export default function Layout() {
   const [theme, setTheme] = useState(() => {
@@ -23,6 +24,7 @@ export default function Layout() {
 
   return (
     <>
+      <PageMeta />
       <a className="skip-link" href="#main">
         Skip to content
       </a>
@@ -44,6 +46,17 @@ export default function Layout() {
           </nav>
 
           <div className="header-actions">
+            <NavLink
+              to="/contact"
+              className="icon-btn header-contact-btn"
+              aria-label="Contact Andrena"
+              title="Contact"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M4 6.5h16v11H4z" />
+                <path d="m5 7.5 7 5.5 7-5.5" />
+              </svg>
+            </NavLink>
             <button className="icon-btn" onClick={toggleTheme} aria-label="Toggle theme">
               {theme === "dark" ? "☀︎" : "◐"}
             </button>
@@ -69,6 +82,7 @@ export default function Layout() {
         <div className="container footer-bar">
           <p>Located in Vancouver, BC</p>
           <div className="footer-links">
+            <NavLink to="/contact">Contact</NavLink>
             <a href="mailto:ayacoub@gmail.com">ayacoub@gmail.com</a>
             <a href={site.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
