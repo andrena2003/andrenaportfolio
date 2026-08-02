@@ -3,26 +3,51 @@ import { site } from "../data";
 
 export default function ContactPage() {
   return (
-    <section className="section container">
-      <div className="contact-panel">
-        <div className="contact-logo">AY</div>
-        <div className="contact-copy">
-          <span className="eyebrow">Contact</span>
-          <h2 className="display-heading">Let’s make the next idea clearer.</h2>
-          <p className="contact-intro">
-            I’m open to opportunities across marketing and brand strategy,
-            UI/UX design, and content. Tell me what you’re working on and where
-            you need support.
-          </p>
-          <div className="contact-field">
-            <a className="pill-btn" href={`mailto:${site.email}`}>Email me</a>
-            <a className="project-link" href={site.linkedin} target="_blank" rel="noreferrer">
-              LinkedIn
-            </a>
-            <Link className="project-link project-link-secondary" to="/work">View selected work</Link>
+    <section className="section container contact-page">
+      <div className="contact-hero">
+        <div className="contact-primary">
+          <div className="contact-kicker-row">
+            <span className="eyebrow">Contact</span>
+            <span className="contact-availability"><i /> Open to opportunities</span>
           </div>
-          <p className="contact-location">{site.email} · {site.location}</p>
+          <h1>Let’s build something people understand—and remember.</h1>
+          <p className="contact-lede">
+            For roles, collaborations, or thoughtful project conversations,
+            email is the best place to start.
+          </p>
+          <a className="contact-email" href={`mailto:${site.email}`}>
+            <span>Email me</span>
+            <strong>{site.email}</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
         </div>
+
+        <aside className="contact-details" aria-label="Contact details">
+          <dl>
+            <div className="contact-detail">
+              <dt>Based in</dt>
+              <dd>Vancouver, BC</dd>
+            </div>
+            <div className="contact-detail">
+              <dt>Focus</dt>
+              <dd className="contact-focus-list">
+                <span>Marketing & brand strategy</span>
+                <span>UI/UX design</span>
+                <span>Content & social</span>
+              </dd>
+            </div>
+          </dl>
+          <a className="contact-social" href={site.linkedin} target="_blank" rel="noreferrer">
+            <span>LinkedIn</span>
+            <strong>Connect with me</strong>
+            <i aria-hidden="true">↗</i>
+          </a>
+        </aside>
+      </div>
+
+      <div className="contact-footer-callout">
+        <p>Want to see how I connect strategy, design, and content?</p>
+        <Link to="/work">View selected work →</Link>
       </div>
     </section>
   );
