@@ -1,4 +1,5 @@
 import hairByAthraaCaseStudy from "./assets/hair-by-athraa-case-study.png";
+import hairByAthraaFigmaOverview from "./assets/hair-by-athraa-figma-overview.png";
 import tastebudsBrandingSystem from "./assets/tastebuds-branding-system.png";
 import tastebudsSocialTemplate from "./assets/tastebuds-social-template.png";
 import tastebudsInstagramTopPerformers from "./assets/tastebuds-instagram-top-performers.png";
@@ -493,7 +494,71 @@ export const projects = [
     context:
       "Hair By Athra'a is a salon booking concept designed for a beauty service experience that should feel elegant, clear, and easy to navigate on mobile.",
     challenge:
-      "The main challenge was organizing service discovery, booking confidence, and visual polish into a flow that would not overwhelm new clients.",
+      "Salon bookings are often scattered across phone calls, direct messages, and separate forms, leaving clients unsure about services, prices, stylists, and whether an appointment is confirmed. The challenge was to bring those decisions into one calm mobile flow without losing the salon's personal, premium feeling.",
+    objective:
+      "Create a mobile-first booking experience that guides a new client from welcome to service discovery, stylist selection, and confirmation with the information needed to make each decision confidently.",
+    responsibilities: [
+      "Defined the booking problem, project scope, information hierarchy, and primary mobile journey.",
+      "Mapped the service-discovery, stylist-selection, scheduling, and confirmation flow.",
+      "Created wireframes, high-fidelity screens, interface content, reusable patterns, and the final Figma prototype.",
+    ],
+    keyConceptsTitle: "A booking flow built around four clear moments.",
+    keyConcepts: [
+      {
+        title: "Welcome",
+        body: "Introduce the salon's tone and value quickly, then give first-time clients an obvious starting point instead of competing calls to action.",
+      },
+      {
+        title: "Discover",
+        body: "Organize services through scannable categories, imagery, and concise details so clients can compare options without reading a dense menu.",
+      },
+      {
+        title: "Choose",
+        body: "Bring stylist expertise, service fit, price, duration, and availability close to the selection moment to reduce uncertainty.",
+      },
+      {
+        title: "Confirm",
+        body: "Repeat the selected service, stylist, date, time, and location before submission so the final action feels deliberate and trustworthy.",
+      },
+    ],
+    researchTitle: "What clients need before they commit.",
+    research: [
+      {
+        title: "Services need context",
+        body: "A service name alone is not enough. Clients need a short description, expected duration, starting price, and a clear sense of the result.",
+      },
+      {
+        title: "Stylist fit builds confidence",
+        body: "Specialties, work examples, and availability help clients choose a stylist without needing a separate phone call or direct-message conversation.",
+      },
+      {
+        title: "Confirmation prevents doubt",
+        body: "A clear summary and visible booking status reduce the uncertainty created when requests move between social messages, forms, and phone calls.",
+      },
+    ],
+    designProcessTitle: "From a fragmented booking process to one guided flow.",
+    designProcess: [
+      {
+        phase: "01 · Discover",
+        title: "Define the booking breakdown",
+        body: "Identified the information clients repeatedly need across discovery, service comparison, stylist choice, scheduling, and confirmation.",
+      },
+      {
+        phase: "02 · Structure",
+        title: "Map the decision sequence",
+        body: "Organized the journey as welcome → discover → choose → confirm so each screen asks for one meaningful decision at a time.",
+      },
+      {
+        phase: "03 · Design",
+        title: "Create a premium mobile system",
+        body: "Developed an editorial visual direction with reusable service cards, stylist profiles, booking controls, and clear primary actions.",
+      },
+      {
+        phase: "04 · Refine",
+        title: "Check continuity and clarity",
+        body: "Reviewed labels, hierarchy, selected states, summaries, and transitions so information remains consistent from discovery through confirmation.",
+      },
+    ],
     approach: [
       "Mapped the client journey from discovery to booking so the interface could support quick decisions.",
       "Created a soft editorial visual direction that feels personal, polished, and beauty-focused.",
@@ -513,6 +578,20 @@ export const projects = [
       takeaway:
         "I would record unassisted completion, rough task time, and every hesitation or backtrack, then revise the service-selection and confirmation states before reporting any success rate.",
     },
+    galleryLabel: "Selected design work",
+    galleryTitle: "The identity and complete booking flow.",
+    gallery: [
+      {
+        image: "/social/hair-by-athraa-case-study.png",
+        alt: "Hair By Athra'a monogram and wordmark in black on a warm cream background.",
+        caption: "Brand mark · An editorial monogram gives the salon a distinctive, premium signature.",
+      },
+      {
+        image: hairByAthraaFigmaOverview,
+        alt: "Figma overview showing the Hair By Athra'a welcome, service discovery, stylist selection, booking, and confirmation screens.",
+        caption: "Flow overview · The full Figma workspace connects discovery, selection, scheduling, and confirmation states.",
+      },
+    ],
     reflection:
       "This project strengthened my ability to turn a service journey into a calm mobile flow. The biggest limitation is the lack of user evidence; the next iteration should be driven by observed booking behaviour rather than visual preference alone.",
     process: [
@@ -537,7 +616,7 @@ export const projects = [
     context:
       "FitArray is a mobile fitness concept designed for people who want structure without the complexity of switching between exercise libraries, workout timers, and separate progress trackers.",
     challenge:
-      "Fitness apps often present too many choices at once. The challenge was to organize workout discovery, exercise details, active-session controls, and performance data into a flow that feels motivating and easy to scan.",
+      "In many fitness apps, the next useful action is buried beneath exercise libraries, metrics, and competing recommendations. The challenge was to keep discovery flexible while making it obvious how to turn an exercise into a reviewed workout, begin a session, and understand what to do next.",
     objective:
       "Design and prototype a consistent mobile journey from account setup to workout completion, with clear navigation, useful exercise guidance, and progress feedback that supports repeat use.",
     responsibilities: [
@@ -558,6 +637,18 @@ export const projects = [
       { title: "Guidance in context", body: "Exercise information is most useful when it appears close to selection and active-workout moments." },
       { title: "Visible progress", body: "Simple summaries, history, and trends help users understand consistency without turning the experience into a dense analytics tool." },
     ],
+    iteration: {
+      label: "Design pivot",
+      title: "Separating discovery from workout commitment.",
+      beforeLabel: "Early direction · Browse and add",
+      before:
+        "The early flow let users browse exercises and add them to a workout on the same screen. It was fast, but there was no clear review moment, so users could lose track of what they had selected, the workout order, or whether the plan was ready to begin.",
+      afterLabel: "Revised direction · Discover → build → review",
+      after:
+        "I separated the experience into three deliberate stages: discover exercises, build the workout, and review the complete plan before starting. The extra checkpoint makes selections, sequence, and next actions visible without making the library itself feel heavier.",
+      takeaway:
+        "The pivot showed that reducing friction does not always mean removing steps. One well-placed review step can reduce uncertainty and make the transition into an active workout feel more intentional.",
+    },
     designProcessTitle: "From user flow to interactive prototype.",
     designProcess: [
       { phase: "01 · Define", title: "Set the core journey", body: "Focused the scope on onboarding, discovering an exercise, building a workout, completing a session, and checking progress." },
@@ -589,7 +680,7 @@ export const projects = [
     outcome:
       "The final prototype brings the main fitness journey into one consistent system. Users can move from discovery to an active workout and then review progress through a cohesive interface with clear hierarchy and repeatable interaction patterns.",
     reflection:
-      "This project strengthened my ability to design an end-to-end mobile product instead of isolated screens. The biggest lesson was that consistency is functional: repeated navigation, card, button, and status patterns make a feature-rich app feel easier. A next iteration would include task-based usability testing and accessibility validation with real users.",
+      "The most important decision was separating discovery, workout building, and review instead of forcing all three behaviours into one screen. That change made the next action clearer and gave the system a more understandable rhythm. A future iteration would test whether users can build and begin a workout without hesitation, then validate contrast, focus order, labels, and active-session controls for accessibility.",
     process: [
       "Defined the core fitness journey and information architecture.",
       "Built a reusable mobile UI system and high-fidelity screens.",

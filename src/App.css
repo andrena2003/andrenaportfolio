@@ -1931,6 +1931,10 @@ footer {
     grid-column: auto;
   }
 
+  .project-page-hair-by-athraa .project-gallery {
+    grid-template-columns: 1fr;
+  }
+
   .project-card-topline {
     flex-direction: row;
     justify-content: space-between;
