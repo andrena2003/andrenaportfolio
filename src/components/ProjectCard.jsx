@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
 
 export default function ProjectCard({ project, tone = "tone-1", index = 0 }) {
+  const previewImage = project.cardImage || project.image || project.gallery?.[0]?.image;
+  const previewAlt = project.cardImageAlt || project.imageAlt || project.gallery?.[0]?.alt || `${project.title} project preview`;
+
   return (
     <article className={`project-card ${tone}`}>
       <div className="project-card-topline">
@@ -23,28 +26,14 @@ export default function ProjectCard({ project, tone = "tone-1", index = 0 }) {
           <Link className="project-link" to={`/project/${project.slug}`}>
             View project
           </Link>
-          {project.figmaUrl && (
-            <a
-              className="project-link project-link-secondary"
-              href={project.figmaUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              Open in Figma
-            </a>
-          )}
-          {project.pdfUrl && (
-            <a
-              className="project-link project-link-secondary"
-              href={project.pdfUrl}
-              target="_blank"
-              rel="noreferrer"
-            >
-              View presentation
-            </a>
-          )}
         </div>
       </div>
+
+      {previewImage && (
+        <Link className="project-card-media" to={`/project/${project.slug}`} aria-label={`View ${project.title}`}>
+          <img src={previewImage} alt={previewAlt} />
+        </Link>
+      )}
     </article>
   );
 }

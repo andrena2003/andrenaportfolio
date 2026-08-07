@@ -8,6 +8,7 @@ import tastebudsWebsiteOverview from "./assets/tastebuds-website-overview.png";
 import tastebudsOpenGraphPreview from "./assets/tastebuds-open-graph-preview.png";
 import meraCampaignHero from "./assets/mera-campaign-hero.png";
 import meraMetaAdArt from "./assets/mera-meta-ad-art.png";
+import meraLogoSketches from "./assets/mera-logo-sketches.png";
 import fitarraySplash from "./assets/fitarray-splash.png";
 import fitarrayLogin from "./assets/fitarray-login.png";
 import fitarrayDashboard from "./assets/fitarray-dashboard.png";
@@ -20,6 +21,10 @@ import mitsubishiVehicleGallery from "./assets/mitsubishi-vehicle-gallery.png";
 import mitsubishiModelDetail from "./assets/mitsubishi-model-detail.png";
 import mitsubishiBuildPrice from "./assets/mitsubishi-build-price.png";
 import mitsubishiMobileConfigurator from "./assets/mitsubishi-mobile-configurator.png";
+import mitsubishiProjectCard from "./assets/mitsubishi-project-card-v2.png";
+import tastebudsProjectCard from "./assets/tastebuds-project-card-v2.png";
+import hairByAthraaProjectCard from "./assets/hair-by-athraa-project-card-v2.png";
+import fitarrayProjectCard from "./assets/fitarray-project-card-v2.png";
 
 export const site = {
   email: "ayacoub@gmail.com",
@@ -42,6 +47,11 @@ export const projects = [
     image: meraCampaignHero,
     imageAlt: "MERA sparkling tea cans styled with citrus and hibiscus in a plum and coral campaign setting.",
     imageCaption: "Hero art direction for MERA’s fictional launch campaign. Brand and campaign created as a portfolio concept.",
+    brandMoodboard: [
+      { image: meraCampaignHero, alt: "MERA product photography direction with warm plum, coral, citrus, and botanical styling.", caption: "Product and colour direction" },
+      { image: meraMetaAdArt, alt: "MERA social campaign artwork showing the product in an evening setting.", caption: "Evening social campaign direction" },
+      { image: meraLogoSketches, alt: "Early MERA logo and packaging direction sketches.", caption: "Early identity exploration" },
+    ],
     brandIdentity: {
       name: "MERA",
       tagline: "Stay for the whole night.",
@@ -274,6 +284,8 @@ export const projects = [
     figmaUrl: "https://www.figma.com/design/FpBadHeu1QwzbAqgL0npOg/Mitsubishi-Motors-%E2%80%94-Website-Redesign-UX-Case-Study?node-id=17-2&t=8T44F1nmuyvRtfIn-1",
     figmaLabel: "Open full Figma case study",
     image: mitsubishiHomepage,
+    cardImage: mitsubishiProjectCard,
+    cardImageAlt: "Mitsubishi Motors website redesign presented on desktop and mobile device mockups.",
     imageAlt: "Redesigned Mitsubishi Motors homepage featuring the 2026 Outlander PHEV and three vehicle cards.",
     imageCaption: "Homepage concept for a streamlined Mitsubishi Motors Canada journey. Independent portfolio redesign; not commissioned by Mitsubishi Motors.",
     role: "UX/UI designer",
@@ -380,6 +392,8 @@ export const projects = [
   {
     slug: "tastebuds",
     title: "TasteBuds Vancouver",
+    cardImage: tastebudsProjectCard,
+    cardImageAlt: "TasteBuds Vancouver branding and social campaign presented across two phone mockups.",
     discipline: "social",
     disciplineLabel: "Content / Social",
     type: "Social media networking project",
@@ -488,6 +502,8 @@ export const projects = [
     tools: ["Figma", "Mobile UI", "Service design", "User flows"],
     figmaUrl: "https://www.figma.com/design/QN3SMXzMllgkNYZtsZbN52/UI---UX-Strategy-1---Term-Project--Done-?node-id=0-1&t=kuYJzHssiU0DArAq-1",
     image: hairByAthraaCaseStudy,
+    cardImage: hairByAthraaProjectCard,
+    cardImageAlt: "Hair By Athra'a salon booking experience presented across three mobile screens.",
     imageAlt: "Mobile mockup for the Hair By Athra'a salon booking case study.",
     role: "UI/UX designer",
     timeline: "Term project",
@@ -603,6 +619,8 @@ export const projects = [
   {
     slug: "group-fitness-app",
     title: "FitArray Fitness App Prototype",
+    cardImage: fitarrayProjectCard,
+    cardImageAlt: "FitArray fitness dashboard, exercise library, and statistics shown on three phone mockups.",
     discipline: "design",
     disciplineLabel: "UI/UX Case Study",
     type: "Interactive Figma prototype",

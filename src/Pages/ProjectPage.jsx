@@ -53,15 +53,20 @@ export default function ProjectPage() {
         <div className="editorial-process">
           <article className="editorial-row">
             <div className="editorial-copy">
-              <span className="eyebrow">Moodboard</span>
+              <span className="eyebrow">Visual direction board</span>
               <h2>Social energy, without the noise.</h2>
-              <p>The visual direction combines warm hospitality, evening richness, botanical ingredients, and confident colour. The goal was to make a zero-proof drink feel celebratory rather than restrictive.</p>
+              <p>This board brings together the actual product art direction, evening campaign treatment, and early identity exploration. Warm hospitality, botanical ingredients, and confident colour make the zero-proof drink feel celebratory rather than restrictive.</p>
             </div>
-            <div className="mera-moodboard" aria-label="MERA campaign moodboard">
-              <img src={project.image} alt="MERA campaign colour and product direction" />
-              <div className="moodboard-word">MERA</div>
-              <div className="moodboard-quote">Stay for the whole night.</div>
-              {project.brandIdentity.colors.map((color) => <span key={color.value} style={{ backgroundColor: color.value }} title={`${color.name} ${color.value}`} />)}
+            <div className="mera-moodboard" aria-label="MERA visual direction board">
+              {project.brandMoodboard?.map((item, index) => (
+                <figure className={`moodboard-tile moodboard-tile-${index + 1}`} key={item.caption}>
+                  <img src={item.image} alt={item.alt} />
+                  <figcaption>{item.caption}</figcaption>
+                </figure>
+              ))}
+              <div className="moodboard-palette" aria-label="MERA colour palette">
+                {project.brandIdentity.colors.map((color) => <span key={color.value}><i style={{ backgroundColor: color.value }} />{color.name}</span>)}
+              </div>
             </div>
           </article>
 
@@ -326,11 +331,15 @@ export default function ProjectPage() {
                 <figcaption><span><strong>mera.ca</strong><small>Meet your new dinner drink.</small></span><b>Shop now</b></figcaption>
               </figure>
               <div className="meta-plan-panel">
-                <div className="campaign-plan-topline"><span>Sales campaign</span><strong>{marketing.meta.budget}</strong></div>
-                <article><h3>Audience structure</h3><ul>{marketing.meta.audiences.map((item) => <li key={item}>{item}</li>)}</ul></article>
-                <article><h3>Placements</h3><div className="marketing-tags">{marketing.meta.placements.map((item) => <span key={item}>{item}</span>)}</div></article>
-                <article><h3>Creative tests</h3><ul>{marketing.meta.tests.map((item) => <li key={item}>{item}</li>)}</ul></article>
-                <div className="target-strip">{marketing.meta.targets.map((item) => <span key={item}>{item}</span>)}</div>
+                <div className="campaign-plan-topline"><span>30-day media test plan</span><strong>Planning assumption</strong></div>
+                <dl className="media-plan-table">
+                  <div><dt>Proposed spend</dt><dd>{marketing.meta.budget}</dd></div>
+                  <div><dt>Audience</dt><dd>{marketing.meta.audiences.join(" · ")}</dd></div>
+                  <div><dt>Placements</dt><dd>{marketing.meta.placements.join(", ")}</dd></div>
+                  <div><dt>Creative tests</dt><dd>{marketing.meta.tests.join(" · ")}</dd></div>
+                  <div><dt>Decision criteria</dt><dd>{marketing.meta.targets.join(" · ")}</dd></div>
+                </dl>
+                <p className="planning-note">This is a proposed testing framework for a portfolio concept, not historical client spend or reported performance.</p>
               </div>
             </div>
           </section>
@@ -377,17 +386,16 @@ export default function ProjectPage() {
 
           <section className="case-section marketing-channel-section measurement-section">
             <div className="section-head case-section-head">
-              <div><span className="eyebrow">Measurement & reporting</span><h2>One view from impression to revenue.</h2></div>
-              <p>Targets are clearly labelled as projections because MERA is a portfolio concept—not a live client campaign.</p>
+              <div><span className="eyebrow">Measurement framework</span><h2>What would be tracked, and why.</h2></div>
+              <p>A practical measurement plan for a future pilot. No simulated results are presented as campaign performance.</p>
             </div>
             <div className="measurement-tools">{marketing.measurement.tools.map((item) => <span key={item}>{item}</span>)}</div>
-            <div className="measurement-layout">
-              <div className="report-dashboard">
-                <div className="report-dashboard-head"><span>Monthly performance report</span><strong>Concept dashboard</strong></div>
-                <div className="report-metrics">{marketing.monthlyReport.snapshot.map((item) => <article key={item.label}><strong>{item.value}</strong><span>{item.label}</span></article>)}</div>
-                <div className="report-funnel">{marketing.measurement.reporting.map((item) => <article key={item.label}><strong>{item.label}</strong><span>{item.value}</span></article>)}</div>
+            <div className="measurement-plan-grid">
+              <div className="measurement-table" role="table" aria-label="MERA measurement plan">
+                <div className="measurement-table-head" role="row"><span role="columnheader">Journey stage</span><span role="columnheader">Measures reviewed</span></div>
+                {marketing.measurement.reporting.map((item) => <div role="row" key={item.label}><strong role="cell">{item.label}</strong><span role="cell">{item.value}</span></div>)}
               </div>
-              <article className="report-actions"><span className="eyebrow">Monthly optimization</span><h3>What I would recommend to ownership.</h3><ul className="case-list">{marketing.monthlyReport.actions.map((item) => <li key={item}>{item}</li>)}</ul><div className="event-map"><strong>GA4 events</strong>{marketing.measurement.events.map((item) => <code key={item}>{item}</code>)}</div></article>
+              <article className="measurement-actions"><span className="eyebrow">Review cadence</span><h3>How decisions would be made.</h3><ul className="case-list">{marketing.monthlyReport.actions.map((item) => <li key={item}>{item}</li>)}</ul><div className="event-map"><strong>GA4 events</strong>{marketing.measurement.events.map((item) => <code key={item}>{item}</code>)}</div></article>
             </div>
           </section>
         </div>
