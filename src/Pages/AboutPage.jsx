@@ -2,6 +2,8 @@ import andrenaProfile from "../assets/andrena-profile.jpg";
 import { skillGroups } from "../data";
 
 export default function AboutPage() {
+  const resumeUrl = `${import.meta.env.BASE_URL}files/andrena-yacoub-resume.pdf`;
+
   return (
     <section className="section container about-page">
       <div className="about-hero">
@@ -45,10 +47,10 @@ export default function AboutPage() {
             A quick look at my education, experience, and multidisciplinary creative skills.
           </p>
           <div className="resume-actions">
-            <a className="pill-btn" href="/files/andrena-yacoub-resume.pdf" target="_blank" rel="noreferrer">
+            <a className="pill-btn" href={resumeUrl} target="_blank" rel="noreferrer">
               View resume
             </a>
-            <a className="project-link" href="/files/andrena-yacoub-resume.pdf" download>
+            <a className="project-link" href={resumeUrl} download>
               Download PDF
             </a>
           </div>

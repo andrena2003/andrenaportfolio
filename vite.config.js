@@ -1,5 +1,6 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
+import { env } from 'node:process'
 
 // https://vite.dev/config/
 export default defineConfig(async ({ command }) => {
@@ -15,6 +16,6 @@ export default defineConfig(async ({ command }) => {
 
   return {
     plugins,
-    base: '/',
+    base: env.VITE_BASE_PATH || '/',
   }
 })
