@@ -42,8 +42,13 @@ export const projects = [
     disciplineLabel: "Marketing / Brand Strategy",
     type: "Integrated marketing campaign",
     summary:
-      "A full-funnel digital marketing concept for launching a premium sparkling tea through Google Search, Meta advertising, SEO, local discovery, email, and conversion-focused measurement.",
-    tools: ["Google Ads", "Meta Ads", "SEO & local", "Landing-page CRO", "Email marketing", "GA4 reporting"],
+      "A full-funnel marketing case study for launching a premium sparkling tea through positioning, creative, paid media, SEO, CRO, and measurement.",
+    projectNote:
+      "MERA is a fictional brand. This is a self-directed portfolio project created to demonstrate full-funnel campaign planning skills—it is not a real client, product, or company. All budgets, targets, and results shown are concept goals, not actual performance data.",
+    projectIntro:
+      "This self-directed portfolio concept demonstrates full-funnel campaign planning—from positioning and creative through paid media, SEO, CRO, and measurement—in one connected system.",
+    tools: ["Google Ads", "Meta Ads Manager", "Google Analytics 4", "Google Search Console", "Looker Studio", "Google Business Profile"],
+    skillsDemonstrated: ["Paid media strategy", "SEO & local search", "Landing-page CRO", "Email marketing", "Brand positioning", "Campaign measurement & reporting"],
     image: meraCampaignHero,
     imageAlt: "MERA sparkling tea cans styled with citrus and hibiscus in a plum and coral campaign setting.",
     imageCaption: "Hero art direction for MERA’s fictional launch campaign. Brand and campaign created as a portfolio concept.",
@@ -265,6 +270,8 @@ export const projects = [
       "The finished concept connects strategy and execution in one launch system: a clear market position, a recognizable creative platform, a channel-specific content plan, and targets that make the work accountable. Because MERA is a portfolio concept, all results shown are campaign goals rather than claimed performance.",
     reflection:
       "This project strengthened my ability to connect brand thinking with measurable action. The most important choice was narrowing the idea: instead of listing product benefits, the campaign owns one social truth and lets every channel prove it differently. With a live product, I would validate taste language through interviews, test the discovery offer with a small paid pilot, and update the forecast using actual conversion and repeat-purchase data.",
+    nextStep:
+      "Run a $500 real-world paid pilot on Meta and Google Search to validate CTR and CVR assumptions, then rebuild the forecast using actual conversion and repeat-purchase data. With a live product, I would also validate taste language through customer interviews and update targets using real conversion and repeat-purchase data.",
     process: [
       "Found an ownable position in the zero-proof beverage category.",
       "Built a 90-day integrated launch plan around awareness, trial, and repeat purchase.",

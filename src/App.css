@@ -937,6 +937,44 @@ svg {
   line-height: 1.6;
 }
 
+.project-intro {
+  max-width: 62ch;
+  margin-top: 1rem;
+  color: var(--color-text-muted);
+  font-style: italic;
+  line-height: 1.7;
+}
+
+.project-note {
+  display: grid;
+  grid-template-columns: minmax(12rem, .28fr) minmax(0, 1fr);
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  border: 1px solid color-mix(in srgb, var(--color-primary) 35%, var(--color-border));
+  border-radius: 1rem;
+  background: var(--color-primary-highlight);
+}
+
+.project-note strong {
+  color: var(--color-primary);
+  font-size: .72rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.project-note p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: .84rem;
+  line-height: 1.65;
+}
+
+.project-capabilities {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(1.25rem, 4vw, 3rem);
+}
+
 .case-meta {
   display: grid;
   gap: 1rem;
@@ -1360,6 +1398,19 @@ svg {
   color: var(--color-text-muted);
   font-size: clamp(1.05rem, 1.5vw, 1.25rem);
   line-height: 1.75;
+}
+
+.reflection-next-step {
+  max-width: 78ch;
+  margin: 1.2rem 0 0;
+  padding-top: 1.2rem;
+  border-top: 1px solid var(--color-border);
+  color: var(--color-text-muted);
+  line-height: 1.7;
+}
+
+.reflection-next-step strong {
+  color: var(--color-text);
 }
 
 .brand-system,.case-brief,.deliverables-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(1.5rem,5vw,4rem)}
@@ -1851,7 +1902,9 @@ footer {
 
   .work-grid,
   .project-page-hero,
-  .case-study-grid {
+  .case-study-grid,
+  .project-capabilities,
+  .project-note {
     grid-template-columns: 1fr;
   }
 

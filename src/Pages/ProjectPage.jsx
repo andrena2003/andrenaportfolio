@@ -28,6 +28,7 @@ export default function ProjectPage() {
           <span className="eyebrow">{project.type || "Project"}</span>
           <h2 className="display-heading">{project.title}</h2>
           <p className="project-lede">{project.summary}</p>
+          {project.projectIntro && <p className="project-intro">{project.projectIntro}</p>}
         </div>
 
         {detailItems.length > 0 && (
@@ -41,6 +42,13 @@ export default function ProjectPage() {
           </dl>
         )}
       </div>
+
+      {project.projectNote && (
+        <aside className="project-note" aria-label="Project disclaimer">
+          <strong>Fictional portfolio concept</strong>
+          <p>{project.projectNote}</p>
+        </aside>
+      )}
 
       {project.image && (
         <figure className="case-image">
@@ -117,10 +125,21 @@ export default function ProjectPage() {
       )}
 
       {project.tools?.length > 0 && (
-        <div className="project-tools project-tools-large" aria-label={`${project.title} tools`}>
-          {project.tools.map((tool) => (
-            <span key={tool}>{tool}</span>
-          ))}
+        <div className="project-capabilities">
+          <div>
+            <span className="eyebrow">Tools</span>
+            <div className="project-tools project-tools-large" aria-label={`${project.title} tools`}>
+              {project.tools.map((tool) => <span key={tool}>{tool}</span>)}
+            </div>
+          </div>
+          {project.skillsDemonstrated?.length > 0 && (
+            <div>
+              <span className="eyebrow">Skills demonstrated</span>
+              <div className="project-tools project-tools-large" aria-label={`${project.title} skills demonstrated`}>
+                {project.skillsDemonstrated.map((skill) => <span key={skill}>{skill}</span>)}
+              </div>
+            </div>
+          )}
         </div>
       )}
 
@@ -451,6 +470,7 @@ export default function ProjectPage() {
             </div>
           </div>
           <p className="reflection-copy">{project.reflection}</p>
+          {project.nextStep && <p className="reflection-next-step"><strong>Next step:</strong> {project.nextStep}</p>}
         </div>
       )}
 
