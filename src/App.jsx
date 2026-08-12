@@ -5,6 +5,7 @@ import AboutPage from "./Pages/AboutPage";
 import WorkPages from "./Pages/WorkPages";
 import ProjectPage from "./Pages/ProjectPage";
 import ContactPage from "./Pages/ContactPage";
+import NotFoundPage from "./Pages/NotFoundPage";
 import "./App.css";
 
 export default function App() {
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="work" element={<WorkPages />} />
           <Route path="project/:slug" element={<ProjectPage />} />
           <Route path="contact" element={<ContactPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Route>
       </Routes>
     </BrowserRouter>

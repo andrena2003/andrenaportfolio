@@ -1,9 +1,27 @@
-import { useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { Link, useParams } from "react-router-dom";
 import { projects } from "../data";
+import meraInstagramGoldenHour from "../assets/mera-instagram-golden-hour.png";
+import meraInstagramDinnerPairing from "../assets/mera-instagram-dinner-pairing.png";
+import meraInstagramNightBright from "../assets/mera-instagram-night-bright.png";
 
 export default function ProjectPage() {
   const { slug } = useParams();
+  const [activeSection, setActiveSection] = useState("overview");
   const project = projects.find((p) => p.slug === slug);
+
+  useEffect(() => {
+    const sections = [...document.querySelectorAll("[data-case-section]")];
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries.filter((entry) => entry.isIntersecting).sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-20% 0px -55% 0px", threshold: [0, 0.15, 0.35, 0.6] },
+    );
+    sections.forEach((section) => observer.observe(section));
+    return () => observer.disconnect();
+  }, [slug]);
 
   if (!project) {
     return (
@@ -15,17 +33,41 @@ export default function ProjectPage() {
 
   const detailItems = [
     project.role && ["Role", project.role],
+    project.team && ["Team / context", project.team],
     project.timeline && ["Timeline", project.timeline],
-    project.type && ["Type", project.type],
+    project.tools?.length > 0 && ["Tools", project.tools.join(" · ")],
+    project.deliverables?.length > 0 && ["Core deliverable", project.deliverables[0]],
+    project.type && ["Project context", project.type],
   ].filter(Boolean);
   const marketing = project.marketingExecution;
   const growth = project.marketingStrategy;
+  const projectIndex = projects.findIndex((item) => item.slug === project.slug);
+  const previousProject = projects[(projectIndex - 1 + projects.length) % projects.length];
+  const nextProject = projects[(projectIndex + 1) % projects.length];
+  const audience = project.keyConcepts?.find((item) => item.title.toLowerCase().includes("audience"));
+  const sectionLinks = [
+    { id: "overview", label: "Overview" },
+    (project.context || project.challenge || project.outcome) && { id: "context", label: "Context" },
+    { id: "strategy", label: "Strategy" },
+    { id: "execution", label: project.discipline === "design" ? "Design process" : "Execution" },
+    project.metrics?.length > 0 && { id: "results", label: "Results" },
+    project.gallery?.length > 0 && { id: "visuals", label: "Visuals" },
+    { id: "reflection", label: "Reflection" },
+  ].filter(Boolean);
 
   return (
-    <section className={`section container project-page project-page-${project.slug} ${project.brandIdentity ? "project-page-brand" : ""}`}>
-      <div className="project-page-hero">
+    <section className={`section container project-page project-page-${project.slug} ${project.brandIdentity ? "project-page-brand" : ""} ${project.brandShowcase ? "project-page-editorial" : ""}`}>
+      <nav className="case-scroll-nav" aria-label={`${project.title} case study sections`}>
+        {sectionLinks.map((link) => (
+          <a className={activeSection === link.id ? "is-active" : ""} href={`#${link.id}`} aria-current={activeSection === link.id ? "location" : undefined} key={link.id}>
+            {link.label}
+          </a>
+        ))}
+      </nav>
+
+      <div className="project-page-hero" id="overview" data-case-section>
         <div>
-          <span className="eyebrow">{project.type || "Project"}</span>
+          <span className="eyebrow">Case study · {project.type || "Project"}</span>
           <h2 className="display-heading">{project.title}</h2>
           <p className="project-lede">{project.summary}</p>
           {project.projectIntro && <p className="project-intro">{project.projectIntro}</p>}
@@ -57,27 +99,40 @@ export default function ProjectPage() {
         </figure>
       )}
 
-      {project.brandIdentity && (
-        <div className="editorial-process">
+      {project.brandShowcase && (
+        <div className="editorial-process brand-showcase-process">
           <article className="editorial-row">
             <div className="editorial-copy">
-              <span className="eyebrow">Visual direction board</span>
-              <h2>Social energy, without the noise.</h2>
-              <p>This board brings together the actual product art direction, evening campaign treatment, and early identity exploration. Warm hospitality, botanical ingredients, and confident colour make the zero-proof drink feel celebratory rather than restrictive.</p>
-            </div>
-            <div className="mera-moodboard" aria-label="MERA visual direction board">
-              {project.brandMoodboard?.map((item, index) => (
-                <figure className={`moodboard-tile moodboard-tile-${index + 1}`} key={item.caption}>
-                  <img src={item.image} alt={item.alt} />
-                  <figcaption>{item.caption}</figcaption>
-                </figure>
-              ))}
-              <div className="moodboard-palette" aria-label="MERA colour palette">
-                {project.brandIdentity.colors.map((color) => <span key={color.value}><i style={{ backgroundColor: color.value }} />{color.name}</span>)}
+              <span className="eyebrow">Brand identity</span>
+              <h2>{project.brandShowcase.title}</h2>
+              <p>{project.brandShowcase.description}</p>
+              <div className="editorial-swatches" aria-label={`${project.title} brand colours`}>
+                {project.brandShowcase.colors.map((color) => <span key={color.value}><i style={{ backgroundColor: color.value }} />{color.name}</span>)}
               </div>
             </div>
+            <figure className="brand-showcase-visual">
+              <img src={project.brandShowcase.image} alt={project.brandShowcase.imageAlt} />
+              <figcaption>{project.brandShowcase.caption}</figcaption>
+            </figure>
           </article>
 
+          <article className="editorial-row brand-voice-row">
+            <div className="editorial-copy">
+              <span className="eyebrow">Voice & content system</span>
+              <h2>{project.brandShowcase.voiceTitle}</h2>
+              <p>{project.brandShowcase.voiceDescription}</p>
+            </div>
+            <div className="brand-principles">
+              {project.brandShowcase.principles.map((item, index) => (
+                <article key={item.title}><span>{String(index + 1).padStart(2, "0")}</span><h3>{item.title}</h3><p>{item.body}</p></article>
+              ))}
+            </div>
+          </article>
+        </div>
+      )}
+
+      {project.brandIdentity && (
+        <div className="editorial-process">
           <article className="editorial-row">
             <div className="editorial-copy">
               <span className="eyebrow">Logo development</span>
@@ -106,45 +161,51 @@ export default function ProjectPage() {
             </div>
           </article>
 
-          <article className="editorial-row">
-            <div className="editorial-copy">
-              <span className="eyebrow">Typography</span>
-              <h2>Editorial warmth meets modern clarity.</h2>
-              <p>Playfair Display gives campaign headlines an expressive, premium tone. Manrope supports the wordmark, labels, body copy, and calls to action with clean readability.</p>
-            </div>
-            <div className="editorial-type" aria-label="MERA typography system">
-              {project.brandIdentity.typography.map((type) => (
-                <div className={type.family === "Playfair Display" ? "type-display" : "type-body"} key={type.family}>
-                  <small>{type.family} · {type.role}</small>
-                  <p>{type.sample}</p>
-                </div>
-              ))}
-            </div>
-          </article>
         </div>
       )}
 
-      {project.tools?.length > 0 && (
-        <div className="project-capabilities">
-          <div>
-            <span className="eyebrow">Tools</span>
-            <div className="project-tools project-tools-large" aria-label={`${project.title} tools`}>
-              {project.tools.map((tool) => <span key={tool}>{tool}</span>)}
-            </div>
+      {project.brandIdentity && marketing && (
+        <section className="case-section paid-preview-section" id="execution" data-case-section>
+          <div className="section-head case-section-head">
+            <div><span className="eyebrow">Paid campaign</span><h2>Search and social ads.</h2></div>
+            <p>Two ad concepts introduce the same offer in different ways.</p>
           </div>
-          {project.skillsDemonstrated?.length > 0 && (
-            <div>
-              <span className="eyebrow">Skills demonstrated</span>
-              <div className="project-tools project-tools-large" aria-label={`${project.title} skills demonstrated`}>
-                {project.skillsDemonstrated.map((skill) => <span key={skill}>{skill}</span>)}
+          <div className="paid-preview-grid">
+            <div className="paid-preview-search">
+              <article className="google-search-ad" aria-label="MERA Google search ad concept">
+                <div className="google-ad-kicker"><strong>{marketing.googleAds.searchAd.label}</strong><span> · {marketing.googleAds.searchAd.url}</span><b>⋮</b></div>
+                <h3>{marketing.googleAds.searchAd.headline}</h3><h4>{marketing.googleAds.searchAd.secondaryHeadline}</h4><p>{marketing.googleAds.searchAd.description}</p>
+              </article>
+              <div className="paid-preview-seo">
+                <span className="eyebrow">SEO keywords</span>
+                <ul className="seo-keywords" aria-label="Priority MERA keywords">{marketing.seo.priorityKeywords.map((item) => <li key={item}>{item}</li>)}</ul>
               </div>
             </div>
-          )}
-        </div>
+            <figure className="meta-ad-mockup paid-preview-meta">
+              <div className="meta-ad-header"><span className="meta-avatar">M</span><span><strong>MERA Sparkling Tea</strong><small>Sponsored · Instagram</small></span><b>•••</b></div>
+              <div className="meta-ad-art"><img src={marketing.meta.creative} alt="MERA sparkling tea social advertisement" /><div className="meta-ad-copy"><span>ZERO-PROOF · FULL NIGHT</span><h3>Stay for the whole night.</h3></div></div>
+            </figure>
+          </div>
+          <div className="mera-instagram-creative">
+            <div className="mera-instagram-creative-head"><span className="eyebrow">More Instagram creative</span><p>Three feed concepts extend the same premium, zero-proof campaign across different social occasions.</p></div>
+            <div className="mera-instagram-grid">
+              {[
+                [meraInstagramGoldenHour, "MERA golden-hour Instagram post with two sparkling tea cans, grapefruit, flowers, and a Vancouver sunset."],
+                [meraInstagramDinnerPairing, "MERA dinner-pairing Instagram post showing sparkling tea poured beside a plated meal."],
+                [meraInstagramNightBright, "MERA late-night Instagram post showing three friends raising sparkling tea cans over a city rooftop."],
+              ].map(([image, alt]) => (
+                <figure className="mera-instagram-post" key={alt}>
+                  <div className="meta-ad-header"><span className="meta-avatar">M</span><span><strong>MERA Sparkling Tea</strong><small>Sponsored · Instagram</small></span><b>•••</b></div>
+                  <img src={image} alt={alt} />
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
       )}
 
       {project.keyConcepts?.length > 0 && (
-        <div className="case-section">
+        <div className="case-section" id="strategy" data-case-section>
           <div className="section-head case-section-head">
             <div>
               <span className="eyebrow">Key concepts</span>
@@ -163,7 +224,7 @@ export default function ProjectPage() {
       )}
 
       {project.metrics?.length > 0 && (
-        <div className="case-section">
+        <div className="case-section" id="results" data-case-section>
           <div className="section-head case-section-head">
             <div>
               <span className="eyebrow">Impact</span>
@@ -182,7 +243,7 @@ export default function ProjectPage() {
       )}
 
       {(project.context || project.challenge || project.outcome) && (
-        <div className="case-study-grid">
+        <div className="case-study-grid" id="context" data-case-section>
           {project.context && (
             <article>
               <p className="case-label">Context</p>
@@ -191,8 +252,14 @@ export default function ProjectPage() {
           )}
           {project.challenge && (
             <article>
-              <p className="case-label">Challenge</p>
+              <p className="case-label">Core problem</p>
               <p>{project.challenge}</p>
+            </article>
+          )}
+          {audience && (
+            <article>
+              <p className="case-label">Target audience</p>
+              <p>{audience.body}</p>
             </article>
           )}
           {project.outcome && (
@@ -224,20 +291,6 @@ export default function ProjectPage() {
         </section>
       )}
 
-      {project.brandIdentity && (project.objective || project.responsibilities?.length > 0 || project.deliverables?.length > 0) && (
-        <div className="brief-deliverables-grid">
-          <article className="brief-deliverable-card">
-            <div><span className="eyebrow">Project brief</span><h2>What I was responsible for.</h2></div>
-            {project.objective && <p className="reflection-copy">{project.objective}</p>}
-            {project.responsibilities?.length > 0 && <ul className="case-list">{project.responsibilities.map((item) => <li key={item}>{item}</li>)}</ul>}
-          </article>
-          <article className="brief-deliverable-card">
-            <div><span className="eyebrow">Deliverables</span><h2>What I produced.</h2></div>
-            {project.deliverables?.length > 0 && <ul className="case-list">{project.deliverables.map((item) => <li key={item}>{item}</li>)}</ul>}
-          </article>
-        </div>
-      )}
-
       {!project.brandIdentity && (project.objective || project.responsibilities?.length > 0) && (
         <div className="case-section case-brief">
           <div><span className="eyebrow">Project brief</span><h2>What I was responsible for.</h2></div>
@@ -247,15 +300,15 @@ export default function ProjectPage() {
         </div>
       )}
 
-      {project.research?.length > 0 && (
-        <div className="case-section">
-          <div className="section-head case-section-head"><div><span className="eyebrow">Research</span><h2>{project.researchTitle || "What the campaign needed to solve."}</h2></div></div>
+      {!project.brandIdentity && project.research?.length > 0 && (
+        <div className="case-section research-discovery-section">
+          <div className="section-head case-section-head"><div><span className="eyebrow">Research &amp; discovery</span><h2>{project.researchTitle || "Evidence that shaped the direction."}</h2></div><p>Documented project insights are separated from assumptions; case studies without formal user testing identify that limitation.</p></div>
           <div className="research-grid">{project.research.map((item) => <article className="concept-card" key={item.title}><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
         </div>
       )}
 
-      {project.designProcess?.length > 0 && (
-        <div className="case-section design-process-section">
+      {!project.brandIdentity && project.designProcess?.length > 0 && (
+        <div className="case-section design-process-section" id="execution" data-case-section>
           <div className="section-head case-section-head"><div><span className="eyebrow">Design process</span><h2>{project.designProcessTitle || "From category insight to launch system."}</h2></div></div>
           <div className={project.brandIdentity ? "process-editorial" : "process-timeline"}>{project.designProcess.map((item) => <article className="process-step" key={item.phase}><span>{item.phase}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
         </div>
@@ -302,8 +355,8 @@ export default function ProjectPage() {
       )}
 
       {project.uxDecisions?.length > 0 && (
-        <div className="case-section">
-          <div className="section-head case-section-head"><div><span className="eyebrow">Channel mix</span><h2>Where the launch budget works hardest.</h2></div></div>
+        <div className="case-section channel-mix-section">
+          <div className="section-head case-section-head"><div><span className="eyebrow">Channel mix</span><h2>Where the launch budget works hardest.</h2></div>{project.brandIdentity && <p>This financial budget is an AI-assisted planning estimate created for the fictional campaign, not recorded client spend.</p>}</div>
           <div className="decision-grid">{project.uxDecisions.map((item) => <article className="decision-card" key={item.title}><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
         </div>
       )}
@@ -364,26 +417,13 @@ export default function ProjectPage() {
           </section>
 
           <section className="case-section marketing-channel-section">
-            <div className="section-head case-section-head">
-              <div><span className="eyebrow">SEO & local discovery</span><h2>Build visibility that compounds beyond paid media.</h2></div>
-              <p>Keyword and competitor research guide the site structure, content priorities, and local-search actions.</p>
-            </div>
-            <div className="seo-keywords" aria-label="Priority MERA keywords">{marketing.seo.priorityKeywords.map((item) => <span key={item}>{item}</span>)}</div>
-            <div className="competitor-lens"><span className="eyebrow">Competitor lens</span><div>{marketing.seo.competitorFindings.map((item) => <article key={item.title}><h3>{item.title}</h3><p>{item.body}</p></article>)}</div></div>
-            <div className="seo-action-grid">{marketing.seo.actions.map((item) => <article key={item.title}><span>↗</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
-            <div className="local-seo-layout">
-              <div className="business-profile-card" aria-label="Google Business Profile optimization concept">
-                <div className="business-profile-cover"><span>MERA</span><small>SPARKLING TEA</small></div>
-                <div><span className="profile-label">Google Business Profile · concept</span><h3>MERA Sparkling Tea</h3><p>Beverage company · Vancouver, BC</p><div className="profile-actions"><span>Website</span><span>Directions</span><span>Order</span></div></div>
-              </div>
-              <article className="local-action-panel"><span className="eyebrow">Local SEO</span><h3>Make every profile visit measurable.</h3><ul className="case-list">{marketing.seo.localActions.map((item) => <li key={item}>{item}</li>)}</ul></article>
-            </div>
+            <div className="competitor-lens"><span className="eyebrow">Real competitors</span><div>{marketing.seo.competitorFindings.map((item) => <article key={item.title}><a href={item.url} target="_blank" rel="noreferrer"><img src={item.image} alt={item.imageAlt} /></a><h3>{item.title}</h3><p>{item.body}</p></article>)}</div></div>
           </section>
 
           <section className="case-section marketing-channel-section">
             <div className="section-head case-section-head">
-              <div><span className="eyebrow">Landing page & CRO</span><h2>Turn campaign attention into action.</h2></div>
-              <p>The paid-media promise continues directly into one focused offer, supported by taste, occasion, and trust.</p>
+              <div><span className="eyebrow">Landing page</span><h2>Turn interest into a purchase.</h2></div>
+              <p>One focused offer makes the next step clear.</p>
             </div>
             <div className="landing-cro-layout">
               <article className="mera-landing-preview">
@@ -391,13 +431,12 @@ export default function ProjectPage() {
                 <div className="landing-preview-copy"><span>{marketing.landingPage.eyebrow}</span><h3>{marketing.landingPage.title}</h3><p>{marketing.landingPage.copy}</p><b>{marketing.landingPage.cta} →</b></div>
                 <div className="landing-proof">{marketing.landingPage.proof.map((item) => <span key={item}>✓ {item}</span>)}</div>
               </article>
-              <article className="cro-plan"><span className="eyebrow">Conversion plan</span><h3>What gets tested.</h3><ol>{marketing.landingPage.decisions.map((item, index) => <li key={item}><span>{String(index + 1).padStart(2, "0")}</span><p>{item}</p></li>)}</ol></article>
             </div>
           </section>
 
-          <section className="case-section marketing-channel-section">
-            <div className="section-head case-section-head">
-              <div><span className="eyebrow">Email marketing</span><h2>A five-message path from interest to reorder.</h2></div>
+          <section className="case-section marketing-channel-section mera-email-section">
+            <div className="section-head case-section-head mera-email-heading">
+              <div><span className="eyebrow">Email marketing</span><h2>From interest to reorder.</h2></div>
               <p>{marketing.email.goal}</p>
             </div>
             <div className="email-flow">{marketing.email.flow.map((item) => <article key={item.step}><span>{item.step}</span><h3>{item.title}</h3><p>{item.body}</p></article>)}</div>
@@ -405,16 +444,14 @@ export default function ProjectPage() {
 
           <section className="case-section marketing-channel-section measurement-section">
             <div className="section-head case-section-head">
-              <div><span className="eyebrow">Measurement framework</span><h2>What would be tracked, and why.</h2></div>
-              <p>A practical measurement plan for a future pilot. No simulated results are presented as campaign performance.</p>
+              <div><span className="eyebrow">Measurement</span><h2>Track what matters.</h2></div>
+              <p>A simple measurement plan for a future pilot.</p>
             </div>
-            <div className="measurement-tools">{marketing.measurement.tools.map((item) => <span key={item}>{item}</span>)}</div>
             <div className="measurement-plan-grid">
               <div className="measurement-table" role="table" aria-label="MERA measurement plan">
                 <div className="measurement-table-head" role="row"><span role="columnheader">Journey stage</span><span role="columnheader">Measures reviewed</span></div>
                 {marketing.measurement.reporting.map((item) => <div role="row" key={item.label}><strong role="cell">{item.label}</strong><span role="cell">{item.value}</span></div>)}
               </div>
-              <article className="measurement-actions"><span className="eyebrow">Review cadence</span><h3>How decisions would be made.</h3><ul className="case-list">{marketing.monthlyReport.actions.map((item) => <li key={item}>{item}</li>)}</ul><div className="event-map"><strong>GA4 events</strong>{marketing.measurement.events.map((item) => <code key={item}>{item}</code>)}</div></article>
             </div>
           </section>
         </div>
@@ -425,7 +462,7 @@ export default function ProjectPage() {
       )}
 
       {project.gallery?.length > 0 && (
-        <div className="case-section">
+        <div className="case-section" id="visuals" data-case-section>
           <div className="section-head case-section-head">
             <div>
               <span className="eyebrow">{project.galleryLabel || "Social media visuals"}</span>
@@ -443,7 +480,7 @@ export default function ProjectPage() {
         </div>
       )}
 
-      {project.approach?.length > 0 && (
+      {!project.brandIdentity && project.approach?.length > 0 && (
         <div className="case-section">
           <div className="section-head case-section-head">
             <div>
@@ -462,7 +499,7 @@ export default function ProjectPage() {
       )}
 
       {project.reflection && (
-        <div className="case-section reflection-section">
+        <div className="case-section reflection-section" id="reflection" data-case-section>
           <div className="section-head case-section-head">
             <div>
               <span className="eyebrow">Reflection</span>
@@ -475,7 +512,9 @@ export default function ProjectPage() {
       )}
 
       {(project.figmaUrl || project.pdfUrl) && (
-        <div className="project-detail-actions">
+        <section className="case-section prototype-section" aria-labelledby={`${project.slug}-prototype-heading`}>
+          <div className="section-head case-section-head"><div><span className="eyebrow">Interactive demo</span><h2 id={`${project.slug}-prototype-heading`}>Explore the final deliverable.</h2></div><p>Open the working prototype or supporting presentation to review the complete flow and interaction details.</p></div>
+          <div className="project-detail-actions">
           {project.figmaUrl && (
             <a
               className="pill-btn"
@@ -496,8 +535,18 @@ export default function ProjectPage() {
               View presentation
             </a>
           )}
-        </div>
+          </div>
+        </section>
       )}
+
+      <nav className="project-pagination" aria-label="Continue exploring case studies">
+        <Link className="project-pagination-link project-pagination-previous" to={`/project/${previousProject.slug}`}>
+          <small>← Previous project</small><strong>{previousProject.title}</strong><span>{previousProject.disciplineLabel}</span>
+        </Link>
+        <Link className="project-pagination-link project-pagination-next" to={`/project/${nextProject.slug}`}>
+          <small>Next project →</small><strong>{nextProject.title}</strong><span>{nextProject.disciplineLabel}</span>
+        </Link>
+      </nav>
     </section>
   );
 }

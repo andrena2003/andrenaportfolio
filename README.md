@@ -1,16 +1,22 @@
-# React + Vite
+# Andrena Yacoub — Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio site for Andrena Yacoub, showcasing marketing strategy, UI/UX design, and content work. Built with React, React Router, and Vite, and deployed at [andrenayacoub.vercel.app](https://andrenayacoub.vercel.app).
 
-Currently, two official plugins are available:
+## Structure
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `src/Pages` — route-level pages (Home, About, Work, Project detail, Contact, 404)
+- `src/components` — shared layout and page-meta (SEO/OG tag) components
+- `src/data.jsx` — all project and site content in one place
+- `src/assets` — images (WebP), optimized for fast loading
+- `public` — static files served as-is (favicon, resume PDF, social share images)
+- `scripts/generate-social-pages.mjs` — post-build step that generates per-route static HTML with correct social meta tags
 
-## React Compiler
+## Development
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+```bash
+npm install
+npm run dev      # start local dev server
+npm run build     # production build
+npm run preview   # preview the production build locally
+npm run lint       # run ESLint
+```

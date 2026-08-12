@@ -6,6 +6,9 @@ import tastebudsInstagramTopPerformers from "./assets/tastebuds-instagram-top-pe
 import tastebudsTiktokTopPerformers from "./assets/tastebuds-tiktok-top-performers.png";
 import tastebudsWebsiteOverview from "./assets/tastebuds-website-overview.png";
 import tastebudsOpenGraphPreview from "./assets/tastebuds-open-graph-preview.png";
+import competitorTost from "./assets/competitor-tost.png";
+import competitorSaicho from "./assets/competitor-saicho.jpg";
+import competitorWildfolk from "./assets/competitor-wildfolk.jpg";
 import meraCampaignHero from "./assets/mera-campaign-hero.png";
 import meraMetaAdArt from "./assets/mera-meta-ad-art.png";
 import meraLogoSketches from "./assets/mera-logo-sketches.png";
@@ -27,7 +30,7 @@ import hairByAthraaProjectCard from "./assets/hair-by-athraa-project-card-v2.png
 import fitarrayProjectCard from "./assets/fitarray-project-card-v2.png";
 
 export const site = {
-  email: "ayacoub@gmail.com",
+  email: "andrena.yacoub@gmail.com",
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
@@ -42,11 +45,11 @@ export const projects = [
     disciplineLabel: "Marketing / Brand Strategy",
     type: "Integrated marketing campaign",
     summary:
-      "A full-funnel marketing case study for launching a premium sparkling tea through positioning, creative, paid media, SEO, CRO, and measurement.",
+      "A 90-day launch campaign for a premium zero-proof sparkling tea.",
     projectNote:
-      "MERA is a fictional brand. This is a self-directed portfolio project created to demonstrate full-funnel campaign planning skills—it is not a real client, product, or company. All budgets, targets, and results shown are concept goals, not actual performance data.",
+      "MERA is a fictional brand created for this portfolio. Budgets and targets are planning estimates, not real results.",
     projectIntro:
-      "This self-directed portfolio concept demonstrates full-funnel campaign planning—from positioning and creative through paid media, SEO, CRO, and measurement—in one connected system.",
+      "This concept connects brand strategy, advertising, SEO, email, and measurement in one launch plan.",
     tools: ["Google Ads", "Meta Ads Manager", "Google Analytics 4", "Google Search Console", "Looker Studio", "Google Business Profile"],
     skillsDemonstrated: ["Paid media strategy", "SEO & local search", "Landing-page CRO", "Email marketing", "Brand positioning", "Campaign measurement & reporting"],
     image: meraCampaignHero,
@@ -60,7 +63,7 @@ export const projects = [
     brandIdentity: {
       name: "MERA",
       tagline: "Stay for the whole night.",
-      description: "A tall editorial wordmark gives the brand a confident premium presence. Plum grounds the system, while coral and peach bring energy and make the product feel social, bright, and modern.",
+      description: "An editorial wordmark feels premium, while plum, coral, and peach keep the brand warm and social.",
       colors: [
         { name: "Night Plum", value: "#3B1026" },
         { name: "MERA Coral", value: "#E64D45" },
@@ -85,22 +88,21 @@ export const projects = [
     role: "Marketing strategist & creative lead",
     timeline: "90-day campaign plan",
     context:
-      "MERA is a fictional zero-proof sparkling tea made for socially active, wellness-minded adults who want an elevated alternative to alcohol and overly sweet soft drinks.",
+      "MERA is a fictional zero-proof sparkling tea for adults seeking a premium alternative to alcohol.",
     challenge:
-      "Enter a crowded beverage category without competing on wellness claims alone, then turn a new name into something people can recognize, sample, and confidently bring to a social occasion.",
+      "Stand out in a crowded category and make MERA a recognizable choice for social occasions.",
     objective:
-      "Build awareness and trial in Metro Vancouver among adults aged 22–35, establish MERA as the drink for a clearer kind of socializing, and create a repeatable path from discovery to first purchase.",
+      "Build awareness and trial among Metro Vancouver adults aged 22–35, then guide them toward a first purchase.",
     responsibilities: [
-      "Planned Google Search and Meta campaigns across prospecting, retargeting, creative testing, and weekly optimization.",
-      "Developed SEO, local-search, Google Business Profile, keyword, and competitor-research recommendations.",
-      "Designed a conversion-focused landing page, email nurture flow, analytics event plan, and monthly ROI report.",
-      "Connected campaign findings to practical recommendations for ownership and the next phase of business growth.",
+      "Planned the Google Search and Meta campaigns.",
+      "Created the SEO, landing-page, and email strategy.",
+      "Defined the campaign budget, goals, and measurement plan.",
     ],
     keyConcepts: [
-      { title: "Audience", body: "Metro Vancouver adults aged 22–35 who care about taste and social ritual, but are increasingly choosing low- or no-alcohol options." },
-      { title: "Positioning", body: "Not a drink for opting out—a bright, premium choice for staying present. MERA owns the space between functional wellness drinks and celebration beverages." },
-      { title: "Big idea", body: "Stay for the whole night. The campaign reframes clarity as confidence, connection, and more of the moments people came for." },
-      { title: "Offer", body: "A low-friction discovery bundle with three flavours, a first-order incentive, and a retail sampling calendar promoted by local creators." },
+      { title: "Audience", body: "Metro Vancouver adults aged 22–35 who want flavourful low- or no-alcohol options." },
+      { title: "Positioning", body: "A premium social drink for staying present—not opting out." },
+      { title: "Big idea", body: "Stay for the whole night. Clarity becomes confidence and connection." },
+      { title: "Offer", body: "A three-flavour discovery pack supported by local creators and tastings." },
     ],
     research: [
       { title: "The occasion matters", body: "The strongest entry point is not a long ingredient story. It is a recognizable social moment: dinner, a picnic, an after-work gathering, or a night out." },
@@ -109,15 +111,15 @@ export const projects = [
     ],
     iteration: {
       label: "Rejected direction",
-      title: "From functional wellness to a social promise.",
+      title: "From wellness to connection.",
       beforeLabel: "Early direction · Wellness first",
       before:
-        "The first concept led with functional benefits: no sugar crash, botanical ingredients, and a healthier night out. It was informative, but it flattened MERA into a category already crowded with kombucha and adaptogen drinks and made the voice feel clinical.",
+        "The first concept focused on health benefits, making MERA feel clinical and similar to other wellness drinks.",
       afterLabel: "Selected direction · Social occasion",
       after:
-        "The shift to “Stay for the whole night” moved the promise from what is missing from the can to what the drink helps people do: stay sharp, stay present, and keep connecting.",
+        "“Stay for the whole night” shifted the focus to staying present and connected.",
       takeaway:
-        "That reframing gave the brand an ownable role and became the reason behind the coral-and-plum visual system, occasion-led creative, and sampling-first launch plan.",
+        "The new direction shaped the visual identity, social creative, and sampling-led launch.",
     },
     designProcess: [
       { phase: "01 · Diagnose", title: "Map the category", body: "Compared sparkling water, functional drinks, and zero-proof beverages to find an ownable role based on social confidence rather than restriction." },
@@ -127,10 +129,10 @@ export const projects = [
     ],
     metricsTitle: "Success measures for the 90-day launch.",
     metrics: [
-      "Reach 250K qualified local impressions with a 1.5%+ paid-social click-through rate.",
-      "Distribute 3,000 samples and convert at least 12% into email sign-ups or first purchases.",
-      "Achieve 1,000 discovery-bundle orders at a customer-acquisition cost below $24.",
-      "Build a creator asset library with 30 usable videos and identify three repeatable winning hooks.",
+      "Reach 250K local impressions and a 1.5%+ social click-through rate.",
+      "Distribute 3,000 samples and convert 12% into sign-ups or purchases.",
+      "Sell 1,000 discovery packs at an acquisition cost below $24.",
+      "Create 30 reusable videos and identify three winning messages.",
     ],
     approach: [
       "Phase 1 — Spark curiosity: short sensory teasers, flavour reveals, creator seeding, and a waitlist landing page.",
@@ -138,10 +140,10 @@ export const projects = [
       "Phase 3 — Turn trial into habit: retargeting, serving-ritual content, customer reactions, email replenishment, and referral rewards.",
     ],
     uxDecisions: [
-      { title: "Google Search · 25%", body: "Capture high-intent searches for sparkling tea, zero-proof drinks, and alcohol alternatives in Metro Vancouver." },
-      { title: "Meta advertising · 35%", body: "Use Reels, Stories, Feed, and retargeting to test lifestyle, taste, and occasion-led creative." },
-      { title: "Creators & sampling · 25%", body: "Turn local tastings and micro-creator reactions into credible content and reusable ad assets." },
-      { title: "SEO, email & CRO · 15%", body: "Build long-term discovery and improve conversion through landing-page tests, local search, and nurture flows." },
+      { title: "Google Search · 25%", body: "Reach local people actively searching for zero-proof drinks." },
+      { title: "Meta ads · 35%", body: "Test lifestyle, flavour, and occasion-based creative." },
+      { title: "Creators & sampling · 25%", body: "Use local tastings and creator reactions to build trust." },
+      { title: "SEO, email & CRO · 15%", body: "Grow discovery and improve conversion over time." },
     ],
     marketingExecution: {
       googleAds: {
@@ -193,21 +195,21 @@ export const projects = [
           "premium non-alcoholic beverages",
         ],
         competitorFindings: [
-          { title: "Premium zero-proof brands", body: "Strong storytelling and packaging, but often broad and non-local. MERA can win with Vancouver-specific discovery and occasion content." },
-          { title: "Functional beverages", body: "Benefits are easy to understand, but the social ritual is weaker. MERA should lead with the occasion and support it with product proof." },
-          { title: "Sparkling water", body: "High familiarity and distribution, but lower perceived celebration value. MERA can own a more elevated dinner-and-night-out position." },
+          { title: "TÖST", body: "A polished sparkling white tea positioned as an alcohol-free celebration drink. MERA can feel younger, more colourful, and more locally focused.", image: competitorTost, imageAlt: "Bottle of TÖST non-alcoholic sparkling white tea.", url: "https://tostbeverages.com/products/tost-750ml" },
+          { title: "Saicho", body: "A premium single-origin sparkling tea built around dining and craftsmanship. MERA can offer a more casual, social option in a portable can.", image: competitorSaicho, imageAlt: "Saicho sparkling tea bottles served at a dinner table.", url: "https://www.saichodrinks.com/" },
+          { title: "Wild Folk", body: "A Canadian botanical zero-proof cocktail brand with strong flavour storytelling. MERA can stand apart through tea, Vancouver occasions, and lighter refreshment.", image: competitorWildfolk, imageAlt: "Wild Folk non-alcoholic cocktail can beside a filled coupe glass.", url: "https://drinkwildfolk.com/" },
         ],
         actions: [
-          { title: "Technical foundation", body: "Improve Core Web Vitals, mobile speed, indexability, image alt text, structured data, sitemap coverage, and broken links." },
-          { title: "On-page SEO", body: "Create one clear keyword target per page, rewrite titles and descriptions, strengthen internal links, and add product and FAQ schema." },
-          { title: "Content growth", body: "Publish occasion-led content around dinner pairings, sober-curious hosting, botanical ingredients, and Vancouver zero-proof guides." },
-          { title: "Authority building", body: "Earn relevant links and mentions through local restaurants, markets, wellness partners, creators, and beverage publications." },
+          { title: "Technical SEO", body: "Improve mobile speed, indexing, alt text, structured data, and broken links." },
+          { title: "On-page SEO", body: "Give each page one keyword focus, clearer titles, and stronger internal links." },
+          { title: "Content", body: "Publish useful guides about pairings, hosting, ingredients, and Vancouver options." },
+          { title: "Authority", body: "Earn local links and mentions through partners, creators, and publications." },
         ],
         localActions: [
-          "Complete the Google Business Profile with the correct category, service area, hours, products, and order link.",
-          "Publish weekly product or event updates and upload consistent, high-quality local photography.",
-          "Request reviews after purchase or sampling, respond to every review, and monitor common customer language.",
-          "Add UTM-tagged website links so profile visits, calls, directions, and orders can be measured in GA4.",
+          "Complete the profile with accurate business details and order links.",
+          "Post weekly product updates, events, and local photography.",
+          "Request and respond to customer reviews.",
+          "Use tracked links to measure visits, calls, directions, and orders.",
         ],
       },
       landingPage: {
@@ -234,7 +236,7 @@ export const projects = [
         ],
       },
       email: {
-        goal: "Turn first interest into trial, then turn trial into a repeat social ritual.",
+        goal: "Turn interest into a first purchase, then encourage a reorder.",
         flow: [
           { step: "01", title: "Welcome", body: "Deliver the first-order offer and introduce MERA’s zero-proof positioning." },
           { step: "02", title: "Find your flavour", body: "Match each flavour to a mood, meal, and serving ritual." },
@@ -251,27 +253,25 @@ export const projects = [
           { value: "≤ $24", label: "Customer acquisition target" },
         ],
         actions: [
-          "Scale the highest-converting audience and creative combination by 15–20% at a time.",
-          "Pause keywords and ads that spend without producing qualified actions.",
-          "Turn winning search queries into SEO pages and email topics.",
-          "Share a concise monthly report with ownership: results, insights, risks, and next actions.",
+          "Increase spend on the best audience and creative by 15–20% at a time.",
+          "Pause keywords and ads that do not produce meaningful actions.",
+          "Turn strong search queries into web and email content.",
+          "Share a short monthly report with results and next actions.",
         ],
       },
     },
     deliverables: [
-      "Google Search campaign structure, ad copy, keyword groups, negatives, budget, and optimization plan",
-      "Meta campaign plan, audience structure, placements, creative concepts, retargeting, and A/B tests",
-      "SEO audit priorities, keyword map, competitor research, content plan, and local-search roadmap",
-      "Google Business Profile optimization and ongoing post, review, photo, and UTM-tracking plan",
-      "High-converting landing-page concept, email nurture flow, and conversion-rate testing roadmap",
-      "GA4 event map, Search Console and Meta reporting framework, ROI dashboard, and monthly recommendations",
+      "Google Search and Meta campaign concepts",
+      "SEO keyword and competitor research",
+      "Landing-page and email concepts",
+      "Budget, goals, and measurement framework",
     ],
     outcome:
-      "The finished concept connects strategy and execution in one launch system: a clear market position, a recognizable creative platform, a channel-specific content plan, and targets that make the work accountable. Because MERA is a portfolio concept, all results shown are campaign goals rather than claimed performance.",
+      "The final concept combines clear positioning, campaign creative, channel plans, and measurable goals. All results are targets, not actual performance.",
     reflection:
-      "This project strengthened my ability to connect brand thinking with measurable action. The most important choice was narrowing the idea: instead of listing product benefits, the campaign owns one social truth and lets every channel prove it differently. With a live product, I would validate taste language through interviews, test the discovery offer with a small paid pilot, and update the forecast using actual conversion and repeat-purchase data.",
+      "This project strengthened my ability to connect brand strategy with measurable action. Focusing on one social promise gave every channel a clearer role.",
     nextStep:
-      "Run a $500 real-world paid pilot on Meta and Google Search to validate CTR and CVR assumptions, then rebuild the forecast using actual conversion and repeat-purchase data. With a live product, I would also validate taste language through customer interviews and update targets using real conversion and repeat-purchase data.",
+      "Run a $500 Meta and Google Search pilot, then refine the campaign using real customer and conversion data.",
     process: [
       "Found an ownable position in the zero-proof beverage category.",
       "Built a 90-day integrated launch plan around awareness, trial, and repeat purchase.",
@@ -286,7 +286,7 @@ export const projects = [
     disciplineLabel: "UI/UX + Digital Marketing",
     type: "Website redesign & growth strategy",
     summary:
-      "An end-to-end automotive website concept and digital growth plan that connects vehicle discovery, comparison, configuration, dealer leads, SEO, paid acquisition, and conversion measurement.",
+      "An automotive website redesign and growth plan connecting vehicle discovery, configuration, dealer leads, and measurable acquisition.",
     tools: ["Figma", "UX strategy", "SEO", "Paid acquisition", "CRO", "GA4 measurement"],
     figmaUrl: "https://www.figma.com/design/FpBadHeu1QwzbAqgL0npOg/Mitsubishi-Motors-%E2%80%94-Website-Redesign-UX-Case-Study?node-id=17-2&t=8T44F1nmuyvRtfIn-1",
     figmaLabel: "Open full Figma case study",
@@ -403,22 +403,59 @@ export const projects = [
     cardImageAlt: "TasteBuds Vancouver branding and social campaign presented across two phone mockups.",
     discipline: "social",
     disciplineLabel: "Content / Social",
-    type: "Social media networking project",
+    type: "Social media brand launch — Instagram, TikTok & website",
     summary:
-      "A seven-week local foodie campaign created for Instagram, TikTok, and the web. I led content planning and management, and contributed to content creation and videography.",
-    tools: ["Content planning", "Branding", "Social media", "Videography", "Analytics"],
+      "A Vancouver foodie brand built from zero across Instagram, TikTok, and a custom website through authentic local content and performance-led iteration.",
+    projectIntro:
+      "As Content Manager, I led content planning and creation alongside a four-person team working across design, videography, and web development.",
+    tools: ["Meta Business Suite", "CapCut", "Final Cut Pro", "Custom website"],
+    skillsDemonstrated: ["Content strategy", "Social analytics", "Brand voice", "Short-form video", "Team coordination", "SEO & Open Graph"],
+    brandShowcase: {
+      title: "A bright, friendly identity made for local discovery.",
+      description: "The smiling wordmark and high-energy yellow palette gave TasteBuds an approachable presence across social posts and the website. Black added clarity and contrast, while cream softened the system so recommendations felt personal rather than promotional.",
+      image: tastebudsBrandingSystem,
+      imageAlt: "TasteBuds Vancouver identity system showing the smiling wordmark, logo mark, typography, and yellow, black, and cream palette.",
+      caption: "TasteBuds identity system · Wordmark, logo mark, typography, and core colours.",
+      colors: [
+        { name: "TasteBuds Yellow", value: "#E6E93A" },
+        { name: "Foodie Black", value: "#111111" },
+        { name: "Warm Cream", value: "#F5F0E5" },
+      ],
+      voiceTitle: "More like a friend’s recommendation than an ad.",
+      voiceDescription: "The visual system stayed consistent, but the writing and video style remained direct, useful, and locally grounded. That balance made the brand recognizable without losing the authenticity that helped the content travel.",
+      principles: [
+        { title: "Local first", body: "Every story began with a real Vancouver restaurant visit, neighbourhood, and location tag." },
+        { title: "Useful hooks", body: "Hidden-gem language gave viewers an emotional reason to stop, save, and share." },
+        { title: "One connected brand", body: "Templates, captions, short videos, and web stories carried the same friendly point of view." },
+      ],
+    },
     figmaUrl: "https://www.figma.com/design/U8rc8P7KkgRX33MPUxoQ7T/Social-media-net-work-Group-work?node-id=0-1&t=EugayvlaFyPthzNz-1",
     pdfUrl: "/files/tastebuds-final-presentation.pdf",
-    role: "Content manager, content planner, content creator, videographer",
-    timeline: "7-week term project",
+    role: "Content Manager & Strategist",
+    team: "Esme Chan · Andrena Yacoub · Bryan Vo · Taka Kondo",
+    timeline: "7 weeks · Oct 13–Nov 30",
     context:
-      "An authentic Vancouver food brand for local residents and food lovers aged 18-35.",
+      "TasteBuds is a Vancouver foodie brand created from the ground up to explore neighbourhood restaurants and local food culture through firsthand visits, original content, and a connected website.",
     challenge:
-      "Build a recognizable identity and reach local viewers beyond our existing followers.",
+      "Enter a crowded category dominated by established Vancouver foodie accounts with 100K+ audiences, then earn attention without paid reach, reposted material, or stock content.",
+    objective:
+      "Build a recognizable local voice that could compete through consistent execution, honest recommendations, and useful multi-platform content rather than aesthetic food photography alone.",
+    responsibilities: [
+      "Led the seven-week content calendar, publishing cadence, and platform strategy across Instagram, TikTok, and the website.",
+      "Created and edited original restaurant content from on-site mobile photography and videography.",
+      "Reviewed performance data, tested posting windows, and shifted the plan toward discovery-led formats that earned stronger reach and interaction.",
+      "Coordinated a four-person team working across content, design, videography, and web development.",
+    ],
+    deliverables: [
+      "Friendly yellow-and-black brand system and reusable social templates",
+      "28 Instagram posts and 16 TikTok videos over seven weeks",
+      "Categorized food website with comments, SEO, and Open Graph sharing",
+      "Performance review connecting platform data to content decisions",
+    ],
     approach: [
-      "Planned four weekly posts: two short videos and two blog-style stories.",
-      "Captured restaurant visits on mobile and turned them into Reels, TikToks, and web stories.",
-      "Scheduled Instagram in Meta Business Suite and posted TikToks at tested peak times.",
+      "Published four posts each week: two short-form restaurant or food-meme videos and two blog-style food-news or fact posts.",
+      "Tested publishing windows for three weeks, then prioritized approximately 7 PM on weekdays and 12 PM on weekends when the data showed stronger response.",
+      "Used firsthand restaurant visits, location tags, collaboration invitations, and clear calls to action to strengthen local discovery and interaction.",
     ],
     iteration: {
       label: "Campaign pivot",
@@ -433,30 +470,46 @@ export const projects = [
         "The Border Burrito invitation was not treated as a lucky outcome; it followed a deliberate shift toward formats that made local discovery feel more personal and shareable.",
     },
     outcome:
-      "The campaign reached thousands of local viewers and led to a collaboration invitation from Border Burrito.",
+      "TasteBuds generated 42.5K total platform views during the seven-week launch, reached the intended Gen Z and young-millennial audience, and prompted an unsolicited restaurant collaboration invitation.",
+    keyConceptsTitle: "A local brand designed for discovery and trust.",
     keyConcepts: [
       {
         title: "Audience",
-        body: "Vancouver students, young professionals, and food enthusiasts aged 18-35.",
+        body: "Vancouver residents aged 18–35—students, young professionals, and food enthusiasts looking for honest perspectives, accessible food news, and useful places to save and share.",
       },
       {
-        title: "Content Plan",
-        body: "Two short videos and two blog-style posts each week for seven weeks.",
+        title: "Brand voice",
+        body: "A smiling wordmark, bright yellow-and-black palette, and a tone closer to a food-loving friend than a polished or sponsored food publication.",
       },
       {
-        title: "Platform Strategy",
-        body: "TikTok drove discovery; Instagram supported branding, shares, and community.",
+        title: "Content system",
+        body: "Four original posts each week connected restaurant tours, food memes, fun facts, and local news across short video, social posts, and longer website stories.",
       },
       {
-        title: "Publishing",
-        body: "Lunch and after-work posting windows produced the strongest response.",
+        title: "Authenticity",
+        body: "Every restaurant visit, image, video, and article was created firsthand. Honest local recommendations became the foundation of the brand’s credibility.",
       },
     ],
+    researchTitle: "The competitive gap behind the strategy.",
+    research: [
+      { title: "A crowded category", body: "Established Vancouver food accounts already owned high-quality, high-frequency content and audiences above 100K, so visual polish alone would not create a reason to follow." },
+      { title: "Authenticity was underused", body: "Competitor content often emphasized aesthetic curation. TasteBuds could differentiate through honest visits, accessible recommendations, and a voice that felt personal instead of promotional." },
+      { title: "Multi-platform continuity", body: "Few competitors connected short-form discovery to a categorized website and blog. Linking TikTok, Instagram, and web content created a more complete local resource." },
+    ],
+    designProcessTitle: "Three channels, each with a distinct job.",
+    designProcess: [
+      { phase: "01 · Instagram", title: "Build recognition and shareability", body: "Used consistent carousels, Reels, and Stories, tagged local accounts, invited restaurants to collaborate, and designed content people could save or share when planning where to eat." },
+      { phase: "02 · TikTok", title: "Drive organic discovery", body: "Created raw, hook-led short videos around hidden gems and local discovery, pairing emotional framing with location tags to reach viewers beyond the existing audience." },
+      { phase: "03 · Website", title: "Extend discovery into a useful resource", body: "Published categorized restaurant stories across cafes, desserts, street food, sushi, and more, with comments, SEO, and Open Graph previews supporting search and sharing." },
+      { phase: "04 · Optimize", title: "Let performance reshape the plan", body: "Reviewed format, timing, reach, and non-follower behavior, then invested more effort in humorous and hidden-gem content once those patterns consistently outperformed." },
+    ],
     metrics: [
-      "16.5K Instagram views and 7.8K accounts reached.",
-      "1.1K Instagram interactions across 28 posts.",
-      "26K TikTok views, 22K reach, and 944 likes.",
-      "Collaboration invitation from Border Burrito.",
+      "Instagram grew from zero to 16.5K views, reaching 7.8K users—74% of them non-followers.",
+      "Instagram produced 1.1K interactions and 455 profile visits across 28 posts.",
+      "TikTok grew from zero to 26K views, 944 likes, and 264 profile visits across 16 posts.",
+      "86% of TikTok viewers were new, with 78% of traffic coming from the For You page.",
+      "83% of viewers matched the intended Gen Z and young-millennial audience.",
+      "An unsolicited restaurant collaboration invitation created a real-world signal beyond vanity metrics.",
     ],
     gallery: [
       {
@@ -491,7 +544,9 @@ export const projects = [
       },
     ],
     reflection:
-      "Short videos with local, emotional hooks performed best. Next time, I would post more consistently, visit more neighborhoods, and add more personal storytelling.",
+      "This project was as much a lesson in operational rigor as content strategy. Running two platforms and a website with daily interaction requirements taught me how to sequence a small team’s time against a demanding calendar, avoid burnout, and use platform-specific evidence to make real-time decisions. TikTok became the discovery engine, while Instagram built the more recognizable, save-worthy brand presence.",
+    nextStep:
+      "Build the restaurant-partnership pipeline that opened organically, formalize a recurring hidden-gem series around the strongest content pattern, and test paid boosting behind proven organic posts.",
     process: [
       "Built the campaign direction with the team.",
       "Planned content across Instagram, TikTok, and web.",
@@ -505,7 +560,7 @@ export const projects = [
     disciplineLabel: "UI/UX Case Study",
     type: "UI/UX Strategy case study",
     summary:
-      "A salon booking experience focused on clarity, confidence, and elegant mobile UI.",
+      "A clear, elegant mobile booking experience that helps salon clients choose services and schedule with confidence.",
     tools: ["Figma", "Mobile UI", "Service design", "User flows"],
     figmaUrl: "https://www.figma.com/design/QN3SMXzMllgkNYZtsZbN52/UI---UX-Strategy-1---Term-Project--Done-?node-id=0-1&t=kuYJzHssiU0DArAq-1",
     image: hairByAthraaCaseStudy,
@@ -632,7 +687,7 @@ export const projects = [
     disciplineLabel: "UI/UX Case Study",
     type: "Interactive Figma prototype",
     summary:
-      "A mobile fitness experience that helps users discover exercises, build workouts, follow active sessions, and understand their progress in one focused app.",
+      "A focused mobile fitness app for discovering exercises, building workouts, following sessions, and tracking progress.",
     tools: ["Figma", "Interactive prototyping", "Mobile UI", "User flows", "Information architecture"],
     figmaUrl: "https://www.figma.com/design/EJUoY1Vu8sDPIRqRgXewcI/fitness-app--Protype-?node-id=124-1037&t=38IHLCmxR2maeFit-1",
     figmaLabel: "Open interactive prototype",

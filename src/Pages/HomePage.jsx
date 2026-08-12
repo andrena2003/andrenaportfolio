@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import { projects, site } from "../data";
 import SlotText from "../SlotText";
-import hairByAthraaLogo from "../assets/hair-by-athraa-logo.png";
-import tastebudsLogo from "../assets/tastebuds-logo.png";
-import fitarrayLogo from "../assets/fitarray-logo-hd.png";
+import hairByAthraaLogo from "../assets/hair-by-athraa-logo.webp";
+import tastebudsLogo from "../assets/tastebuds-logo.webp";
+import fitarrayLogo from "../assets/fitarray-logo-hd.webp";
 
 export default function HomePage() {
   const featuredProjects = [
@@ -31,9 +31,9 @@ export default function HomePage() {
             <p className="hero-description">{site.intro}</p>
 
             <div className="studio-meta" aria-label="Focus areas">
-              <span>Marketing & brand</span>
+              <span>Marketing &amp; brand</span>
               <span>UI/UX design</span>
-              <span>Content & social</span>
+              <span>Content &amp; social</span>
             </div>
 
             <div className="intro-row" aria-label="Contact links">
@@ -41,35 +41,21 @@ export default function HomePage() {
                 <span className="contact-link-icon" aria-hidden="true">@</span>
                 <span>{site.email}</span>
               </a>
-              <a
-                className="contact-link"
-                href={site.linkedin}
-                target="_blank"
-                rel="noreferrer"
-              >
+              <a className="contact-link" href={site.linkedin} target="_blank" rel="noreferrer">
                 <span className="contact-link-icon" aria-hidden="true">in</span>
                 <span>{site.linkedinUsername}</span>
               </a>
             </div>
 
             <div className="cta-row">
-              <Link to="/work" className="pill-btn">
-                Discover My Work →
-              </Link>
-              <Link to="/contact" className="text-cta">
-                Start a conversation
-              </Link>
+              <Link to="/work" className="pill-btn">Discover My Work →</Link>
+              <Link to="/contact" className="text-cta">Start a conversation</Link>
             </div>
           </div>
 
           <div className="project-widget-grid" aria-label="Featured projects">
             {featuredProjects.map((project, index) => (
-              <Link
-                className={`project-widget project-widget-${index + 1} project-widget-${project.slug}`}
-                to={`/project/${project.slug}`}
-                key={project.slug}
-                aria-label={`${project.title} — ${project.disciplineLabel}`}
-              >
+              <Link className={`project-widget project-widget-${index + 1} project-widget-${project.slug}`} to={`/project/${project.slug}`} key={project.slug} aria-label={`${project.title} — ${project.disciplineLabel}`}>
                 <span className="widget-project-discipline">{project.disciplineLabel}</span>
                 <span className="widget-project-mark" aria-hidden="true">
                   {project.slug === "mera-sparkling-tea-launch" && <><strong>MERA</strong><small>sparkling tea</small></>}
@@ -85,12 +71,8 @@ export default function HomePage() {
       </section>
 
       <section className="section container studio-strip" aria-label="Studio approach">
-        <p>Research-led</p>
-        <p>Detail-oriented</p>
-        <p>Responsive</p>
-        <p>Portfolio-ready</p>
+        <p>Research-led</p><p>Detail-oriented</p><p>Responsive</p><p>Portfolio-ready</p>
       </section>
-
     </>
   );
 }

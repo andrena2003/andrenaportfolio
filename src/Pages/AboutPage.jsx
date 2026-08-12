@@ -1,5 +1,5 @@
 import andrenaProfile from "../assets/andrena-profile.jpg";
-import { skillGroups } from "../data";
+import { site, skillGroups } from "../data";
 
 export default function AboutPage() {
   const resumeUrl = `${import.meta.env.BASE_URL}files/andrena-yacoub-resume.pdf`;
@@ -16,11 +16,25 @@ export default function AboutPage() {
             the content that earns their attention. That perspective lets me move
             between marketing, UI/UX, and social without losing the larger goal.
           </p>
+          <p className="about-philosophy">My approach is human-centred, accessible, and evidence-led: understand the real need, make the path easier to follow, then test whether the solution works.</p>
         </div>
         <figure className="about-portrait">
           <img src={andrenaProfile} alt="Portrait of Andrena Yacoub" />
         </figure>
       </div>
+
+      <section className="about-process" aria-labelledby="about-process-heading">
+        <div className="section-head case-section-head">
+          <div><span className="eyebrow">My process</span><h2 id="about-process-heading">From uncertainty to a clear, testable direction.</h2></div>
+          <p>The exact methods change with the project, but the work follows one practical rhythm.</p>
+        </div>
+        <ol className="about-process-grid">
+          <li><span>01</span><h3>Discover</h3><p>Frame the problem through stakeholder context, user research, competitive review, and existing evidence.</p></li>
+          <li><span>02</span><h3>Define</h3><p>Synthesize patterns into priorities, user needs, information architecture, and a focused success measure.</p></li>
+          <li><span>03</span><h3>Design</h3><p>Explore flows and wireframes, then build a consistent high-fidelity system and interactive prototype.</p></li>
+          <li><span>04</span><h3>Validate</h3><p>Test key tasks, refine the details, document decisions, and identify the strongest next iteration.</p></li>
+        </ol>
+      </section>
 
       <div className="about-layout about-story-layout">
         <article className="story-card about-story-card">
@@ -103,6 +117,20 @@ export default function AboutPage() {
           </p>
         </div>
       </div>
+
+      <section className="about-personal-contact">
+        <article>
+          <span className="eyebrow">Beyond the screen</span>
+          <h2>Curious about culture, food, and the details people remember.</h2>
+          <p>I enjoy exploring local places, visual storytelling, and small creative projects. Those interests keep me observant and often become useful references for brand, content, and experience design.</p>
+        </article>
+        <aside>
+          <span className="eyebrow">Let’s connect</span>
+          <h3>Open to opportunities and thoughtful collaborations.</h3>
+          <a href={`mailto:${site.email}`}>{site.email} ↗</a>
+          <a href={site.linkedin} target="_blank" rel="noreferrer">LinkedIn ↗</a>
+        </aside>
+      </section>
     </section>
   );
 }

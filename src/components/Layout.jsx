@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { NavLink, Outlet } from "react-router-dom";
-import logoDark from "../assets/logo-dark.png";
-import logoWhite from "../assets/logo-white.png";
+import { NavLink, Outlet, useLocation } from "react-router-dom";
+import logoDark from "../assets/logo-dark.webp";
+import logoWhite from "../assets/logo-white.webp";
 import { site } from "../data";
 import PageMeta from "./PageMeta";
 
 export default function Layout() {
+  const { pathname } = useLocation();
   const [theme, setTheme] = useState(() => {
     const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
     const savedTheme = localStorage.getItem("theme");
@@ -15,6 +16,10 @@ export default function Layout() {
   useEffect(() => {
     document.documentElement.setAttribute("data-theme", theme);
   }, [theme]);
+
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: "auto" });
+  }, [pathname]);
 
   const toggleTheme = () => {
     const nextTheme = theme === "dark" ? "light" : "dark";
@@ -83,7 +88,7 @@ export default function Layout() {
           <p>Located in Vancouver, BC</p>
           <div className="footer-links">
             <NavLink to="/contact">Contact</NavLink>
-            <a href="mailto:ayacoub@gmail.com">ayacoub@gmail.com</a>
+            <a href={`mailto:${site.email}`}>{site.email}</a>
             <a href={site.linkedin} target="_blank" rel="noreferrer">
               LinkedIn
             </a>
