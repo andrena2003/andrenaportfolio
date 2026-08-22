@@ -132,17 +132,18 @@ const allProjects = [
       title: "Ditch the 3 PM Coffee Crash.",
       eyebrow: "10-second vertical ad",
       description:
-        "A fast problem-to-solution concept designed to stop the scroll, position MERA as the energizing alternative, and convert attention into a starter-bundle offer.",
+        "A polished problem-to-solution edit built with authentic vertical footage, restrained motion, and MERA’s campaign imagery to move from afternoon fatigue to a clear product offer.",
       video: "/videos/mera-pattern-interrupt.mp4",
       poster: "/videos/mera-pattern-interrupt-poster.jpg",
+      caption: "Concept edit · Licensed real-world footage + MERA brand art direction · 9:16 · 10 seconds",
       phases: [
-        { time: "0.0–1.5s", title: "The hook", body: "A desaturated office slump is interrupted by sharp kinetic type and a high-contrast shift into MERA’s campaign palette." },
-        { time: "1.5–4.0s", title: "Product reveal", body: "The three-flavour lineup becomes the hero, supported by floating botanicals, warm light, and a direct brand introduction." },
-        { time: "4.0–7.0s", title: "Value proposition", body: "Three benefit callouts land in quick, scannable beats: real organic tea, zero sugar and calories, and sustained natural focus." },
-        { time: "7.0–10.0s", title: "Conversion CTA", body: "A clean end card presents the starter-bundle offer, then fades back to the opening scene for a seamless social loop." },
+        { time: "0.0–1.8s", title: "The hook", body: "Real office footage establishes the afternoon slump before clean kinetic type lands the coffee-crash problem." },
+        { time: "1.8–3.6s", title: "Product reveal", body: "A fast colour hit shifts into MERA’s three-flavour lineup with a slow editorial push-in." },
+        { time: "3.6–7.4s", title: "Value proposition", body: "A real sparkling pour and minimal callouts deliver the core benefits without covering the product story." },
+        { time: "7.4–10.0s", title: "Conversion CTA", body: "A clean end card presents the starter-bundle offer, then fades back to the opening scene for a seamless social loop." },
       ],
       strategyNote:
-        "Designed with a 1.5-second visual hook, safe-zone text placement for sound-off mobile scrolling, and an end frame matched to the start frame for infinite looping.",
+        "Designed with an under-two-second visual hook, safe-zone text placement for sound-off mobile scrolling, and an end frame matched to the start frame for infinite looping.",
     },
     designProcess: [
       { phase: "01 · Diagnose", title: "Map the category", body: "Compared sparkling water, functional drinks, and zero-proof beverages to find an ownable role based on social confidence rather than restriction." },

@@ -426,7 +426,7 @@ export default function ProjectPage() {
                 <source src={project.patternInterruptAd.video} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>Vertical social ad · 9:16 · 10 seconds</figcaption>
+              <figcaption>{project.patternInterruptAd.caption || "Vertical social ad · 9:16 · 10 seconds"}</figcaption>
             </figure>
             <div className="pattern-interrupt-storyboard">
               <ol>
