@@ -15,12 +15,7 @@ export default function ProjectCard({ project, tone = "tone-1", index = 0 }) {
         <h3>{project.title}</h3>
         {project.type && <p className="project-format">{project.type}</p>}
         {project.role && <p className="project-card-role"><strong>Role</strong> · {project.role}</p>}
-        <p>{project.summary}</p>
-        {project.tools?.length > 0 && (
-          <div className="project-tools" aria-label={`${project.title} main tools`}>
-            {project.tools.slice(0, 3).map((tool) => <span key={tool}>{tool}</span>)}
-          </div>
-        )}
+        <p className="project-card-teaser">{project.summary}</p>
         <div className="project-actions">
           <Link className="project-link" to={`/project/${project.slug}`}>
             View project

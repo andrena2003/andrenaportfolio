@@ -3,14 +3,14 @@ import { projects, site } from "../data";
 import SlotText from "../SlotText";
 import hairByAthraaLogo from "../assets/hair-by-athraa-logo.webp";
 import tastebudsLogo from "../assets/tastebuds-logo.webp";
-import fitarrayLogo from "../assets/fitarray-logo-hd.webp";
+import mitsubishiHomeLogo from "../assets/mitsubishi-logo-home.png";
 
 export default function HomePage() {
   const featuredProjects = [
     "mera-sparkling-tea-launch",
     "tastebuds",
     "hair-by-athraa",
-    "group-fitness-app",
+    "mitsubishi-motors-website-redesign",
   ].map((slug) => projects.find((project) => project.slug === slug));
 
   return (
@@ -49,7 +49,6 @@ export default function HomePage() {
 
             <div className="cta-row">
               <Link to="/work" className="pill-btn">Discover My Work →</Link>
-              <Link to="/contact" className="text-cta">Start a conversation</Link>
             </div>
           </div>
 
@@ -61,7 +60,7 @@ export default function HomePage() {
                   {project.slug === "mera-sparkling-tea-launch" && <><strong>MERA</strong><small>sparkling tea</small></>}
                   {project.slug === "tastebuds" && <img className="widget-logo widget-logo-tastebuds" src={tastebudsLogo} alt="" />}
                   {project.slug === "hair-by-athraa" && <img className="widget-logo widget-logo-athraa" src={hairByAthraaLogo} alt="" />}
-                  {project.slug === "group-fitness-app" && <img className="widget-logo widget-logo-fitarray" src={fitarrayLogo} alt="" />}
+                  {project.slug === "mitsubishi-motors-website-redesign" && <img className="widget-logo widget-logo-mitsubishi" src={mitsubishiHomeLogo} alt="" />}
                 </span>
                 <span className="widget-project-label">View project ↗</span>
               </Link>

@@ -1,11 +1,16 @@
-import hairByAthraaCaseStudy from "./assets/hair-by-athraa-case-study.png";
 import hairByAthraaFigmaOverview from "./assets/hair-by-athraa-figma-overview.png";
 import tastebudsBrandingSystem from "./assets/tastebuds-branding-system.png";
+import tastebudsLogoYellow from "./assets/tastebuds-logo-yellow.png";
+import tastebudsLogoBlack from "./assets/tastebuds-logo-black.png";
+import tastebudsWordmarkYellow from "./assets/tastebuds-wordmark-yellow.png";
+import tastebudsWordmarkBlack from "./assets/tastebuds-wordmark-black.png";
 import tastebudsSocialTemplate from "./assets/tastebuds-social-template.png";
 import tastebudsInstagramTopPerformers from "./assets/tastebuds-instagram-top-performers.png";
 import tastebudsTiktokTopPerformers from "./assets/tastebuds-tiktok-top-performers.png";
 import tastebudsWebsiteOverview from "./assets/tastebuds-website-overview.png";
 import tastebudsOpenGraphPreview from "./assets/tastebuds-open-graph-preview.png";
+import tastebudsInstagramTemplates from "./assets/tastebuds-instagram-templates.png";
+import tastebudsBorderBurritoMilestone from "./assets/tastebuds-border-burrito-milestone.png";
 import competitorTost from "./assets/competitor-tost.png";
 import competitorSaicho from "./assets/competitor-saicho.jpg";
 import competitorWildfolk from "./assets/competitor-wildfolk.jpg";
@@ -19,25 +24,27 @@ import fitarrayExercises from "./assets/fitarray-exercises.png";
 import fitarrayWorkoutDetail from "./assets/fitarray-workout-detail.png";
 import fitarrayStats from "./assets/fitarray-stats.png";
 import fitarrayProfile from "./assets/fitarray-profile.png";
-import mitsubishiHomepage from "./assets/mitsubishi-homepage.png";
 import mitsubishiVehicleGallery from "./assets/mitsubishi-vehicle-gallery.png";
 import mitsubishiModelDetail from "./assets/mitsubishi-model-detail.png";
 import mitsubishiBuildPrice from "./assets/mitsubishi-build-price.png";
 import mitsubishiMobileConfigurator from "./assets/mitsubishi-mobile-configurator.png";
 import mitsubishiProjectCard from "./assets/mitsubishi-project-card-v2.png";
+import mitsubishiCaseHero from "./assets/mitsubishi-case-hero-editorial-v4.png";
 import tastebudsProjectCard from "./assets/tastebuds-project-card-v2.png";
 import hairByAthraaProjectCard from "./assets/hair-by-athraa-project-card-v2.png";
 import fitarrayProjectCard from "./assets/fitarray-project-card-v2.png";
 
 export const site = {
   email: "andrena.yacoub@gmail.com",
+  phone: "(236) 591-3951",
+  website: "https://www.andrenayacoub.com",
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
   intro: "I connect campaign strategy, digital experiences, and social content so every touchpoint tells the same story.",
 };
 
-export const projects = [
+const allProjects = [
   {
     slug: "mera-sparkling-tea-launch",
     title: "MERA Sparkling Tea",
@@ -46,6 +53,7 @@ export const projects = [
     type: "Integrated marketing campaign",
     summary:
       "A 90-day launch campaign for a premium zero-proof sparkling tea.",
+    hideCaseStudySummary: true,
     projectNote:
       "MERA is a fictional brand created for this portfolio. Budgets and targets are planning estimates, not real results.",
     projectIntro:
@@ -54,7 +62,6 @@ export const projects = [
     skillsDemonstrated: ["Paid media strategy", "SEO & local search", "Landing-page CRO", "Email marketing", "Brand positioning", "Campaign measurement & reporting"],
     image: meraCampaignHero,
     imageAlt: "MERA sparkling tea cans styled with citrus and hibiscus in a plum and coral campaign setting.",
-    imageCaption: "Hero art direction for MERA’s fictional launch campaign. Brand and campaign created as a portfolio concept.",
     brandMoodboard: [
       { image: meraCampaignHero, alt: "MERA product photography direction with warm plum, coral, citrus, and botanical styling.", caption: "Product and colour direction" },
       { image: meraMetaAdArt, alt: "MERA social campaign artwork showing the product in an evening setting.", caption: "Evening social campaign direction" },
@@ -282,40 +289,26 @@ export const projects = [
     slug: "mitsubishi-motors-website-redesign",
     title: "Mitsubishi Motors Website Redesign",
     discipline: "design",
-    disciplines: ["design", "marketing"],
+    disciplines: ["design", "marketing", "web"],
     disciplineLabel: "UI/UX + Digital Marketing",
     type: "Website redesign & growth strategy",
     summary:
       "An automotive website redesign and growth plan connecting vehicle discovery, configuration, dealer leads, and measurable acquisition.",
     tools: ["Figma", "UX strategy", "SEO", "Paid acquisition", "CRO", "GA4 measurement"],
+    skillsDemonstrated: ["Information architecture", "Responsive UI design", "Interaction design", "Design systems", "User flows", "Wireframing & prototyping", "Accessibility-aware hierarchy", "Conversion-focused UX"],
+    skillsTitle: "Visual and interaction design skills.",
     figmaUrl: "https://www.figma.com/design/FpBadHeu1QwzbAqgL0npOg/Mitsubishi-Motors-%E2%80%94-Website-Redesign-UX-Case-Study?node-id=17-2&t=8T44F1nmuyvRtfIn-1",
     figmaLabel: "Open full Figma case study",
-    image: mitsubishiHomepage,
+    image: mitsubishiCaseHero,
     cardImage: mitsubishiProjectCard,
     cardImageAlt: "Mitsubishi Motors website redesign presented on desktop and mobile device mockups.",
-    imageAlt: "Redesigned Mitsubishi Motors homepage featuring the 2026 Outlander PHEV and three vehicle cards.",
-    imageCaption: "Homepage concept for a streamlined Mitsubishi Motors Canada journey. Independent portfolio redesign; not commissioned by Mitsubishi Motors.",
+    imageAlt: "Mitsubishi Motors website redesign displayed on a desktop monitor and smartphone in a dark studio setting.",
     role: "UX/UI designer",
-    timeline: "Independent redesign concept",
+    timeline: "2 weeks · Independent redesign concept",
     context:
-      "This independent portfolio project reimagines the Mitsubishi Motors Canada website around the decisions people make before and after purchasing a vehicle—from finding a model to configuring it, locating a dealer, and booking service.",
+      "An independent redesign of the Mitsubishi Motors Canada journey, from model discovery to service booking.",
     challenge:
-      "Automotive websites carry a large amount of product, pricing, financing, inventory, and ownership information. The challenge was to make that depth easier to scan without separating the experience into disconnected tools.",
-    objective:
-      "Create one clear, responsive journey that helps shoppers compare models, understand costs, configure a vehicle, find local inventory, and move toward a measurable dealer or test-drive lead with less friction.",
-    responsibilities: [
-      "Mapped the customer journey across discovery, model research, comparison, configuration, financing, inventory, dealer, and ownership tasks.",
-      "Reorganized the information architecture and established consistent navigation, card, form, pricing, and call-to-action patterns.",
-      "Designed 18 high-fidelity screens, including a mobile configurator, and connected the major paths in Figma.",
-      "Developed a proposed SEO, paid-media, local-discovery, conversion, and analytics plan around the redesigned customer journey.",
-    ],
-    keyConceptsTitle: "One system for the full vehicle journey.",
-    keyConcepts: [
-      { title: "Discover", body: "Lead with recognizable models, useful starting prices, and simple filters so shoppers can narrow the range quickly." },
-      { title: "Compare", body: "Keep trim differences, key specifications, and pricing visible at the point where people are making trade-offs." },
-      { title: "Configure", body: "Show selected colour, package, interior, accessories, and estimated price together instead of hiding the total across steps." },
-      { title: "Continue", body: "Connect the purchase journey to financing, inventory, test drives, dealer support, service booking, and a customer account." },
-    ],
+      "Product, pricing, financing, and inventory information felt dense and disconnected across key tasks.",
     iteration: {
       label: "Structural shift",
       title: "From separate pages to one connected journey.",
@@ -334,7 +327,7 @@ export const projects = [
       { title: "The total should stay visible", body: "Configuration choices feel more trustworthy when the selected options and estimated price update in the same view." },
       { title: "Local action is part of the journey", body: "Dealer distance, available inventory, test-drive booking, and service access should feel connected to product research rather than like separate websites." },
     ],
-    designProcessTitle: "From complex sitemap to responsive product system.",
+    designProcessTitle: "Design process: from complex sitemap to responsive product system.",
     designProcess: [
       { phase: "01 · Audit", title: "Identify the high-friction decisions", body: "Reviewed the major tasks in an automotive journey and prioritized the information needed to discover, compare, configure, finance, and locate a vehicle." },
       { phase: "02 · Structure", title: "Map one connected flow", body: "Organized the site around vehicles, shopping tools, dealers, service, and ownership while defining a clear next action for each screen." },
@@ -344,18 +337,17 @@ export const projects = [
     marketingStrategy: {
       title: "Turn vehicle research into measurable local demand.",
       intro:
-        "The marketing layer treats the redesigned website as the centre of an acquisition and lead-generation system. These are proposed campaign and measurement recommendations—not live Mitsubishi results.",
+        "A simple acquisition plan connecting vehicle research to qualified local leads.",
       funnel: [
-        { step: "01", title: "Reach", body: "Use model-led Search and Meta creative to introduce the right vehicle, offer, and local reason to click." },
-        { step: "02", title: "Consider", body: "Match each campaign to a useful model, comparison, PHEV education, or ownership-cost landing experience." },
-        { step: "03", title: "Convert", body: "Move qualified visitors into build-and-price, inventory, financing, dealer, and test-drive actions." },
-        { step: "04", title: "Retain", body: "Use the customer account, service reminders, warranty content, and dealer communication to support ownership." },
+        { step: "01", title: "Reach", body: "Introduce relevant models and local offers." },
+        { step: "02", title: "Consider", body: "Guide visitors to useful model and comparison pages." },
+        { step: "03", title: "Convert", body: "Drive build, inventory, dealer, and test-drive actions." },
+        { step: "04", title: "Retain", body: "Support owners with service and warranty content." },
       ],
       channels: [
-        { title: "SEO & content", body: "Build search visibility around model pricing, trim comparisons, PHEV range and charging, incentives, ownership costs, and local inventory. Strengthen titles, internal links, vehicle schema, dealer schema, and Core Web Vitals." },
-        { title: "Google Search", body: "Capture high-intent searches such as ‘Outlander PHEV price,’ ‘Mitsubishi SUV Vancouver,’ and ‘book Mitsubishi test drive,’ then send each query to its closest matching page and action." },
-        { title: "Meta retargeting", body: "Retarget model viewers, comparison users, and incomplete configurations with the exact vehicle or feature they explored, while excluding completed test-drive and dealer leads." },
-        { title: "Local dealer growth", body: "Connect optimized dealer pages and Google Business Profiles to live inventory, directions, calls, test drives, and service booking with consistent details and UTM-tagged links." },
+        { title: "SEO & content", body: "Improve visibility for model pricing, comparisons, and local inventory." },
+        { title: "Search & retargeting", body: "Match high-intent searches to the right page, and reconnect visitors who leave a build unfinished." },
+        { title: "Local dealer growth", body: "Link dealer pages to inventory, directions, calls, and test drives." },
       ],
       measurement: {
         tools: ["Google Analytics 4", "Search Console", "Google Ads", "Meta Business Suite", "Dealer CRM"],
@@ -372,10 +364,8 @@ export const projects = [
       "Customer journey and revised information architecture",
       "Homepage, vehicle gallery, model-detail, and trim-comparison screens",
       "Build-and-price configurator and financing calculator",
-      "Inventory search, dealer locator, and dealer-detail flows",
-      "Test-drive, service-booking, and customer-account screens",
+      "Inventory, dealer, test-drive, service, and account flows",
       "Responsive mobile configurator and high-fidelity Figma prototype",
-      "SEO, paid-media, local dealer, conversion, and analytics growth recommendations",
     ],
     galleryLabel: "Selected product screens",
     galleryTitle: "A connected path from discovery to ownership.",
@@ -387,9 +377,11 @@ export const projects = [
       { image: mitsubishiMobileConfigurator, alt: "Mobile Mitsubishi Outlander PHEV configurator.", caption: "Responsive configurator · The same decisions are condensed into a focused mobile experience." },
     ],
     outcome:
-      "The result is an 18-screen high-fidelity concept that connects the full customer journey through one consistent interface system. It demonstrates clearer hierarchy and continuity across key tasks, but it has not been validated with Mitsubishi customers or live conversion data.",
+      "An 18-screen concept with clearer hierarchy and connected flows, ready for usability testing and validation.",
     reflection:
-      "This project strengthened my ability to design a large product ecosystem instead of a single page. The next step would be task-based usability testing with shoppers and owners—especially around model comparison, price configuration, dealer inventory, and service booking—before treating the proposed improvements as proven outcomes.",
+      "This project strengthened my ability to design a large product ecosystem instead of a single page—connecting discovery, configuration, dealer, and ownership tasks into one consistent system.",
+    nextStep:
+      "Run task-based usability tests with vehicle shoppers and owners, then refine the flows using what I learn.",
     process: [
       "Mapped the automotive journey from model discovery to ownership support.",
       "Designed a reusable responsive system across 18 screens.",
@@ -401,13 +393,14 @@ export const projects = [
     title: "TasteBuds Vancouver",
     cardImage: tastebudsProjectCard,
     cardImageAlt: "TasteBuds Vancouver branding and social campaign presented across two phone mockups.",
+    image: tastebudsProjectCard,
+    imageAlt: "TasteBuds Vancouver branding and social campaign presented across two phone mockups.",
     discipline: "social",
+    disciplines: ["social", "marketing", "web"],
     disciplineLabel: "Content / Social",
     type: "Social media brand launch — Instagram, TikTok & website",
     summary:
       "A Vancouver foodie brand built from zero across Instagram, TikTok, and a custom website through authentic local content and performance-led iteration.",
-    projectIntro:
-      "As Content Manager, I led content planning and creation alongside a four-person team working across design, videography, and web development.",
     tools: ["Meta Business Suite", "CapCut", "Final Cut Pro", "Custom website"],
     skillsDemonstrated: ["Content strategy", "Social analytics", "Brand voice", "Short-form video", "Team coordination", "SEO & Open Graph"],
     brandShowcase: {
@@ -415,18 +408,24 @@ export const projects = [
       description: "The smiling wordmark and high-energy yellow palette gave TasteBuds an approachable presence across social posts and the website. Black added clarity and contrast, while cream softened the system so recommendations felt personal rather than promotional.",
       image: tastebudsBrandingSystem,
       imageAlt: "TasteBuds Vancouver identity system showing the smiling wordmark, logo mark, typography, and yellow, black, and cream palette.",
-      caption: "TasteBuds identity system · Wordmark, logo mark, typography, and core colours.",
+      images: [
+        { image: tastebudsLogoYellow, alt: "Black TasteBuds smiling logo on a bright yellow background.", label: "Primary logo · Yellow" },
+        { image: tastebudsLogoBlack, alt: "Yellow TasteBuds smiling logo on a black background.", label: "Primary logo · Black" },
+        { image: tastebudsWordmarkYellow, alt: "Black TasteBuds smiling wordmark on a bright yellow background.", label: "Wordmark · Yellow" },
+        { image: tastebudsWordmarkBlack, alt: "Yellow TasteBuds smiling wordmark on a black background.", label: "Wordmark · Black" },
+      ],
+      caption: "TasteBuds identity marks · Primary logo and wordmark in both brand colourways.",
       colors: [
         { name: "TasteBuds Yellow", value: "#E6E93A" },
         { name: "Foodie Black", value: "#111111" },
         { name: "Warm Cream", value: "#F5F0E5" },
       ],
       voiceTitle: "More like a friend’s recommendation than an ad.",
-      voiceDescription: "The visual system stayed consistent, but the writing and video style remained direct, useful, and locally grounded. That balance made the brand recognizable without losing the authenticity that helped the content travel.",
+      voiceDescription: "A consistent identity paired with direct, useful, and locally grounded content.",
       principles: [
-        { title: "Local first", body: "Every story began with a real Vancouver restaurant visit, neighbourhood, and location tag." },
-        { title: "Useful hooks", body: "Hidden-gem language gave viewers an emotional reason to stop, save, and share." },
-        { title: "One connected brand", body: "Templates, captions, short videos, and web stories carried the same friendly point of view." },
+        { title: "Local first", body: "Real Vancouver visits, neighbourhoods, and location tags." },
+        { title: "Useful hooks", body: "Hidden gems worth stopping, saving, and sharing." },
+        { title: "One voice", body: "The same friendly tone across social, video, and web." },
       ],
     },
     figmaUrl: "https://www.figma.com/design/U8rc8P7KkgRX33MPUxoQ7T/Social-media-net-work-Group-work?node-id=0-1&t=EugayvlaFyPthzNz-1",
@@ -475,19 +474,19 @@ export const projects = [
     keyConcepts: [
       {
         title: "Audience",
-        body: "Vancouver residents aged 18–35—students, young professionals, and food enthusiasts looking for honest perspectives, accessible food news, and useful places to save and share.",
+        body: "Vancouver food lovers aged 18–35 seeking honest places to try and share.",
       },
       {
         title: "Brand voice",
-        body: "A smiling wordmark, bright yellow-and-black palette, and a tone closer to a food-loving friend than a polished or sponsored food publication.",
+        body: "Bright, friendly, and conversational—not polished or promotional.",
       },
       {
         title: "Content system",
-        body: "Four original posts each week connected restaurant tours, food memes, fun facts, and local news across short video, social posts, and longer website stories.",
+        body: "Four weekly posts connecting restaurant tours, humour, food facts, and local news.",
       },
       {
         title: "Authenticity",
-        body: "Every restaurant visit, image, video, and article was created firsthand. Honest local recommendations became the foundation of the brand’s credibility.",
+        body: "Every visit, image, video, and story was created firsthand.",
       },
     ],
     researchTitle: "The competitive gap behind the strategy.",
@@ -496,13 +495,47 @@ export const projects = [
       { title: "Authenticity was underused", body: "Competitor content often emphasized aesthetic curation. TasteBuds could differentiate through honest visits, accessible recommendations, and a voice that felt personal instead of promotional." },
       { title: "Multi-platform continuity", body: "Few competitors connected short-form discovery to a categorized website and blog. Linking TikTok, Instagram, and web content created a more complete local resource." },
     ],
-    designProcessTitle: "Three channels, each with a distinct job.",
+    designProcessLabel: "Content strategy",
+    designProcessTitle: "One idea, adapted for every channel.",
     designProcess: [
-      { phase: "01 · Instagram", title: "Build recognition and shareability", body: "Used consistent carousels, Reels, and Stories, tagged local accounts, invited restaurants to collaborate, and designed content people could save or share when planning where to eat." },
-      { phase: "02 · TikTok", title: "Drive organic discovery", body: "Created raw, hook-led short videos around hidden gems and local discovery, pairing emotional framing with location tags to reach viewers beyond the existing audience." },
-      { phase: "03 · Website", title: "Extend discovery into a useful resource", body: "Published categorized restaurant stories across cafes, desserts, street food, sushi, and more, with comments, SEO, and Open Graph previews supporting search and sharing." },
-      { phase: "04 · Optimize", title: "Let performance reshape the plan", body: "Reviewed format, timing, reach, and non-follower behavior, then invested more effort in humorous and hidden-gem content once those patterns consistently outperformed." },
+      { phase: "01 · Instagram", title: "Build recognition", body: "Saveable carousels, Reels, Stories, and local collaborations." },
+      { phase: "02 · TikTok", title: "Reach new viewers", body: "Fast, hook-led videos featuring hidden local spots." },
+      { phase: "03 · Website", title: "Make discovery useful", body: "Categorized restaurant stories designed for search and sharing." },
+      { phase: "04 · Improve", title: "Follow the results", body: "Used reach, timing, and engagement to guide the next posts." },
     ],
+    contentOperations: {
+      title: "From weekly plan to measurable growth.",
+      intro: "A repeatable publishing rhythm kept the content original, timely, and grounded in audience behaviour.",
+      planning: [
+        { label: "Weekly output", value: "4 original posts" },
+        { label: "Short video", value: "Local tour + food meme · TikTok and Instagram" },
+        { label: "Blog-style", value: "Food fact + local news · Instagram and website" },
+      ],
+      sourcing: [
+        "Photos and video captured during restaurant visits",
+        "Firsthand Vancouver food facts and culture stories",
+        "Mobile production edited in CapCut and Final Cut Pro",
+      ],
+      scheduling: [
+        { label: "Lunch scroll", value: "11:30 AM–1:30 PM" },
+        { label: "After work", value: "6–8 PM" },
+        { label: "Test and refine", value: "Weeks 1–3, then ~7 PM weekdays and ~12 PM weekends" },
+      ],
+      tools: ["Instagram · Meta Business Suite", "TikTok · Manual posting"],
+      insights: [
+        { label: "Peak engagement", value: "12–1 PM and 7–9 PM" },
+        { label: "Core viewers", value: "87% Gen Z + young millennials" },
+        { label: "Preferred content", value: "Local food tours and hidden gems" },
+      ],
+      performance: [
+        { platform: "Instagram", views: "16.5K", visits: "455" },
+        { platform: "TikTok", views: "26K", visits: "264" },
+      ],
+      templateImage: tastebudsInstagramTemplates,
+      templateAlt: "TasteBuds Instagram carousel templates for a Halloween food-history story in the yellow-and-black brand system.",
+      milestoneImage: tastebudsBorderBurritoMilestone,
+      milestoneAlt: "Instagram message from Border Burrito inviting TasteBuds Vancouver to collaborate.",
+    },
     metrics: [
       "Instagram grew from zero to 16.5K views, reaching 7.8K users—74% of them non-followers.",
       "Instagram produced 1.1K interactions and 455 profile visits across 28 posts.",
@@ -562,17 +595,19 @@ export const projects = [
     summary:
       "A clear, elegant mobile booking experience that helps salon clients choose services and schedule with confidence.",
     tools: ["Figma", "Mobile UI", "Service design", "User flows"],
+    skillsDemonstrated: ["Information architecture", "Mobile UI design", "Interaction design", "User flows", "Wireframing & prototyping", "Service design", "Accessible hierarchy", "Booking UX"],
+    skillsTitle: "Mobile product and interaction design skills.",
     figmaUrl: "https://www.figma.com/design/QN3SMXzMllgkNYZtsZbN52/UI---UX-Strategy-1---Term-Project--Done-?node-id=0-1&t=kuYJzHssiU0DArAq-1",
-    image: hairByAthraaCaseStudy,
+    image: hairByAthraaProjectCard,
     cardImage: hairByAthraaProjectCard,
     cardImageAlt: "Hair By Athra'a salon booking experience presented across three mobile screens.",
     imageAlt: "Mobile mockup for the Hair By Athra'a salon booking case study.",
     role: "UI/UX designer",
     timeline: "Term project",
     context:
-      "Hair By Athra'a is a salon booking concept designed for a beauty service experience that should feel elegant, clear, and easy to navigate on mobile.",
+      "Hair By Athra'a is a modern salon concept focused on making service discovery and booking simpler, clearer, and more personal. Clients can browse styles visually, speak with stylists, and book appointments with confidence.",
     challenge:
-      "Salon bookings are often scattered across phone calls, direct messages, and separate forms, leaving clients unsure about services, prices, stylists, and whether an appointment is confirmed. The challenge was to bring those decisions into one calm mobile flow without losing the salon's personal, premium feeling.",
+      "Unclear pricing, difficult booking systems, and trouble describing exact styling needs leave clients uncertain. The challenge was to connect visual inspiration, stylist communication, transparent service details, and booking in one calm mobile flow.",
     objective:
       "Create a mobile-first booking experience that guides a new client from welcome to service discovery, stylist selection, and confirmation with the information needed to make each decision confidently.",
     responsibilities: [
@@ -637,6 +672,13 @@ export const projects = [
         body: "Reviewed labels, hierarchy, selected states, summaries, and transitions so information remains consistent from discovery through confirmation.",
       },
     ],
+    deliverables: [
+      "Client journey and mobile information architecture",
+      "Service discovery and stylist-selection flows",
+      "Scheduling and booking-confirmation screens",
+      "Reusable mobile interface patterns",
+      "High-fidelity Figma prototype",
+    ],
     approach: [
       "Mapped the client journey from discovery to booking so the interface could support quick decisions.",
       "Created a soft editorial visual direction that feels personal, polished, and beauty-focused.",
@@ -672,6 +714,8 @@ export const projects = [
     ],
     reflection:
       "This project strengthened my ability to turn a service journey into a calm mobile flow. The biggest limitation is the lack of user evidence; the next iteration should be driven by observed booking behaviour rather than visual preference alone.",
+    nextStep:
+      "Run the five-person usability test outlined above, then revise the service-selection and confirmation screens based on where users hesitate or backtrack.",
     process: [
       "Restructured discovery and booking flow.",
       "Built a premium editorial-inspired interface.",
@@ -768,21 +812,23 @@ export const projects = [
     ],
   },
 ];
+
+export const projects = allProjects.filter((project) => project.slug !== "group-fitness-app");
 export const skillGroups = [
   {
-    title: "Marketing & Brand",
-    skills: ["Campaign Strategy", "Brand Positioning", "Google & Meta Ads", "SEO & Local Search"],
+    title: "Marketing & Branding",
+    skills: ["Social Media Content Creation", "Brand Strategy", "Content Marketing", "Visual Identity Design"],
   },
   {
-    title: "UI/UX Design",
-    skills: ["Figma", "User Flows", "Wireframing", "Interactive Prototyping"],
+    title: "Design",
+    skills: ["Figma", "Adobe Photoshop", "Adobe Illustrator", "Adobe InDesign", "Canva"],
   },
   {
-    title: "Content & Social",
-    skills: ["Content Planning", "Social Strategy", "Copywriting", "Email Marketing"],
+    title: "Web Development",
+    skills: ["HTML5", "CSS3", "JavaScript", "WordPress"],
   },
   {
-    title: "Tools & Measurement",
-    skills: ["Adobe Creative Suite", "GA4", "Search Console", "HTML & CSS"],
+    title: "Languages",
+    skills: ["English", "Aramaic", "Arabic"],
   },
 ];

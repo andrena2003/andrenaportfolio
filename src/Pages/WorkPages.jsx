@@ -6,9 +6,9 @@ export default function WorkPages() {
   const tones = ["tone-1", "tone-2", "tone-3", "tone-4"];
   const filters = [
     { value: "all", label: "All work" },
-    { value: "marketing", label: "Marketing & Brand" },
-    { value: "design", label: "UI/UX" },
-    { value: "social", label: "Content & Social" },
+    { value: "design", label: "UI/UX & Mobile" },
+    { value: "marketing", label: "Marketing & Content" },
+    { value: "web", label: "Web Design" },
   ];
   const [activeFilter, setActiveFilter] = useState("all");
   const [viewMode, setViewMode] = useState("grid");
@@ -39,10 +39,10 @@ export default function WorkPages() {
             </button>
           ))}
         </div>
-        <div className="work-view-switcher" aria-label="Choose project layout">
-          <button type="button" className={viewMode === "grid" ? "is-active" : ""} aria-pressed={viewMode === "grid"} onClick={() => setViewMode("grid")}><span aria-hidden="true">▦</span> Editorial grid</button>
-          <button type="button" className={viewMode === "list" ? "is-active" : ""} aria-pressed={viewMode === "list"} onClick={() => setViewMode("list")}><span aria-hidden="true">☷</span> Classic list</button>
-        </div>
+        <button type="button" className="work-layout-toggle" aria-pressed={viewMode === "list"} onClick={() => setViewMode((current) => current === "grid" ? "list" : "grid")}>
+          <span aria-hidden="true">{viewMode === "grid" ? "☷" : "▦"}</span>
+          {viewMode === "grid" ? "Classic list" : "Card grid"}
+        </button>
       </div>
 
       <div className="work-count" aria-live="polite">

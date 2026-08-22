@@ -49,10 +49,10 @@
   --color-bg: #12110f;
   --color-surface: #191815;
   --color-surface-2: #24211d;
-  --color-border: rgba(246, 241, 232, 0.14);
+  --color-border: rgba(226, 69, 45, 0.14);
   --color-text: #f1ece3;
   --color-text-muted: #bcb4a8;
-  --color-text-faint: #81786d;
+  --color-text-faint: #ffffff;
   --color-primary: #f1ece3;
   --color-primary-hover: #d8cdbf;
   --color-primary-highlight: #2d2924;
@@ -70,10 +70,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
   min-height: 100vh;
+  overflow-x: hidden;
   font-family: var(--font-body);
   font-size: var(--text-base);
   line-height: 1.6;
@@ -101,7 +103,7 @@ svg {
 }
 
 .container {
-  width: min(calc(100% - 2rem), var(--content-wide));
+  width: min(calc(100% - clamp(2rem, 8vw, 6rem)), var(--content-wide));
   margin-inline: auto;
 }
 
@@ -137,7 +139,7 @@ svg {
 .eyebrow {
   display: inline-flex;
   align-items: center;
-  padding: 0.45rem 0.9rem;
+  padding: 0.1rem 0.9rem;
   border-radius: var(--radius-full);
   background: var(--color-primary-highlight);
   color: var(--color-primary);
@@ -321,18 +323,20 @@ svg {
 }
 
 .intro-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 0.8rem 1.25rem;
+  display: grid;
+  grid-template-columns: max-content;
+  justify-items: start;
+  gap: 0.7rem;
   margin: 1.8rem 0 2.4rem;
   color: var(--color-text-muted);
 }
 
 .contact-link {
-  display: inline-flex;
+  display: grid;
+  grid-template-columns: 1.9rem max-content;
   align-items: center;
   gap: 0.55rem;
+  width: max-content;
   min-height: 2.4rem;
   color: var(--color-text-muted);
   font-size: var(--text-sm);
@@ -400,11 +404,11 @@ svg {
 .project-widget-grid{display:grid;grid-template-columns:repeat(8,minmax(0,1fr));grid-template-rows:repeat(6,minmax(0,1fr));gap:1.15rem;min-height:34rem}
 .project-widget{position:relative;isolation:isolate;min-width:0;min-height:0;contain:paint;display:grid;place-items:center;overflow:hidden;padding:1.5rem;text-align:center;transition:filter 260ms}.project-widget:hover{filter:brightness(1.07)}
 .widget-project-mark{display:grid;place-items:center;gap:.15rem}.widget-project-mark small{font-size:.72rem;letter-spacing:.08em;text-transform:uppercase}.widget-project-discipline{position:absolute;z-index:2;top:.9rem;left:1rem;max-width:calc(100% - 2rem);font-size:.66rem;font-weight:800;letter-spacing:.08em;text-align:left;text-transform:uppercase;opacity:.74}.widget-project-label{position:absolute;right:.9rem;bottom:.75rem;opacity:0;font-size:.68rem;font-weight:800;transition:opacity var(--transition)}.project-widget:hover .widget-project-label{opacity:1}
-.widget-logo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain}.widget-logo-tastebuds{transform:scale(1.35)}.widget-logo-athraa{transform:scale(1.24)}.project-widget-4 .widget-project-mark{width:100%;height:100%;overflow:hidden;padding:0 3%}.widget-logo-fitarray{width:94%;max-width:32rem;transform:none}
+.widget-logo{position:relative;z-index:1;display:block;width:100%;height:auto;object-fit:contain}.widget-logo-tastebuds{transform:scale(1.35)}.widget-logo-athraa{transform:scale(1.24)}.project-widget-4 .widget-project-mark{width:100%;height:100%;overflow:hidden;padding:8%}.widget-logo-fitarray{width:94%;max-width:32rem;transform:none}.widget-logo-mitsubishi{width:100%;height:100%;object-fit:contain;transform:scale(1.08)}
 .project-widget-1{grid-column:1/6;grid-row:1/4;color:#f7e9d8;background:#3b1026;border-radius:2.5rem .9rem .9rem .9rem}.project-widget-1 strong{font-family:var(--font-body);font-size:clamp(2.2rem,4vw,4rem);font-weight:500;letter-spacing:.13em}.project-widget-1 small{color:#f3a184}
 .project-widget-2{grid-column:6/9;grid-row:1/4;color:#f4ff22;background:#000;border-radius:2.5rem 2.5rem .9rem .9rem}.project-widget-2 strong{font-family:var(--font-body);font-size:clamp(1.2rem,2.15vw,2.1rem);font-weight:900;letter-spacing:.02em}.project-widget-2 i{width:78%;height:2rem;border-bottom:.52rem solid #f4ff22;border-radius:0 0 50% 50%}
 .project-widget-3{grid-column:1/4;grid-row:4/7;color:#1b1714;background:#f4eee9;border-radius:.9rem .9rem 2.5rem 2.5rem}.project-widget-3 strong{font-family:var(--font-display);font-size:clamp(3.5rem,6vw,6rem);font-weight:500;line-height:.65}.project-widget-3 small{font-family:var(--font-display);font-size:clamp(.85rem,1.25vw,1.1rem);font-style:italic;text-transform:none}
-.project-widget-4{grid-column:4/9;grid-row:4/7;color:#f7f8ff;background:#080b13;border-radius:.9rem 2.5rem .9rem .9rem}.project-widget-4::before{content:"";position:absolute;inset:12%;border-radius:50%;background:radial-gradient(circle,rgba(43,58,208,.3),rgba(43,58,208,0) 68%);filter:blur(16px);pointer-events:none}.project-widget-4 strong{font-family:var(--font-body);font-size:clamp(1.4rem,2.5vw,2.4rem);font-weight:800;letter-spacing:.08em}.project-widget-4 small{color:#7080ff}
+.project-widget-4{grid-column:4/9;grid-row:4/7;color:#171512;background:#fff;border:1px solid var(--color-border);border-radius:.9rem 2.5rem .9rem .9rem}.project-widget-4::before{content:none}.project-widget-4 strong{font-family:var(--font-body);font-size:clamp(1.4rem,2.5vw,2.4rem);font-weight:800;letter-spacing:.08em}.project-widget-4 small{color:#e60012}
 
 .story-card,
 .path-card,
@@ -528,7 +532,7 @@ svg {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(18rem, 0.42fr);
   gap: clamp(2rem, 6vw, 5rem);
-  align-items: end;
+  align-items: start;
   padding-bottom: clamp(1.5rem, 4vw, 2.5rem);
   border-bottom: 1px solid var(--color-border);
 }
@@ -557,10 +561,10 @@ svg {
 }
 
 .about-hero h2 {
-  max-width: 10ch;
+  max-width: 17ch;
   font-family: var(--font-display);
-  font-size: clamp(3.2rem, 8vw, 7.5rem);
-  line-height: 0.88;
+  font-size: clamp(2.6rem, 5vw, 4.75rem);
+  line-height: 0.98;
   letter-spacing: 0;
 }
 
@@ -573,6 +577,34 @@ svg {
 
 .about-story-layout {
   align-items: stretch;
+}
+
+.resume-highlights {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.resume-highlights .story-card {
+  display: grid;
+  align-content: start;
+  gap: 0.65rem;
+}
+
+.resume-highlights h3 {
+  font-family: var(--font-display);
+  font-size: clamp(1.55rem, 2.6vw, 2.3rem);
+  line-height: 1.05;
+}
+
+.resume-highlights a {
+  font-weight: 800;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
+@media (max-width: 980px) {
+  .resume-highlights { grid-template-columns: 1fr; }
 }
 
 .about-story-card,
@@ -616,6 +648,14 @@ svg {
   align-items: center;
   gap: 0.9rem 1.2rem;
   margin-top: 1rem;
+}
+
+.about-personal-contact .resume-view-link {
+  text-decoration: none;
+}
+
+.about-personal-contact .resume-view-link::after {
+  content: none;
 }
 
 .skills-section {
@@ -785,7 +825,7 @@ svg {
 
 .contact-hero {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(18rem, .7fr);
+  grid-template-columns: minmax(0, 1fr) minmax(20rem, .85fr);
   gap: clamp(2rem, 5vw, 5rem);
   align-items: end;
   padding-bottom: clamp(2rem, 4vw, 3.5rem);
@@ -852,7 +892,7 @@ svg {
 }
 
 .contact-email {
-  max-width: 48rem;
+  max-width: 28rem;
   margin-top: .25rem;
   padding: 1rem 0;
   border-top: 1px solid var(--color-border);
@@ -1376,9 +1416,10 @@ svg {
   grid-template-columns: minmax(18rem, .75fr) minmax(0, 1.25fr);
   gap: clamp(1.5rem, 4vw, 3rem);
   padding: clamp(1.4rem, 4vw, 2.5rem);
+  border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  background: #171719;
-  color: #f7f7f6;
+  background: color-mix(in srgb, var(--color-card) 84%, transparent);
+  color: var(--color-text);
 }
 
 .growth-measurement > article {
@@ -1387,21 +1428,17 @@ svg {
   gap: 1.2rem;
 }
 
-.growth-measurement .measurement-tools span {
-  border-color: rgba(255, 255, 255, .2);
-  color: rgba(255, 255, 255, .74);
-}
-
 .growth-event-map {
   display: flex;
   flex-wrap: wrap;
   gap: .45rem;
   padding-top: 1rem;
-  border-top: 1px solid rgba(255, 255, 255, .14);
+  border-top: 1px solid var(--color-border);
 }
 
 .growth-event-map strong {
   flex-basis: 100%;
+  color: var(--color-text-faint);
   font-size: .7rem;
   letter-spacing: .08em;
   text-transform: uppercase;
@@ -1410,16 +1447,16 @@ svg {
 .growth-event-map code {
   padding: .4rem .55rem;
   border-radius: .45rem;
-  background: rgba(255, 255, 255, .08);
-  color: #ff7477;
+  background: var(--color-surface-2);
+  color: var(--case-accent);
   font-size: .67rem;
 }
 
 .growth-kpis {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
-  border-top: 1px solid rgba(255, 255, 255, .14);
-  border-left: 1px solid rgba(255, 255, 255, .14);
+  border-top: 1px solid var(--color-border);
+  border-left: 1px solid var(--color-border);
 }
 
 .growth-kpis article {
@@ -1428,12 +1465,12 @@ svg {
   gap: .55rem;
   min-height: 9rem;
   padding: 1.2rem;
-  border-right: 1px solid rgba(255, 255, 255, .14);
-  border-bottom: 1px solid rgba(255, 255, 255, .14);
+  border-right: 1px solid var(--color-border);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .growth-kpis span {
-  color: #ff7477;
+  color: var(--case-accent);
   font-size: .7rem;
   font-weight: 900;
   letter-spacing: .1em;
@@ -1441,7 +1478,7 @@ svg {
 }
 
 .growth-kpis p {
-  color: rgba(255, 255, 255, .72);
+  color: var(--color-text-muted);
 }
 
 .reflection-section {
@@ -1492,7 +1529,7 @@ svg {
   text-transform: uppercase;
 }
 
-.brand-system,.case-brief,.deliverables-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:center;gap:clamp(1.5rem,5vw,4rem)}
+.brand-system,.case-brief,.deliverables-section{grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:start;gap:clamp(1.5rem,5vw,4rem)}
 .brand-mark-panel{min-height:25rem;display:grid;place-content:center;gap:1rem;padding:3rem 2rem;border-radius:var(--radius-lg);color:#f7e9d8;background:#3b1026;text-align:center}
 .brand-wordmark{font-family:var(--font-body);font-size:clamp(4.5rem,12vw,9rem);font-weight:500;line-height:.8;letter-spacing:.12em}
 .brand-tagline{color:#f3a184;font-size:var(--text-sm);font-weight:800;letter-spacing:.13em;text-transform:uppercase}
@@ -1507,7 +1544,21 @@ svg {
 .type-note{max-width:60ch;color:var(--color-text-muted);font-size:var(--text-xs);line-height:1.6}
 .research-grid,.process-timeline,.decision-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}.research-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .process-step,.decision-card{padding:1.5rem;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-card) 84%,transparent)}.process-step{display:grid;align-content:start;gap:.75rem}.process-step>span{color:#e64d45;font-size:var(--text-xs);font-weight:900;letter-spacing:.08em;text-transform:uppercase}.process-step h3,.decision-card h3{font-family:var(--font-display);font-size:var(--text-lg);line-height:1.05}.process-step p,.decision-card p{color:var(--color-text-muted)}.decision-card{display:grid;gap:.75rem}
-.case-list{display:grid;gap:.85rem;padding-left:0;list-style:none;color:var(--color-text-muted)}.case-list li{position:relative;padding-left:1.35rem;line-height:1.65}.case-list li::before{content:"";position:absolute;left:0;top:.55em;width:.55rem;height:1.5px;background:var(--case-accent)}.case-brief>div,.deliverables-section>div{display:grid;gap:1rem}
+.case-list{display:grid;gap:.85rem;padding-left:0;list-style:none;color:var(--color-text-muted)}.case-list li{position:relative;padding-left:1.6rem;line-height:1.65}.case-list li::before{content:"";position:absolute;left:0;top:.15em;width:1.1rem;height:1.1rem;background-color:var(--case-accent);-webkit-mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/70% no-repeat;mask:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="black" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>') center/70% no-repeat}.case-brief>div,.deliverables-section>div{display:grid;gap:1rem}
+.case-icon{width:1.05rem;height:1.05rem;flex:0 0 auto;margin-right:.45rem;vertical-align:-.2rem;color:var(--case-accent)}
+.case-meta dt{display:flex;align-items:center}
+.case-label{display:flex;align-items:center}
+
+.poster-notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.poster-note{display:grid;align-content:start;gap:.6rem;padding:1.5rem;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:color-mix(in srgb,var(--color-card) 84%,transparent);color:var(--color-text-muted)}
+
+.channel-mix-chart{display:grid;gap:1rem;margin-bottom:1.5rem}
+.channel-mix-bar{display:flex;width:100%;height:2.15rem;overflow:hidden;border:1px solid var(--color-border);border-radius:var(--radius-full)}
+.channel-mix-bar span{display:block;height:100%}
+.channel-mix-legend{display:flex;flex-wrap:wrap;gap:.5rem 1.75rem;list-style:none;padding:0}
+.channel-mix-legend li{display:flex;align-items:center;gap:.5rem;color:var(--color-text-muted);font-size:var(--text-sm)}
+.channel-mix-legend i{width:.85rem;height:.85rem;flex:0 0 auto;border:1px solid var(--color-border);border-radius:50%}
+.channel-mix-legend b{color:var(--color-text);font-weight:800}
 
 .editorial-process{display:grid;border-top:1px solid var(--color-border)}
 .editorial-row{display:grid;grid-template-columns:minmax(17rem,.78fr) minmax(0,1.22fr);gap:clamp(2rem,7vw,7rem);align-items:start;padding:clamp(3.5rem,8vw,7rem) 0;border-bottom:1px solid var(--color-border)}
@@ -1523,7 +1574,8 @@ svg {
 .editorial-swatches{display:grid;grid-template-columns:repeat(2,minmax(8rem,1fr));gap:1rem}.editorial-swatches span{display:inline-flex;align-items:center;gap:.65rem;color:var(--color-text-muted);font-size:.82rem}.editorial-swatches i{flex:0 0 auto;width:2rem;height:2rem;border:1px solid var(--color-border);border-radius:50%}
 .editorial-type{display:grid;border-top:1px solid var(--color-border)}.editorial-type>div{display:grid;gap:1rem;padding:clamp(1.5rem,4vw,2.75rem) 0;border-bottom:1px solid var(--color-border)}.editorial-type small{color:var(--color-text-faint);font-size:var(--text-xs);text-transform:uppercase;letter-spacing:.08em}.editorial-type p{font-size:clamp(1.8rem,4vw,4rem);line-height:1}.editorial-type .type-display p{font-family:var(--font-display)}.editorial-type .type-body p{font-family:var(--font-body);font-size:clamp(1.2rem,2.4vw,2rem);font-weight:700;letter-spacing:.04em}
 .brand-showcase-visual{margin:0;overflow:hidden;border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-card)}.brand-showcase-visual img{width:100%;aspect-ratio:4/3;object-fit:cover}.brand-showcase-visual figcaption{padding:.85rem 1rem;color:var(--color-text-faint);font-size:var(--text-xs)}
-.brand-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-card)}.brand-principles article{display:grid;align-content:start;gap:.8rem;min-height:18rem;padding:1.35rem;border-left:1px solid var(--color-border)}.brand-principles article:first-child{border-left:0}.brand-principles article>span{color:#5278ff;font-size:var(--text-xs);font-weight:900}.brand-principles h3{font-family:var(--font-display);font-size:var(--text-lg);line-height:1.05}.brand-principles p{color:var(--color-text-muted);font-size:var(--text-sm);line-height:1.65}
+.brand-principles{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border:1px solid var(--color-border);border-radius:var(--radius-lg);overflow:hidden;background:var(--color-card)}.brand-principles article{display:grid;align-content:start;gap:.8rem;min-height:18rem;padding:1.35rem;border-left:1px solid var(--color-border)}.brand-principles article:first-child{border-left:0}.brand-principles article>span{color:
+#B7BB18;font-size:var(--text-xs);font-weight:900}.brand-principles h3{font-family:var(--font-display);font-size:var(--text-lg);line-height:1.05}.brand-principles p{color:var(--color-text-muted);font-size:var(--text-sm);line-height:1.65}
 .project-page-editorial>.project-capabilities,.project-page-editorial>.case-section,.project-page-editorial>.case-study-grid{margin-top:clamp(3rem,7vw,6rem)}
 .process-editorial{display:grid;border-top:1px solid var(--color-border)}.process-editorial .process-step{grid-template-columns:10rem minmax(12rem,.55fr) minmax(0,1fr);align-items:start;gap:2rem;padding:2rem 0;border:0;border-bottom:1px solid var(--color-border);border-radius:0;background:transparent}.process-editorial .process-step h3{font-size:var(--text-xl)}
 
@@ -1555,7 +1607,7 @@ svg {
 @media (max-width:600px){.mera-instagram-grid{grid-template-columns:1fr}}
 .project-page-brand .marketing-execution .marketing-channel-section:nth-child(-n+2){display:none}
 .marketing-channel-section{gap:clamp(1.5rem,3vw,2.5rem)}
-.marketing-channel-section>.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.55fr);gap:2rem;align-items:end;padding-bottom:1.4rem;border-bottom:1px solid var(--color-border)}
+.marketing-channel-section>.section-head{display:grid;grid-template-columns:minmax(0,1fr) minmax(18rem,.55fr);gap:2rem;align-items:end;padding-bottom:1rem;border-bottom:1px solid var(--color-border)}
 .marketing-channel-section>.section-head>p{max-width:42ch;color:var(--color-text-muted);font-size:var(--text-sm);line-height:1.7}
 .google-campaign-layout,.meta-campaign-layout,.local-seo-layout,.landing-cro-layout,.measurement-layout{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,3vw,2rem);align-items:stretch}
 .google-search-ad{align-self:start;padding:clamp(1.3rem,3vw,2rem);border:1px solid #dfe1e5;border-radius:1.35rem;background:#fff;color:#202124;box-shadow:0 18px 44px rgba(28,22,18,.12)}
@@ -1922,6 +1974,7 @@ footer {
 .work-page .work-page-head p{max-width:62ch;color:var(--color-text-muted);font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.65}
 .work-page .work-filters{gap:.55rem;margin-bottom:0}.work-page .work-filters button{padding:.65rem 1rem;border-color:var(--color-border);background:var(--color-card);color:var(--color-text-muted);box-shadow:none}.work-page .work-filters button:hover{border-color:var(--color-text-faint);background:var(--color-surface-2);color:var(--color-text)}.work-page .work-filters button.is-active{border-color:color-mix(in srgb,var(--color-text) 24%,var(--color-border));background:var(--color-primary-highlight);color:var(--color-text)}
 .work-toolbar{display:flex;justify-content:space-between;gap:1rem;align-items:center;flex-wrap:wrap;margin-bottom:1rem}.work-view-switcher{display:flex;gap:.3rem;padding:.3rem;border:1px solid var(--color-border);border-radius:var(--radius-full);background:var(--color-card);box-shadow:none}.work-view-switcher button{display:inline-flex;align-items:center;gap:.4rem;min-height:2.45rem;padding:.55rem .8rem;border-radius:var(--radius-full);color:var(--color-text-muted);font-size:.72rem;font-weight:800;transition:background var(--transition),color var(--transition)}.work-view-switcher button:hover{background:var(--color-surface-2);color:var(--color-text)}.work-view-switcher button.is-active{background:var(--color-primary-highlight);color:var(--color-text)}.work-view-switcher button span{font-size:1rem;line-height:1}
+.work-layout-toggle{display:inline-flex;align-items:center;gap:.45rem;min-height:2.75rem;padding:.65rem 1rem;border:1px solid var(--color-border);border-radius:var(--radius-full);background:var(--color-card);color:var(--color-text-muted);font-size:.75rem;font-weight:800;white-space:nowrap;transition:background var(--transition),color var(--transition)}.work-layout-toggle:hover{background:var(--color-surface-2);color:var(--color-text)}.work-layout-toggle span{font-size:1rem}
 .work-count{display:flex;align-items:baseline;gap:.65rem;margin:0 0 .75rem;color:var(--color-text-faint)}.work-count span{font-family:var(--font-display);font-size:1.5rem}.work-count p{font-size:var(--text-xs);font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .work-page .work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(1rem,2.5vw,2rem);border:0}
 .work-page .project-card{position:relative;display:grid;grid-template-columns:1fr;grid-template-areas:"media" "topline" "copy";gap:0;align-content:start;min-width:0;padding:0;overflow:hidden;border:1px solid var(--color-border);border-radius:1.4rem;background:var(--color-card);box-shadow:var(--shadow-sm);transition:transform 300ms cubic-bezier(.16,1,.3,1),box-shadow 300ms ease,border-color 300ms ease}
@@ -2074,7 +2127,7 @@ footer {
   }
   .brand-system,.case-brief,.deliverables-section{grid-template-columns:1fr}
   .typography-heading{display:grid}
-  .process-timeline,.decision-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .process-timeline,.decision-grid,.poster-notes{grid-template-columns:repeat(2,minmax(0,1fr))}
   .editorial-row{grid-template-columns:1fr;gap:2rem}.process-editorial .process-step{grid-template-columns:1fr;gap:.75rem}
   .project-page-brand .editorial-row,.project-page-brand .case-brief,.project-page-brand .deliverables-section{grid-template-columns:1fr;gap:2rem}
   .project-page-brand .case-brief>div:last-child,.project-page-brand .deliverables-section>ul{grid-column:1}
@@ -2236,7 +2289,7 @@ footer {
   .featured-project-controls{grid-template-columns:auto minmax(0,1fr) auto}.featured-project-controls>a{grid-column:2;grid-row:2}.featured-project-controls>button:last-child{grid-column:3;grid-row:1/3}
   .project-widget-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,11rem);min-height:0}.project-widget{grid-column:auto;grid-row:auto;padding:1rem;border-radius:1.25rem}.project-widget-2 strong{font-size:clamp(1rem,4.5vw,1.6rem)}
   .project-gallery-screens{grid-template-columns:repeat(2,minmax(0,1fr));padding:.75rem;gap:.75rem}.project-gallery-screens .gallery-item figcaption{font-size:.65rem}
-  .brand-swatches,.research-grid,.process-timeline,.decision-grid{grid-template-columns:1fr}
+  .brand-swatches,.research-grid,.process-timeline,.decision-grid,.poster-notes{grid-template-columns:1fr}
   .type-specimen{grid-template-columns:1fr;gap:1rem}
   .logo-directions{grid-template-columns:1fr}.logo-directions article{min-height:15rem;border-left:0;border-top:1px solid var(--color-border)}.logo-directions article:first-child{border-top:0}
   .brand-principles{grid-template-columns:1fr}.brand-principles article{min-height:0;border-left:0;border-top:1px solid var(--color-border)}.brand-principles article:first-child{border-top:0}
@@ -2248,7 +2301,7 @@ footer {
 }
 
 /* Clean long-form case-study system */
-.project-page{width:min(100%,1080px);gap:0;padding-top:clamp(1.5rem,3vw,2.25rem);padding-bottom:0}
+.project-page{width:min(calc(100% - 2rem),1440px);gap:0;padding-top:clamp(1.5rem,3vw,2.25rem);padding-bottom:0}
 .project-page>.project-page-hero{display:grid}
 .project-page .display-heading{font-size:clamp(2.7rem,5.5vw,5rem);line-height:.94}.project-page .project-lede{max-width:42ch;font-size:clamp(1.05rem,1.5vw,1.3rem);line-height:1.65}.project-page .project-intro{max-width:58ch;font-size:var(--text-sm);line-height:1.75}
 .project-page .case-meta{display:grid;gap:.55rem}.project-page .case-meta>div{display:grid;grid-template-columns:5.5rem 1fr;gap:1rem;padding:.85rem 1rem;border:1px solid var(--color-border);border-radius:.3rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}.project-page .case-meta dt{color:var(--color-text-faint);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase}.project-page .case-meta dd{font-size:.8rem;line-height:1.5}
@@ -2392,41 +2445,738 @@ footer {
 .about-personal-contact{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(18rem,.8fr);gap:clamp(1rem,3vw,2rem)}
 .about-personal-contact>article,.about-personal-contact>aside{display:grid;align-content:start;gap:1rem;padding:clamp(1.5rem,3vw,2.5rem);border:1px solid var(--color-border);border-radius:var(--radius-lg);background:var(--color-card)}
 .about-personal-contact h2{max-width:15ch;font-family:var(--font-display);font-size:clamp(2.2rem,4vw,4rem);line-height:.95}.about-personal-contact h3{font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.8rem);line-height:1}.about-personal-contact p{color:var(--color-text-muted);line-height:1.7}.about-personal-contact a{font-weight:900;text-decoration:underline;text-underline-offset:.25rem}
+.about-life-strip{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.6rem;margin-top:.35rem}
+.about-life-strip img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:.6rem;border:1px solid var(--color-border);transition:transform .35s ease}
+.about-life-strip img:hover{transform:scale(1.03)}
+@media (max-width:480px){.about-life-strip{grid-template-columns:repeat(3,minmax(0,1fr));gap:.4rem}.about-life-strip img{border-radius:.4rem}}
 @media (max-width:980px){.home-skills-grid,.about-process-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.home-skills-grid article:nth-child(odd),.about-process-grid li:nth-child(odd){border-left:0}.home-proof,.about-personal-contact{grid-template-columns:1fr}}
 @media (max-width:600px){.hero-statement h1{font-size:clamp(3.35rem,15vw,5.2rem)}.home-featured-grid,.home-skills-grid,.home-proof-grid,.about-process-grid{grid-template-columns:1fr}.home-skills-grid article,.about-process-grid li,.home-proof-grid article{min-height:0;border-left:0;border-top:1px solid var(--color-border)}.home-skills-grid article:first-child,.about-process-grid li:first-child,.home-proof-grid article:first-child{border-top:0}.home-view-all{justify-self:start}.home-final-cta{border-radius:1rem}}
 .project-page .case-meta{grid-template-columns:repeat(2,minmax(0,1fr))}
-.research-discovery-section>.section-head>p,.prototype-section>.section-head>p{max-width:48ch}
-.prototype-section{padding:clamp(2rem,4vw,3.5rem) 0;border-top:1px solid var(--color-border)}
-.prototype-section .project-detail-actions{display:flex;flex-wrap:wrap;gap:.75rem}
+.research-discovery-section>.section-head>p{max-width:48ch}
+.research-artifacts-subsection{margin-top:clamp(1.75rem,3vw,2.5rem);padding-top:clamp(1.75rem,3vw,2.5rem);border-top:1px solid var(--color-border)}
+.research-artifacts-subsection>.case-label{margin-bottom:.9rem}
+.reflection-section .project-detail-actions{display:flex;flex-wrap:wrap;gap:.75rem;margin-top:clamp(1.5rem,3vw,2.25rem);padding-top:clamp(1.5rem,3vw,2.25rem);border-top:1px solid var(--color-border)}
 .project-pagination{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:clamp(2rem,5vw,4rem);border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
 .project-pagination-link{display:grid;gap:.35rem;padding:clamp(1.25rem,3vw,2rem);transition:background var(--transition)}.project-pagination-link:hover{background:var(--color-surface-2)}.project-pagination-link+.project-pagination-link{border-left:1px solid var(--color-border)}
 .project-pagination-link small{color:var(--color-primary);font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.project-pagination-link strong{font-family:var(--font-display);font-size:clamp(1.8rem,3.2vw,3.2rem);line-height:1}.project-pagination-link span{color:var(--color-text-muted);font-size:.72rem}.project-pagination-next{text-align:right}
 @media (max-width:700px){.project-page .case-meta,.project-pagination{grid-template-columns:1fr}.project-pagination-link+.project-pagination-link{border-left:0;border-top:1px solid var(--color-border)}.project-pagination-next{text-align:left}}
 
 /* MERA layout corrections */
-.project-page-mera-sparkling-tea-launch{padding-top:4rem}
-.project-page-mera-sparkling-tea-launch .project-page-hero{grid-template-columns:minmax(0,1fr) minmax(22rem,.58fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
-.project-page-mera-sparkling-tea-launch .case-meta{display:grid;grid-template-columns:1fr;gap:0;padding:1.1rem 1.2rem;border:1px solid var(--color-border);border-radius:.85rem;background:color-mix(in srgb,var(--color-card) 88%,var(--color-surface-2))}
-.project-page-mera-sparkling-tea-launch .case-meta>div{display:grid;grid-template-columns:5.5rem minmax(0,1fr);align-items:start;gap:.75rem;min-width:0;padding:.85rem 0;border:0;border-top:1px solid var(--color-border);border-radius:0;background:transparent}
+.project-page-mera-sparkling-tea-launch{padding-top:clamp(1.5rem,3vw,2.25rem)}
+.project-page-mera-sparkling-tea-launch .project-page-hero{grid-template-columns:minmax(0,.92fr) minmax(30rem,.68fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.project-page-mera-sparkling-tea-launch .project-page-hero>div:first-child{display:grid;justify-items:start;align-content:center;align-self:stretch;text-align:left}
+.project-page-mera-sparkling-tea-launch .project-page-hero>div:first-child .eyebrow{justify-self:start}
+.project-page-mera-sparkling-tea-launch .project-page-hero .project-intro{margin-right:auto;text-align:left}
+.project-page-mera-sparkling-tea-launch .case-meta{display:grid;grid-template-columns:1fr;gap:0;width:100%;min-height:27rem;padding:1.65rem 1.8rem;border:1px solid var(--color-border);border-radius:.85rem;background:color-mix(in srgb,var(--color-card) 88%,var(--color-surface-2))}
+.project-page-mera-sparkling-tea-launch .case-meta>div{display:grid;grid-template-columns:7.25rem minmax(0,1fr);align-items:start;gap:1rem;min-width:0;padding:1.15rem 0;border:0;border-top:1px solid var(--color-border);border-radius:0;background:transparent}
 .project-page-mera-sparkling-tea-launch .case-meta>div:first-child{padding-top:0;border-top:0}
 .project-page-mera-sparkling-tea-launch .case-meta>div:last-child{padding-bottom:0}
-.project-page-mera-sparkling-tea-launch .case-meta dd{overflow-wrap:anywhere;font-size:.82rem;font-weight:700;line-height:1.5}
+.project-page-mera-sparkling-tea-launch .case-meta dd{overflow-wrap:anywhere;font-size:.9rem;font-weight:700;line-height:1.55}
 .project-page-mera-sparkling-tea-launch .iteration-compare article{align-content:start;text-align:left}
 .project-page-mera-sparkling-tea-launch .iteration-compare article>*{text-align:left}
 .project-page-mera-sparkling-tea-launch .logo-directions{align-items:stretch}
 .project-page-mera-sparkling-tea-launch .logo-directions article{grid-template-rows:auto minmax(7rem,1fr) auto;gap:1.25rem;min-height:18rem;padding:1.5rem}
 .project-page-mera-sparkling-tea-launch .logo-directions article>p{margin:0;text-align:left}
-.project-page-mera-sparkling-tea-launch .paid-preview-grid{grid-template-columns:repeat(2,minmax(280px,1fr));align-items:start;max-width:64rem;margin-inline:auto}
+.project-page-mera-sparkling-tea-launch .paid-preview-grid{grid-template-columns:minmax(0,1fr) minmax(18rem,.72fr);align-items:start;width:100%;max-width:none;margin-inline:0}
 .project-page-mera-sparkling-tea-launch .paid-preview-meta,.project-page-mera-sparkling-tea-launch .meta-campaign-layout .meta-ad-mockup{width:min(100%,24rem)}
-.project-page-mera-sparkling-tea-launch .mera-instagram-grid{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));max-width:64rem;margin-inline:auto}
+.project-page-mera-sparkling-tea-launch .mera-instagram-grid{grid-template-columns:repeat(3,minmax(0,1fr));width:100%;max-width:none;margin-inline:0}
 .project-page-mera-sparkling-tea-launch .channel-mix-section .decision-grid{grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem}
 .project-page-mera-sparkling-tea-launch .channel-mix-section .decision-card{min-height:0;padding:1.25rem}
-.project-page-mera-sparkling-tea-launch .landing-cro-layout{max-width:64rem;margin-inline:auto}
+.project-page-mera-sparkling-tea-launch .landing-cro-layout{width:100%;max-width:none;margin-inline:0}
 .project-page-mera-sparkling-tea-launch .landing-preview-copy p,.project-page-mera-sparkling-tea-launch .marketing-channel-section>.section-head>p{max-width:65ch}
+.project-page-mera-sparkling-tea-launch .editorial-copy>p,.project-page-mera-sparkling-tea-launch .reflection-copy,.project-page-mera-sparkling-tea-launch .iteration-takeaway{max-width:65ch}
 .project-page-mera-sparkling-tea-launch .email-flow article>span{display:block;width:auto;height:auto;margin:0;border:0;border-radius:0;background:transparent;color:var(--case-accent);font-family:var(--font-display);font-size:2rem;font-weight:700;line-height:1;text-align:left}
 .project-page-mera-sparkling-tea-launch .email-flow article{align-content:start;justify-items:start;text-align:left}
 .project-page-mera-sparkling-tea-launch>.project-pagination{order:14}
-.project-page-mera-sparkling-tea-launch>.prototype-section{order:13}
 @media (max-width:980px){.project-page-mera-sparkling-tea-launch{padding-top:2.5rem}.project-page-mera-sparkling-tea-launch .project-page-hero{grid-template-columns:1fr}.project-page-mera-sparkling-tea-launch .paid-preview-grid{grid-template-columns:1fr}.project-page-mera-sparkling-tea-launch .paid-preview-meta{justify-self:start}}
 @media (max-width:600px){.project-page-mera-sparkling-tea-launch{padding-top:2rem}.project-page-mera-sparkling-tea-launch .case-meta{padding:1rem}.project-page-mera-sparkling-tea-launch .case-meta>div{grid-template-columns:1fr;gap:.25rem}.project-page-mera-sparkling-tea-launch .logo-directions article{min-height:14rem}}
+.project-card-teaser{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3}
+.project-card-outcome{display:-webkit-box;overflow:hidden;-webkit-box-orient:vertical;-webkit-line-clamp:3;padding-top:.75rem;border-top:1px solid var(--color-border);font-size:.78rem!important;line-height:1.55!important}.project-card-outcome strong{color:var(--color-text)}
+.resume-download-primary{padding:.95rem 1.2rem;font-size:1rem;box-shadow:0 10px 24px color-mix(in srgb,var(--color-primary) 18%,transparent)}
+
+/* Compact, consistently aligned portfolio cards */
+.work-page .work-grid.view-grid{width:100%;grid-template-columns:repeat(2,minmax(0,1fr));justify-content:stretch;align-items:stretch;gap:1.25rem}
+.work-page .work-grid.view-grid .project-card,.work-page .work-grid.view-grid .project-card:first-child{grid-column:auto;grid-template-columns:1fr;grid-template-areas:"media" "topline" "copy";align-items:start;border-radius:1rem}
+.work-page .work-grid.view-grid .project-card-media,.work-page .work-grid.view-grid .project-card:first-child .project-card-media{width:100%;height:auto;min-height:0;aspect-ratio:16/9;background:var(--color-surface-2)}
+.work-page .work-grid.view-grid .project-card-media img,.work-page .work-grid.view-grid .project-card:first-child .project-card-media img{display:block;width:100%;height:100%;min-height:0;aspect-ratio:auto;object-fit:cover;object-position:center}
+.work-page .work-grid.view-grid .project-card-topline{align-items:center;min-height:3.2rem;padding:.7rem .85rem .35rem}
+.work-page .work-grid.view-grid .project-card-topline>span:first-child{width:1.85rem;height:1.85rem}
+.work-page .work-grid.view-grid .project-discipline{max-width:10rem;line-height:1.25}
+.work-page .work-grid.view-grid .project-copy{grid-template-rows:minmax(3.8rem,auto) auto auto 1fr auto;gap:.5rem;height:100%;padding:0 .85rem .85rem}
+.work-page .work-grid.view-grid .project-copy h3,.work-page .work-grid.view-grid .project-card:not(:first-child) .project-copy h3{display:-webkit-box;overflow:hidden;width:100%;max-width:none;min-height:2em;margin:0;-webkit-box-orient:vertical;-webkit-line-clamp:2;font-size:clamp(1.8rem,2.35vw,2.45rem);line-height:.96}
+.work-page .work-grid.view-grid .project-format{display:-webkit-box;overflow:hidden;min-height:2.4em;margin:0;-webkit-box-orient:vertical;-webkit-line-clamp:2;font-size:.59rem;line-height:1.2}
+.work-page .work-grid.view-grid .project-card-role{min-height:2.1em;margin:0;font-size:.67rem;line-height:1.4}
+.work-page .work-grid.view-grid .project-copy>p:not(.project-format){font-size:.78rem;line-height:1.5}
+.work-page .work-grid.view-grid .project-card-teaser{-webkit-line-clamp:2}
+.work-page .work-grid.view-grid .project-actions{align-self:end;margin-top:.15rem;padding-top:.55rem}.work-page .work-grid.view-grid .project-link{font-size:.78rem}.work-page .work-grid.view-grid .project-link::after{width:1.85rem;height:1.85rem;font-size:.75rem}
+@media (max-width:1050px){.work-page .work-grid.view-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:650px){.work-page .work-grid.view-grid{grid-template-columns:1fr}.work-page .work-grid.view-grid .project-card-media,.work-page .work-grid.view-grid .project-card:first-child .project-card-media{aspect-ratio:16/10}}
 .project-page-mera-sparkling-tea-launch .competitor-lens article h3,.project-page-mera-sparkling-tea-launch .competitor-lens article p{margin-inline:1rem}
+
+/* MERA review refinements: fuller imagery, concise rows, and a stronger ending */
+.project-page-mera-sparkling-tea-launch>.case-image img{width:100%;max-height:46rem;object-fit:cover}
+.project-page-mera-sparkling-tea-launch>.case-study-grid{grid-template-columns:repeat(4,minmax(0,1fr));padding-block:clamp(1.5rem,3vw,2.5rem)}
+.project-page-mera-sparkling-tea-launch .metric-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.project-page-mera-sparkling-tea-launch>.reflection-section{grid-template-columns:minmax(13rem,.36fr) minmax(0,1fr);align-items:start}
+.project-page-mera-sparkling-tea-launch>.reflection-section{border-top:1px solid var(--color-border)}
+.project-page-mera-sparkling-tea-launch .reflection-copy{max-width:none}
+.project-page-mera-sparkling-tea-launch .reflection-next-step{grid-column:1/-1;width:100%;max-width:none;margin-top:0;padding:1.25rem 1.5rem}
+.project-page-mera-sparkling-tea-launch>.project-pagination{margin-top:0}
+
+@media (max-width:980px){
+  .project-page-mera-sparkling-tea-launch>.case-study-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-mera-sparkling-tea-launch .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-mera-sparkling-tea-launch .mera-instagram-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-mera-sparkling-tea-launch>.reflection-section{grid-template-columns:1fr}
+}
+@media (max-width:600px){
+  .project-page-mera-sparkling-tea-launch>.case-study-grid,.project-page-mera-sparkling-tea-launch .metric-grid,.project-page-mera-sparkling-tea-launch .mera-instagram-grid{grid-template-columns:1fr}
+}
+
+/* Keep the MERA narrative compact without sacrificing its full-width layout */
+.project-page-mera-sparkling-tea-launch{width:min(calc(100% - clamp(2rem,14vw,18rem)),1744px)}
+.project-page-mera-sparkling-tea-launch>.case-section,
+.project-page-mera-sparkling-tea-launch .marketing-channel-section,
+.project-page-mera-sparkling-tea-launch>.iteration-section{padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-mera-sparkling-tea-launch .editorial-row{padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-mera-sparkling-tea-launch .section-head,
+.project-page-mera-sparkling-tea-launch .case-section-head{margin-bottom:1rem}
+.project-page-mera-sparkling-tea-launch>.case-image{margin-bottom:2rem}
+.project-page-mera-sparkling-tea-launch>.case-image img{max-height:34rem}
+.project-page-mera-sparkling-tea-launch .logo-directions article{min-height:13rem;padding:1.15rem}
+.project-page-mera-sparkling-tea-launch .mera-instagram-creative{gap:.85rem;margin-top:1.5rem;padding-top:1.25rem}
+.project-page-mera-sparkling-tea-launch .mera-instagram-post>img{aspect-ratio:1/1;object-position:center}
+.project-page-mera-sparkling-tea-launch .mera-landing-preview{min-height:27rem}
+.project-page-mera-sparkling-tea-launch .concept-card,
+.project-page-mera-sparkling-tea-launch .decision-card,
+.project-page-mera-sparkling-tea-launch .metric-card{padding:1rem}
+.project-page-mera-sparkling-tea-launch .process-step,
+.project-page-mera-sparkling-tea-launch .process-editorial .process-step{padding:.9rem 0}
+.project-page-mera-sparkling-tea-launch>.reflection-section{padding-bottom:1.75rem}
+.project-page-mera-sparkling-tea-launch .project-pagination-link{padding:1.25rem}
+
+@media (max-width:600px){
+  .project-page-mera-sparkling-tea-launch{width:calc(100% - 2rem)}
+  .project-page-mera-sparkling-tea-launch>.case-section,
+  .project-page-mera-sparkling-tea-launch .marketing-channel-section,
+  .project-page-mera-sparkling-tea-launch>.iteration-section,
+  .project-page-mera-sparkling-tea-launch .editorial-row{padding:1rem 0}
+  .project-page-mera-sparkling-tea-launch .mera-instagram-post>img{aspect-ratio:4/5}
+}
+
+/* Interactive MERA Instagram carousel */
+.mera-instagram-carousel{display:grid;justify-items:center;width:100%}
+.paid-preview-grid>.mera-instagram-carousel{justify-self:end}
+.project-page-mera-sparkling-tea-launch .paid-preview-section{grid-template-columns:minmax(0,1fr) minmax(18rem,.72fr);column-gap:clamp(1rem,3vw,2rem);align-items:start}
+.project-page-mera-sparkling-tea-launch .paid-preview-section>.section-head{grid-column:1;grid-row:1;margin-bottom:0;padding-top:clamp(1.25rem,2.4vw,2rem)}
+.project-page-mera-sparkling-tea-launch .paid-preview-section>.paid-preview-grid{display:contents}
+.project-page-mera-sparkling-tea-launch .paid-preview-section .paid-preview-search{grid-column:1;grid-row:2}
+.project-page-mera-sparkling-tea-launch .paid-preview-section .mera-instagram-carousel{grid-column:2;grid-row:1/3;align-self:start;margin-top:0}
+.mera-instagram-carousel-post{width:min(100%,28rem);overflow:hidden;margin:0;border:1px solid var(--color-border);border-radius:.75rem;background:#fff;color:#171717;box-shadow:var(--shadow-sm)}
+.mera-instagram-carousel-post .meta-ad-header{padding:.8rem 1rem}
+.mera-carousel-image{position:relative;display:grid;place-items:center;overflow:hidden;aspect-ratio:4/5;background:#3b1026;touch-action:pan-y}
+.mera-carousel-image img{display:block;width:100%;height:100%;object-fit:contain;background:#3b1026}
+.mera-carousel-arrow{position:absolute;top:50%;display:grid;place-items:center;width:2.35rem;height:2.35rem;padding:0;border:1px solid rgba(255,255,255,.62);border-radius:50%;background:rgba(23,20,18,.48);color:#fff;font-family:var(--font-body);font-size:1.65rem;line-height:1;box-shadow:0 .2rem .8rem rgba(0,0,0,.18);transform:translateY(-50%);transition:background var(--transition),transform var(--transition)}
+.mera-carousel-arrow:hover{background:rgba(23,20,18,.78);transform:translateY(-50%) scale(1.06)}
+.mera-carousel-previous{left:.8rem}.mera-carousel-next{right:.8rem}
+.mera-carousel-count{position:absolute;top:.75rem;right:.75rem;padding:.3rem .55rem;border-radius:999px;background:rgba(23,20,18,.62);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.05em}
+.mera-carousel-dots{display:flex;justify-content:center;gap:.5rem;padding:.8rem;background:#fff}
+.mera-carousel-dots button{width:.48rem;height:.48rem;padding:0;border:0;border-radius:50%;background:#c8c3bc;transition:width var(--transition),background var(--transition)}
+.mera-carousel-dots button.is-active{width:1.35rem;border-radius:999px;background:var(--case-accent)}
+@media (max-width:980px){.paid-preview-grid>.mera-instagram-carousel{justify-self:start}.project-page-mera-sparkling-tea-launch .paid-preview-section{display:grid;grid-template-columns:1fr}.project-page-mera-sparkling-tea-launch .paid-preview-section>.section-head,.project-page-mera-sparkling-tea-launch .paid-preview-section .paid-preview-search,.project-page-mera-sparkling-tea-launch .paid-preview-section .mera-instagram-carousel{grid-column:1;grid-row:auto}.project-page-mera-sparkling-tea-launch .paid-preview-section>.section-head{padding-top:0}.project-page-mera-sparkling-tea-launch .paid-preview-section>.paid-preview-grid{display:grid}}
+@media (max-width:600px){.mera-instagram-carousel-post{width:100%}.mera-carousel-arrow{width:2rem;height:2rem}.mera-carousel-previous{left:.5rem}.mera-carousel-next{right:.5rem}}
+
+/* Compact MERA landing-page transition */
+.project-page-mera-sparkling-tea-launch .mera-landing-section{padding-top:1.25rem;border-top:0}
+.project-page-mera-sparkling-tea-launch .mera-landing-section>.section-head{margin-bottom:.6rem;padding-bottom:0;border-bottom:0}
+.project-page-mera-sparkling-tea-launch .mera-landing-section>.section-head>div{gap:0}
+
+/* Mitsubishi case study: shared MERA editorial template */
+.project-page-mitsubishi-motors-website-redesign{width:min(calc(100% - clamp(2rem,14vw,18rem)),1744px);max-width:100%;min-width:0;padding-top:clamp(1.5rem,3vw,2.25rem)}
+.project-page-mitsubishi-motors-website-redesign>*{min-width:0;max-width:100%}
+.project-page-mitsubishi-motors-website-redesign .project-page-hero{grid-template-columns:minmax(0,.92fr) minmax(30rem,.68fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.project-page-mitsubishi-motors-website-redesign .project-page-hero>div:first-child{display:grid;justify-items:start;align-content:center;align-self:stretch;text-align:left}
+.project-page-mitsubishi-motors-website-redesign .case-meta{display:grid;grid-template-columns:1fr;gap:0;width:100%;min-height:27rem;padding:1.65rem 1.8rem;border:1px solid var(--color-border);border-radius:.85rem;background:color-mix(in srgb,var(--color-card) 88%,var(--color-surface-2))}
+.project-page-mitsubishi-motors-website-redesign .case-meta>div{display:grid;grid-template-columns:7.25rem minmax(0,1fr);align-items:start;gap:1rem;min-width:0;padding:1.15rem 0;border:0;border-top:1px solid var(--color-border);border-radius:0;background:transparent}
+.project-page-mitsubishi-motors-website-redesign .case-meta>div:first-child{padding-top:0;border-top:0}
+.project-page-mitsubishi-motors-website-redesign .case-meta>div:last-child{padding-bottom:0}
+.project-page-mitsubishi-motors-website-redesign .case-meta dd{overflow-wrap:anywhere;font-size:.9rem;font-weight:700;line-height:1.55}
+.project-page-mitsubishi-motors-website-redesign .case-meta>.case-meta-deliverable{grid-template-columns:1fr;gap:.55rem}
+.project-page-mitsubishi-motors-website-redesign .case-meta>.case-meta-deliverable dd{max-width:32ch;font-size:1rem;line-height:1.45}
+.project-page-mitsubishi-motors-website-redesign>.case-image img{width:100%;max-height:42rem;object-fit:contain;object-position:center;background:#111}
+.project-page-mitsubishi-motors-website-redesign>.case-study-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:1rem;padding-block:clamp(1.5rem,3vw,2.5rem)}
+.project-page-mitsubishi-motors-website-redesign>.case-study-grid article{display:grid;align-content:start;gap:.65rem;min-height:10.5rem;padding:1.35rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 70%,transparent)}
+.project-page-mitsubishi-motors-website-redesign>.case-study-grid article:first-child{padding-left:1.35rem;border:1px solid var(--color-border)}
+.project-page-mitsubishi-motors-website-redesign>.case-study-grid .case-label{margin:0;color:#000000}
+.project-page-mitsubishi-motors-website-redesign>.case-study-grid article>p:last-child{margin:0}
+.project-page-mitsubishi-motors-website-redesign>.case-section,
+.project-page-mitsubishi-motors-website-redesign>.iteration-section,
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section{padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-mitsubishi-motors-website-redesign .iteration-compare{grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+.project-page-mitsubishi-motors-website-redesign .iteration-compare article{min-width:0;overflow-wrap:anywhere}
+.project-page-mitsubishi-motors-website-redesign .iteration-takeaway{max-width:none;margin-left:0}
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section{width:100%;max-width:100%;min-width:0;overflow:hidden}
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section>*{width:100%;max-width:100%;min-width:0}
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section>.section-head{grid-template-columns:1fr;align-items:start;gap:.85rem}
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section>.section-head h2{width:100%;max-width:26ch;font-size:clamp(2rem,3.6vw,3.35rem);line-height:1.02;white-space:normal;overflow-wrap:break-word}
+.project-page-mitsubishi-motors-website-redesign .growth-strategy-section>.section-head>p{max-width:none;margin:0;font-size:.9rem;line-height:1.55}
+.project-page-mitsubishi-motors-website-redesign .growth-funnel{grid-template-columns:repeat(auto-fit,minmax(min(100%,14rem),1fr));gap:.75rem;width:100%;max-width:100%;min-width:0;border:0}
+.project-page-mitsubishi-motors-website-redesign .growth-funnel article{min-width:0;min-height:10rem;padding:1.1rem;border:1px solid var(--color-border);border-radius:.6rem;background:color-mix(in srgb,var(--color-card) 70%,transparent);overflow-wrap:anywhere}
+.project-page-mitsubishi-motors-website-redesign .growth-funnel article:first-child{border-left:1px solid var(--color-border)}
+.project-page-mitsubishi-motors-website-redesign .growth-funnel h3{font-size:clamp(1.35rem,2vw,1.75rem)}
+.project-page-mitsubishi-motors-website-redesign .growth-funnel p{font-size:.78rem;line-height:1.5}
+.project-page-mitsubishi-motors-website-redesign .growth-channel-grid{grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr));gap:.75rem;width:100%;max-width:100%;min-width:0}
+.project-page-mitsubishi-motors-website-redesign .growth-channel-grid article{min-width:0;min-height:9.5rem;gap:.6rem;padding:1.1rem;border:1px solid var(--color-border);border-top:3px solid #d10512;border-radius:.6rem;overflow-wrap:anywhere}
+.project-page-mitsubishi-motors-website-redesign .growth-channel-grid h3{font-size:clamp(1.2rem,1.8vw,1.55rem)}
+.project-page-mitsubishi-motors-website-redesign .growth-channel-grid p{font-size:.76rem;line-height:1.5}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement{grid-template-columns:minmax(20rem,.72fr) minmax(0,1.28fr);align-items:stretch;gap:1rem;padding:1rem}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement>article{align-content:center;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card)}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement h3{font-size:clamp(1.55rem,2.2vw,2rem);line-height:1.1}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement .measurement-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.55rem}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement .measurement-tools span{display:grid;place-items:center;min-height:2.65rem;padding:.65rem .75rem;border-radius:.45rem;background:var(--color-surface-2);color:var(--color-text);font-size:.8rem;font-weight:800;text-align:center}
+.project-page-mitsubishi-motors-website-redesign .growth-measurement .measurement-tools span:last-child{grid-column:1/-1}
+.project-page-mitsubishi-motors-website-redesign .growth-kpis{gap:.65rem;border:0}
+.project-page-mitsubishi-motors-website-redesign .growth-kpis article{place-content:center;justify-items:center;min-height:10.5rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card);text-align:center}
+.project-page-mitsubishi-motors-website-redesign .growth-kpis span{font-size:.82rem}
+.project-page-mitsubishi-motors-website-redesign .growth-kpis p{max-width:24ch;margin:0;color:var(--color-text);font-size:clamp(.9rem,1.15vw,1.05rem);font-weight:650;line-height:1.5}
+.project-page-mitsubishi-motors-website-redesign .growth-event-map{margin-top:.2rem}
+.project-page-mitsubishi-motors-website-redesign .section-head,
+.project-page-mitsubishi-motors-website-redesign .case-section-head{margin-bottom:1rem}
+.project-page-mitsubishi-motors-website-redesign>.case-image{margin-bottom:2rem}
+.project-page-mitsubishi-motors-website-redesign .concept-grid,
+.project-page-mitsubishi-motors-website-redesign .metric-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.project-page-mitsubishi-motors-website-redesign .research-discovery-section{padding-bottom:1.25rem}
+.project-page-mitsubishi-motors-website-redesign .research-discovery-section>.section-head{grid-template-columns:minmax(0,.72fr) minmax(16rem,.28fr);align-items:end;margin-bottom:1.25rem}
+.project-page-mitsubishi-motors-website-redesign .research-discovery-section>.section-head h2{max-width:24ch;font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.04}
+.project-page-mitsubishi-motors-website-redesign .research-discovery-section>.section-head>p{font-size:.78rem;line-height:1.5}
+.project-page-mitsubishi-motors-website-redesign .research-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-mitsubishi-motors-website-redesign .research-grid .concept-card{display:grid;align-content:start;gap:.75rem;min-width:0;min-height:11rem;padding:1.35rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent);overflow-wrap:anywhere}
+.project-page-mitsubishi-motors-website-redesign .research-grid .concept-card:first-child{border-left:1px solid var(--color-border)}
+.project-page-mitsubishi-motors-website-redesign .research-grid .concept-card h3{font-size:clamp(1.15rem,1.7vw,1.45rem);line-height:1.15}
+.project-page-mitsubishi-motors-website-redesign .research-grid .concept-card p{font-size:.8rem;line-height:1.55}
+.project-page-mitsubishi-motors-website-redesign .concept-card,
+.project-page-mitsubishi-motors-website-redesign .decision-card,
+.project-page-mitsubishi-motors-website-redesign .metric-card{padding:1rem}
+.project-page-mitsubishi-motors-website-redesign .process-step{padding:.9rem 0}
+.project-page-mitsubishi-motors-website-redesign .project-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}
+.project-page-mitsubishi-motors-website-redesign .gallery-item img{width:100%;height:clamp(18rem,31vw,31rem);object-fit:contain}
+.project-page-mitsubishi-motors-website-redesign>.reflection-section{grid-template-columns:minmax(13rem,.36fr) minmax(0,1fr);align-items:start;column-gap:clamp(3rem,7vw,6rem);row-gap:1.5rem;border-top:1px solid var(--color-border);padding-top:clamp(2rem,4vw,3rem);padding-bottom:1.75rem}
+.project-page-mitsubishi-motors-website-redesign>.reflection-section .case-section-head h2{margin-top:1rem}
+.project-page-mitsubishi-motors-website-redesign .reflection-copy{max-width:none}
+.project-page-mitsubishi-motors-website-redesign .reflection-next-step{grid-column:1/-1;width:100%;max-width:none;margin-top:0;padding:1.25rem 1.5rem}
+.project-page-mitsubishi-motors-website-redesign>.project-pagination{margin-top:0}
+.project-page-mitsubishi-motors-website-redesign .project-pagination-link{padding:1.25rem}
+.project-page-mitsubishi-motors-website-redesign>.mitsubishi-design-skills{display:grid;grid-template-columns:1fr;align-items:start;gap:clamp(1.5rem,3vw,2.5rem);padding:clamp(1.75rem,3vw,2.5rem) 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.project-page-mitsubishi-motors-website-redesign .mitsubishi-design-skills h2{max-width:none;margin-top:.75rem;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.05;white-space:nowrap}
+.project-page-mitsubishi-motors-website-redesign>.deliverables-section{grid-template-columns:1fr;align-items:start;gap:clamp(1.5rem,3vw,2.5rem)}
+.project-page-mitsubishi-motors-website-redesign>.deliverables-section h2{max-width:none;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.05;white-space:nowrap}
+.project-page-mitsubishi-motors-website-redesign>.deliverables-section .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem 2rem;margin:0}
+.mitsubishi-capabilities-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem 2rem;margin:0;padding:0;list-style:none}
+.mitsubishi-capabilities-list li{position:relative;padding-left:1.25rem;color:var(--color-text);font-size:clamp(1rem,1.35vw,1.2rem);font-weight:650;line-height:1.5}
+.mitsubishi-capabilities-list li::before{content:"•";position:absolute;left:0;color:#d71920;font-size:1.3rem;font-weight:900;line-height:1.05}
+.mitsubishi-ux-artifacts{gap:1rem;padding-top:1.25rem!important}
+.mitsubishi-ux-artifacts>.section-head{margin-bottom:.5rem}
+.mitsubishi-safari-window{width:min(100%,68rem);justify-self:start;overflow:hidden;border:1px solid #b9b9b9;border-radius:1rem;background:#fff;box-shadow:0 1.25rem 3rem rgba(18,18,18,.12)}
+.mitsubishi-safari-chrome{display:grid;grid-template-columns:auto auto auto minmax(10rem,32rem) 1fr;align-items:center;gap:.45rem;padding:.7rem 1rem;border-bottom:1px solid #cfcfcf;background:linear-gradient(#f5f5f5,#e4e4e4)}
+.safari-dot{width:.72rem;height:.72rem;border-radius:50%;border:1px solid rgba(0,0,0,.18)}.safari-dot-red{background:#ff5f57}.safari-dot-yellow{background:#febc2e}.safari-dot-green{background:#28c840}.safari-address{grid-column:4;justify-self:center;width:100%;padding:.4rem .8rem;border:1px solid #c9c9c9;border-radius:.45rem;background:rgba(255,255,255,.78);color:#777;font-size:.66rem;text-align:center}
+.mitsubishi-artifact-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-bottom:1px solid var(--color-border);background:#f4f4f4}
+.mitsubishi-artifact-tabs button{padding:1rem .75rem;border:0;border-left:1px solid var(--color-border);background:transparent;color:#777;font-size:.75rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;transition:background var(--transition),color var(--transition)}.mitsubishi-artifact-tabs button:first-child{border-left:0}.mitsubishi-artifact-tabs button:hover:not(.is-active){background:#ececec;color:#333}.mitsubishi-artifact-tabs button.is-active{background:#fff;color:#d71920;box-shadow:inset 0 -3px 0 #d71920}
+.mitsubishi-artifact-panel{display:grid;place-items:center;min-height:clamp(22rem,38vw,38rem);overflow:auto;background:#090909}
+.mitsubishi-artifact-panel>a{display:block;width:100%}.mitsubishi-artifact-panel img{display:block;width:100%;height:auto;max-height:38rem;object-fit:contain}
+.mitsubishi-scenario-tab{display:grid;gap:1.5rem;width:min(100% - 2rem,62rem);margin:1rem;padding:clamp(1.5rem,3vw,2.5rem);border:1px solid #ddd;border-radius:.75rem;background:#fff;color:#191919;text-align:left}
+.scenario-header{display:grid;gap:.75rem;max-width:56rem}.mitsubishi-scenario-tab .scenario-header h3{max-width:24ch;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,3rem);line-height:1.03}.mitsubishi-scenario-tab .scenario-header>p:last-child{max-width:68ch;margin:0;color:#5f5f5f;font-size:clamp(.92rem,1.2vw,1.05rem);line-height:1.65}
+.scenario-details{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;overflow:hidden;border:1px solid #dedede;border-radius:.55rem;background:#dedede}.scenario-details>div{display:grid;align-content:start;gap:.45rem;min-width:0;min-height:8rem;padding:1.15rem;background:#fff}.scenario-details span{color:#d71920;font-size:.7rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.scenario-details p{margin:0;color:#555;font-size:.86rem;line-height:1.55}
+.scenario-steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:.65rem;margin:0;padding:0;list-style:none}.scenario-steps li{display:grid;align-content:start;gap:.5rem;min-width:0;min-height:5.5rem;padding:.9rem;border-top:3px solid #d71920;background:#f4f4f4}.scenario-steps span{color:#d71920;font-size:.68rem;font-weight:900}.scenario-steps strong{font-size:.78rem;line-height:1.35}
+.mitsubishi-artifact-caption{margin:0;padding:.8rem 1rem;border-top:1px solid var(--color-border);background:#fff;color:var(--color-text-muted);font-size:.7rem;line-height:1.5}
+.mitsubishi-comparison-section{display:grid;gap:1.25rem;padding:clamp(1.75rem,3vw,2.5rem) 0;border-top:1px solid var(--color-border)}
+.mitsubishi-comparison-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}.mitsubishi-comparison-grid>article{display:grid;grid-template-rows:auto 32rem;align-content:start;gap:1rem;padding:1rem;border:1px solid var(--color-border);border-radius:.6rem;background:color-mix(in srgb,var(--color-card) 65%,transparent)}.mitsubishi-comparison-grid ul{display:grid;gap:.5rem;margin:0;padding-left:1.1rem;color:var(--color-text-muted);font-size:.76rem;line-height:1.5}
+@media (max-width:700px){.mitsubishi-comparison-grid>article{grid-template-rows:auto 22rem}}
+.comparison-carousel-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-width:0;border-bottom:1px solid var(--color-border)}.comparison-carousel-toolbar>div{display:flex;min-width:0;overflow-x:auto}.comparison-carousel-toolbar button{min-width:max-content;padding:.75rem 1rem;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--color-text-faint);font-size:.68rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em;transition:color var(--transition),border-color var(--transition)}.comparison-carousel-toolbar button:hover{color:var(--color-text)}.comparison-carousel-toolbar button.is-active{border-bottom-color:#d71920;color:#d71920}.comparison-carousel-toolbar>span{flex:0 0 auto;color:var(--color-text-faint);font-size:.68rem;font-weight:800}.mitsubishi-comparison-carousel{position:relative;min-width:0;overflow:hidden}.comparison-screen{position:relative;display:grid;place-items:center;height:100%;overflow:hidden;border:1px solid var(--color-border);border-radius:.5rem;background:#111}.comparison-screen-redesign{border-color:#d71920}.comparison-screen img{display:block;width:100%;height:100%;max-height:none;aspect-ratio:auto;object-fit:contain;object-position:center;transition:transform 320ms cubic-bezier(.16,1,.3,1)}.comparison-screen:hover img{transform:scale(1.015)}.comparison-arrow{position:absolute;z-index:2;top:50%;display:grid;place-items:center;width:2.5rem;height:2.5rem;padding:0;border:1px solid rgba(255,255,255,.65);border-radius:50%;background:rgba(0,0,0,.68);color:#fff;font-size:1.5rem;transform:translateY(-50%);transition:background var(--transition),transform var(--transition)}.comparison-arrow:hover{background:#d71920;transform:translateY(-50%) scale(1.06)}.comparison-arrow-left{left:.45rem}.comparison-arrow-right{right:.45rem}
+.mitsubishi-persona-scenario>.mitsubishi-ux-graphic+article{border-left:1px solid var(--color-border)}
+.mitsubishi-ux-graphic{display:grid;gap:0;margin:0;overflow:hidden;border:1px solid var(--color-border);border-radius:.6rem;background:#0a0a0a}.mitsubishi-persona-scenario>.mitsubishi-ux-graphic{border:0;border-radius:0}.mitsubishi-ux-graphic a{display:block;overflow:auto}.mitsubishi-ux-graphic img{display:block;width:100%;height:auto}.mitsubishi-ux-graphic figcaption{padding:.75rem 1rem;background:var(--color-card);color:var(--color-text-muted);font-size:.72rem;line-height:1.5}.mitsubishi-ux-graphic-wide img{min-width:56rem}
+.mitsubishi-persona-scenario h3{font-family:var(--font-display);font-size:clamp(1.5rem,2.5vw,2.25rem);line-height:1.05}.mitsubishi-persona-scenario p{color:var(--color-text-muted);font-size:.86rem;line-height:1.65}
+.persona-heading{display:flex;align-items:center;gap:1rem}.persona-heading>span{display:grid;place-items:center;width:3.5rem;height:3.5rem;flex:0 0 auto;border-radius:50%;background:#d71920;color:#fff;font-weight:900}.persona-heading p{margin-top:.2rem;font-size:.72rem}
+.mitsubishi-persona dl{display:grid;margin:0;border-top:1px solid var(--color-border)}.mitsubishi-persona dl>div{display:grid;grid-template-columns:5rem 1fr;gap:.75rem;padding:.75rem 0;border-bottom:1px solid var(--color-border)}.mitsubishi-persona dt{font-size:.68rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}.mitsubishi-persona dd{margin:0;color:var(--color-text-muted);font-size:.78rem;line-height:1.55}
+.mitsubishi-journey-map{overflow-x:auto;border:1px solid var(--color-border);border-radius:.6rem}.journey-map-labels,.journey-map-row{display:grid;grid-template-columns:8rem repeat(4,minmax(12rem,1fr));min-width:56rem}.journey-map-labels{background:#171412;color:#fff}.journey-map-labels span{padding:.85rem 1rem;border-left:1px solid rgba(255,255,255,.16);font-size:.7rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}.journey-map-labels span:first-child{border-left:0}.journey-map-row>*{margin:0;padding:1rem;border-top:1px solid var(--color-border);border-left:1px solid var(--color-border);font-size:.76rem;line-height:1.55}.journey-map-row>*:first-child{border-left:0;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}.journey-map-row p{color:var(--color-text-muted)}.journey-map-friction{background:#fff5f3}.journey-map-opportunity{background:#f2f6f3}
+.mitsubishi-user-flow{display:grid;gap:1rem;padding:clamp(1.25rem,2.5vw,2rem);border:1px solid var(--color-border);border-radius:.6rem;background:color-mix(in srgb,var(--color-card) 65%,transparent)}.user-flow-track{display:flex;align-items:stretch;overflow-x:auto;padding-bottom:.35rem}.user-flow-step{position:relative;display:grid;align-content:center;gap:.35rem;min-width:9.5rem;min-height:6rem;padding:1rem 1.35rem 1rem 1rem;border:1px solid var(--color-border);border-radius:.35rem;background:var(--color-card)}.user-flow-step+ .user-flow-step{margin-left:1.7rem}.user-flow-step+ .user-flow-step::before{content:"→";position:absolute;left:-1.35rem;top:50%;color:#d71920;font-size:1.1rem;font-weight:900;transform:translateY(-50%)}.user-flow-step span{color:#d71920;font-size:.65rem;font-weight:900}.user-flow-step strong{font-size:.76rem;line-height:1.35}.user-flow-note{color:var(--color-text-muted);font-size:.78rem;line-height:1.55}
+@media (max-width:980px){
+  .project-page-mitsubishi-motors-website-redesign .project-page-hero{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign>.case-study-grid,
+  .project-page-mitsubishi-motors-website-redesign .concept-grid,
+  .project-page-mitsubishi-motors-website-redesign .metric-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-mitsubishi-motors-website-redesign .research-discovery-section>.section-head{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .research-grid{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign>.reflection-section{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign>.mitsubishi-design-skills{grid-template-columns:1fr}
+  .mitsubishi-persona-scenario{grid-template-columns:1fr}.mitsubishi-persona-scenario>article+article,.mitsubishi-persona-scenario>.mitsubishi-ux-graphic+article{border-left:0;border-top:1px solid var(--color-border)}
+  .mitsubishi-comparison-grid{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .growth-strategy-section>.section-head{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .growth-funnel,.project-page-mitsubishi-motors-website-redesign .growth-channel-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-mitsubishi-motors-website-redesign .growth-measurement{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .iteration-compare{grid-template-columns:1fr}
+  .scenario-steps{grid-template-columns:repeat(3,minmax(0,1fr))}
+}
+@media (max-width:700px){.project-page-mitsubishi-motors-website-redesign .mitsubishi-design-skills h2,.project-page-mitsubishi-motors-website-redesign>.deliverables-section h2{white-space:normal}.project-page-mitsubishi-motors-website-redesign>.deliverables-section .case-list{grid-template-columns:1fr}}
+@media (max-width:900px){.project-page-mitsubishi-motors-website-redesign .growth-strategy-section>.section-head h2{white-space:normal}}
+@media (max-width:600px){.mitsubishi-safari-chrome{grid-template-columns:auto auto auto minmax(5rem,1fr)}.safari-address{grid-column:4}.mitsubishi-artifact-tabs{display:flex;overflow-x:auto}.mitsubishi-artifact-tabs button{min-width:8.5rem}.mitsubishi-artifact-panel{min-height:22rem;place-items:start}.mitsubishi-artifact-panel>a{overflow-x:auto}.mitsubishi-artifact-panel img{width:auto;max-width:none;height:28rem}.mitsubishi-scenario-tab{width:calc(100% - 1rem);margin:.5rem}.scenario-details,.scenario-steps{grid-template-columns:1fr}}
+@media (max-width:600px){
+  .project-page-mitsubishi-motors-website-redesign{width:calc(100% - 2rem);padding-top:2rem}
+  .project-page-mitsubishi-motors-website-redesign .case-meta{min-height:0;padding:1rem}
+  .project-page-mitsubishi-motors-website-redesign .case-meta>div{grid-template-columns:1fr;gap:.25rem}
+  .project-page-mitsubishi-motors-website-redesign>.case-study-grid,
+  .project-page-mitsubishi-motors-website-redesign .concept-grid,
+  .project-page-mitsubishi-motors-website-redesign .metric-grid,
+  .project-page-mitsubishi-motors-website-redesign .project-gallery{grid-template-columns:1fr}
+  .mitsubishi-capabilities-list{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .growth-funnel,.project-page-mitsubishi-motors-website-redesign .growth-channel-grid{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .growth-measurement .measurement-tools{grid-template-columns:1fr}
+  .project-page-mitsubishi-motors-website-redesign .growth-measurement .measurement-tools span:last-child{grid-column:auto}
+}
+
+/* Hair by Athraa: Mitsubishi editorial case-study template */
+.project-page-hair-by-athraa{--case-accent:#8b674f;width:min(calc(100% - clamp(2rem,14vw,18rem)),1744px);max-width:100%;min-width:0;overflow-x:clip;padding-top:clamp(1.5rem,3vw,2.25rem)}
+.project-page-hair-by-athraa>*{min-width:0;max-width:100%}
+.project-page-hair-by-athraa .project-page-hero{grid-template-columns:minmax(0,.92fr) minmax(30rem,.68fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.project-page-hair-by-athraa .project-page-hero>div:first-child{display:grid;justify-items:start;align-content:center;align-self:stretch;text-align:left}
+.project-page-hair-by-athraa .project-lede{max-width:48ch}
+.project-page-hair-by-athraa .case-meta{display:grid;grid-template-columns:1fr;gap:0;width:100%;min-height:27rem;padding:1.65rem 1.8rem;border:1px solid var(--color-border);border-radius:.85rem;background:color-mix(in srgb,var(--color-card) 88%,var(--color-surface-2))}
+.project-page-hair-by-athraa .case-meta>div{display:grid;grid-template-columns:7.25rem minmax(0,1fr);align-items:start;gap:1rem;min-width:0;padding:1.15rem 0;border:0;border-top:1px solid var(--color-border);border-radius:0;background:transparent}
+.project-page-hair-by-athraa .case-meta>div:first-child{padding-top:0;border-top:0}
+.project-page-hair-by-athraa .case-meta>div:last-child{padding-bottom:0}
+.project-page-hair-by-athraa .case-meta dd{overflow-wrap:anywhere;font-size:.9rem;font-weight:700;line-height:1.55}
+.project-page-hair-by-athraa .case-meta>.case-meta-deliverable{grid-template-columns:1fr;gap:.55rem}
+.project-page-hair-by-athraa>.case-image{margin-bottom:2rem}
+.project-page-hair-by-athraa>.case-image img{width:100%;max-height:42rem;object-fit:contain;object-position:center;background:#eee5dc}
+.project-page-hair-by-athraa>.case-section,.project-page-hair-by-athraa>.iteration-section{margin-top:0!important;padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-hair-by-athraa .section-head,.project-page-hair-by-athraa .case-section-head{margin-bottom:1rem}
+.project-page-hair-by-athraa>.case-study-grid{grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:1rem;padding-block:clamp(1.5rem,3vw,2.5rem)}
+.project-page-hair-by-athraa>.case-study-grid article{display:grid;align-content:start;gap:.65rem;min-height:10.5rem;padding:1.35rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 70%,transparent)}
+.project-page-hair-by-athraa>.case-study-grid article:first-child{padding-left:1.35rem;border:1px solid var(--color-border)}
+.project-page-hair-by-athraa>.case-study-grid article>p:last-child{margin:0}
+.project-page-hair-by-athraa .concept-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.project-page-hair-by-athraa .concept-card{display:grid;align-content:start;gap:.7rem;min-height:11rem;padding:1.15rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-hair-by-athraa .research-discovery-section>.section-head h2{max-width:24ch;font-size:clamp(2rem,3.5vw,3.1rem);line-height:1.04}
+.project-page-hair-by-athraa .research-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-hair-by-athraa .research-grid .concept-card h3{font-size:clamp(1.15rem,1.7vw,1.45rem);line-height:1.15}
+.project-page-hair-by-athraa .research-grid .concept-card p{font-size:.8rem;line-height:1.55}
+.project-page-hair-by-athraa .hair-ux-artifacts{display:grid;gap:.75rem;margin-top:1.25rem}
+.project-page-hair-by-athraa .hair-safari-window{width:100%;max-width:none}
+.project-page-hair-by-athraa .hair-artifact-tabs{grid-template-columns:repeat(5,minmax(0,1fr))}
+.project-page-hair-by-athraa .hair-artifact-tabs button.is-active{color:#8b674f;box-shadow:inset 0 -3px 0 #8b674f}
+.project-page-hair-by-athraa .hair-artifact-panel{min-height:clamp(25rem,45vw,48rem);background:#f4f0ec}
+.project-page-hair-by-athraa .hair-artifact-panel>a{display:grid;place-items:center;width:100%;height:100%;overflow:auto}
+.project-page-hair-by-athraa .hair-artifact-panel img{display:block;width:100%;height:auto;max-height:48rem;object-fit:contain}
+.project-page-hair-by-athraa .process-timeline{display:grid;grid-template-columns:1fr;border-top:1px solid var(--color-border)}
+.project-page-hair-by-athraa .process-timeline .process-step{display:grid;grid-template-columns:8rem minmax(12rem,.45fr) minmax(0,1fr);align-items:start;gap:1.5rem;min-height:0;padding:1.25rem 0;border:0;border-bottom:1px solid var(--color-border);border-radius:0;background:transparent}
+.project-page-hair-by-athraa .process-step>span{color:#8b674f}
+.project-page-hair-by-athraa .process-step h3{font-size:1.15rem}
+.project-page-hair-by-athraa .process-step p{font-size:.84rem;line-height:1.6}
+.project-page-hair-by-athraa>.mitsubishi-design-skills{display:grid;grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.5rem);padding:clamp(1.75rem,3vw,2.5rem) 0;border-top:1px solid var(--color-border);border-bottom:1px solid var(--color-border)}
+.project-page-hair-by-athraa .mitsubishi-design-skills h2{max-width:none;margin-top:.75rem;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.05}
+.project-page-hair-by-athraa .mitsubishi-capabilities-list li::before{color:#8b674f}
+.project-page-hair-by-athraa>.deliverables-section{grid-template-columns:1fr;gap:clamp(1.5rem,3vw,2.5rem)}
+.project-page-hair-by-athraa>.deliverables-section h2{max-width:none;font-family:var(--font-display);font-size:clamp(1.8rem,3vw,2.7rem);line-height:1.05}
+.project-page-hair-by-athraa>.deliverables-section .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem 2rem;margin:0}
+.project-page-hair-by-athraa .iteration-compare{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.project-page-hair-by-athraa .iteration-takeaway{max-width:none;margin-left:0}
+.project-page-hair-by-athraa .project-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.project-page-hair-by-athraa .gallery-item{overflow:hidden;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card)}
+.project-page-hair-by-athraa .gallery-item img{width:100%;height:clamp(18rem,31vw,31rem);object-fit:contain;background:#171412}
+.project-page-hair-by-athraa>.reflection-section{grid-template-columns:minmax(13rem,.36fr) minmax(0,1fr);align-items:start;column-gap:clamp(3rem,7vw,6rem);row-gap:1.5rem;border-top:1px solid var(--color-border);padding-top:clamp(2rem,4vw,3rem);padding-bottom:1.75rem}
+.project-page-hair-by-athraa>.reflection-section .case-section-head h2{margin-top:1rem}
+.project-page-hair-by-athraa .reflection-copy{max-width:none}
+.project-page-hair-by-athraa .project-detail-actions{grid-column:1/-1}
+.project-page-hair-by-athraa>.project-pagination{margin-top:0}
+.project-page-hair-by-athraa .project-pagination-link{padding:1.25rem}
+@media (max-width:980px){
+  .project-page-hair-by-athraa .project-page-hero{grid-template-columns:1fr}
+  .project-page-hair-by-athraa>.case-study-grid,.project-page-hair-by-athraa .concept-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-hair-by-athraa .research-grid,.project-page-hair-by-athraa>.reflection-section{grid-template-columns:1fr}
+  .project-page-hair-by-athraa .process-timeline .process-step{grid-template-columns:1fr;gap:.5rem}
+  .project-page-hair-by-athraa .hair-artifact-tabs{display:flex;overflow-x:auto}
+  .project-page-hair-by-athraa .hair-artifact-tabs button{min-width:9rem}
+}
+@media (max-width:600px){
+  .project-page-hair-by-athraa{width:calc(100% - 2rem);padding-top:2rem}
+  .project-page-hair-by-athraa .case-meta{min-height:0;padding:1rem}
+  .project-page-hair-by-athraa .case-meta>div{grid-template-columns:1fr;gap:.25rem}
+  .project-page-hair-by-athraa>.case-study-grid,.project-page-hair-by-athraa .concept-grid,.project-page-hair-by-athraa .project-gallery,.project-page-hair-by-athraa>.deliverables-section .case-list{grid-template-columns:1fr}
+  .project-page-hair-by-athraa .hair-artifact-panel{min-height:20rem;place-items:start}
+  .project-page-hair-by-athraa .hair-artifact-panel img{width:auto;max-width:none;height:28rem}
+}
+
+/* TasteBuds uses the same editorial case-study template as MERA and Mitsubishi. */
+.project-page-tastebuds{--case-accent:#b7bb18;width:min(calc(100% - clamp(2rem,14vw,18rem)),1744px);max-width:100%;min-width:0;overflow-x:clip;padding-top:clamp(1.5rem,3vw,2.25rem)}
+.project-page-tastebuds .project-page-hero{grid-template-columns:minmax(0,.92fr) minmax(30rem,.68fr);gap:clamp(2rem,4vw,3.5rem);align-items:start}
+.project-page-tastebuds .project-page-hero>div:first-child{display:grid;justify-items:start;align-content:center;align-self:stretch;text-align:left}
+.project-page-tastebuds .project-lede{max-width:50ch}
+.project-page-tastebuds .project-intro{max-width:58ch}
+.project-page-tastebuds .case-meta{display:grid;grid-template-columns:1fr;gap:0;width:100%;min-height:27rem;padding:1.65rem 1.8rem;border:1px solid var(--color-border);border-radius:.85rem;background:color-mix(in srgb,var(--color-card) 88%,var(--color-surface-2))}
+.project-page-tastebuds .case-meta>div{display:grid;grid-template-columns:7.25rem minmax(0,1fr);align-items:start;gap:1rem;min-width:0;padding:1.15rem 0;border:0;border-top:1px solid var(--color-border);border-radius:0;background:transparent}
+.project-page-tastebuds .case-meta>div:first-child{padding-top:0;border-top:0}
+.project-page-tastebuds .case-meta>div:last-child{padding-bottom:0}
+.project-page-tastebuds .case-meta dd{overflow-wrap:anywhere;font-size:.9rem;font-weight:700;line-height:1.55}
+.project-page-tastebuds .case-meta>.case-meta-deliverable{grid-template-columns:1fr;gap:.55rem}
+.project-page-tastebuds .case-meta>.case-meta-deliverable dd{max-width:32ch;font-size:1rem;line-height:1.45}
+.project-page-tastebuds>.case-image{margin-bottom:2rem}
+.project-page-tastebuds>.case-image img{width:100%;max-height:42rem;object-fit:contain;object-position:center;background:#111}
+.project-page-tastebuds>.brand-showcase-process{display:grid;gap:clamp(1.75rem,3vw,2.5rem);margin-top:0;padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-tastebuds .brand-showcase-process .editorial-row:first-child{grid-template-columns:minmax(0,1fr) auto;align-items:end;gap:clamp(2rem,5vw,5rem);padding:0;border:0}
+.project-page-tastebuds .brand-showcase-process .editorial-row:first-child .editorial-copy{align-self:start}
+.project-page-tastebuds .brand-showcase-process .editorial-row:first-child .editorial-copy h2{max-width:none;font-size:clamp(2.25rem,4.6vw,4.75rem);line-height:.98}
+.project-page-tastebuds .brand-showcase-process .editorial-row:first-child .editorial-copy>p{max-width:74ch;margin-top:1rem}
+.project-page-tastebuds .brand-showcase-process .brand-voice-row{grid-template-columns:minmax(18rem,.62fr) minmax(0,1.38fr);gap:clamp(2rem,5vw,5rem)}
+.project-page-tastebuds .brand-showcase-process .brand-voice-row{align-items:start;padding-top:clamp(1.75rem,3vw,2.5rem);border-top:1px solid var(--color-border)}
+.project-page-tastebuds .brand-showcase-visual img{aspect-ratio:16/9;object-fit:contain;background:#111}
+.project-page-tastebuds .brand-showcase-visual{width:min(100%,30rem);justify-self:end;border-radius:.65rem}
+.project-page-tastebuds .brand-showcase-logo-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;min-height:0;padding:.45rem;background:#29292d}
+.project-page-tastebuds .brand-showcase-logo-grid>div{display:grid;grid-template-rows:1fr auto;min-width:0;overflow:hidden;border:1px solid rgba(230,233,58,.22);border-radius:.35rem;background:#111}
+.project-page-tastebuds .brand-showcase-logo-grid img{width:100%;height:14rem;min-height:0;aspect-ratio:auto;object-fit:contain;padding:.5rem;background:transparent}
+.project-page-tastebuds .brand-showcase-logo-grid span{padding:.35rem .4rem;border-top:1px solid rgba(230,233,58,.22);background:#29292d;color:#f4f1e8;font-size:.5rem;font-weight:800;letter-spacing:.04em;text-align:center;text-transform:uppercase}
+.project-page-tastebuds .brand-showcase-visual figcaption{padding:.55rem .7rem;font-size:.62rem}
+.project-page-tastebuds .brand-principles{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds .brand-principles article{min-height:13rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds>.case-section,
+.project-page-tastebuds>.case-study-grid,
+.project-page-tastebuds>.iteration-section{margin-top:0!important;padding:clamp(1.75rem,3vw,2.5rem) 0}
+.project-page-tastebuds .section-head,
+.project-page-tastebuds .case-section-head{margin-bottom:1rem}
+.project-page-tastebuds .concept-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds .concept-card{display:grid;align-content:start;gap:.7rem;min-height:11rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds .metric-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds .metric-card{min-height:10.5rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds>.case-study-grid{grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:1rem}
+.project-page-tastebuds>.case-study-grid article{display:grid;align-content:start;gap:.65rem;min-height:12rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 70%,transparent)}
+.project-page-tastebuds>.case-study-grid article:first-child{padding-left:1.25rem;border:1px solid var(--color-border)}
+.project-page-tastebuds>.case-study-grid article>p:last-child{margin:0}
+.project-page-tastebuds .iteration-compare{gap:1rem}
+.project-page-tastebuds .iteration-compare article{min-height:11rem;padding:1.25rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds>.case-brief,
+.project-page-tastebuds>.deliverables-section{grid-template-columns:minmax(15rem,.55fr) minmax(0,1.45fr);align-items:start;gap:clamp(2rem,5vw,5rem)}
+.project-page-tastebuds .research-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds .design-process-section{display:grid;gap:1.15rem}
+.project-page-tastebuds .design-process-section .case-section-head{margin-bottom:0}
+.project-page-tastebuds .design-process-section .case-section-head>div{display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:.85rem}
+.project-page-tastebuds .design-process-section .case-section-head .eyebrow{margin:0;background:var(--color-primary-highlight);color:var(--color-text)}
+.project-page-tastebuds .design-process-section .case-section-head h2{font-size:clamp(1.65rem,2.8vw,2.65rem);line-height:1.05}
+.project-page-tastebuds .process-timeline{position:relative;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;overflow:hidden;border:1px solid var(--color-border);border-radius:.8rem;background:color-mix(in srgb,var(--color-card) 82%,var(--color-surface-2))}
+.project-page-tastebuds .process-timeline .process-step{position:relative;display:grid;grid-template-columns:1fr;align-content:start;gap:.65rem;min-height:12rem;padding:1.35rem 1.25rem;border:0;border-left:1px solid var(--color-border);background:transparent;color:var(--color-text)}
+.project-page-tastebuds .process-timeline .process-step:first-child{border-left:0}
+.project-page-tastebuds .process-timeline .process-step>span{display:flex;align-items:center;gap:.55rem;color:#8b9000;font-size:.67rem;letter-spacing:.07em}
+.project-page-tastebuds .process-timeline .process-step>span::after{display:block;flex:1;height:1px;background:#b7bb18;content:""}
+.project-page-tastebuds .process-step h3{max-width:12ch;color:var(--color-text);font-family:var(--font-body);font-size:1.15rem;font-weight:850;line-height:1.15}
+.project-page-tastebuds .process-step p{max-width:24ch;color:var(--color-text-muted);font-size:.8rem;line-height:1.5}
+.project-page-tastebuds .process-timeline .process-step:hover{background:var(--color-primary-highlight)}
+.project-page-tastebuds .tastebuds-content-operations{display:grid;gap:1rem}
+.project-page-tastebuds .tastebuds-operations-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.project-page-tastebuds .tastebuds-operations-grid>article{display:grid;align-content:start;gap:.7rem;min-height:14rem;padding:1.1rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds .tastebuds-icon-label{display:flex;align-items:center;gap:.45rem}
+.project-page-tastebuds .tastebuds-icon-label .case-icon{width:1.05rem;height:1.05rem;color:#a8ad09;stroke-width:2}
+.project-page-tastebuds .tastebuds-operation-row{display:grid;gap:.15rem;padding-top:.65rem;border-top:1px solid var(--color-border)}
+.project-page-tastebuds .tastebuds-operation-row strong{font-size:.72rem;text-transform:uppercase;letter-spacing:.05em}
+.project-page-tastebuds .tastebuds-operation-row p,.project-page-tastebuds .tastebuds-operations-grid li{font-size:.82rem;line-height:1.5;color:var(--color-text-muted)}
+.project-page-tastebuds .tastebuds-operations-grid ul{display:grid;gap:.65rem;margin:0;padding-left:1.1rem}
+.project-page-tastebuds .tastebuds-posting-tools{display:flex;flex-wrap:wrap;gap:.4rem;margin-top:.25rem}
+.project-page-tastebuds .tastebuds-posting-tools span{padding:.35rem .55rem;border-radius:999px;background:#111;color:#e6e93a;font-size:.68rem;font-weight:800}
+.project-page-tastebuds .tastebuds-performance-strip{display:grid;grid-template-columns:1.5fr repeat(2,minmax(10rem,.65fr));gap:.75rem}
+.project-page-tastebuds .tastebuds-performance-strip>article,.project-page-tastebuds .tastebuds-insights{min-height:10rem;padding:1.1rem;border:1px solid var(--color-border);border-radius:.65rem;background:color-mix(in srgb,var(--color-card) 72%,transparent)}
+.project-page-tastebuds .tastebuds-insights{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.75rem}
+.project-page-tastebuds .tastebuds-insights>.case-label{grid-column:1/-1}
+.project-page-tastebuds .tastebuds-insights strong{font-size:.72rem;text-transform:uppercase;letter-spacing:.04em}
+.project-page-tastebuds .tastebuds-insights p{margin-top:.25rem;font-size:.82rem;line-height:1.4;color:var(--color-text-muted)}
+.project-page-tastebuds .tastebuds-performance-strip>article{display:grid;align-content:start}
+.project-page-tastebuds .tastebuds-performance-strip>article>span{font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.project-page-tastebuds .tastebuds-performance-strip>article>strong{margin-top:.45rem;font-family:var(--font-display);font-size:2.6rem;line-height:1}
+.project-page-tastebuds .tastebuds-performance-strip>article>p{font-size:.75rem;color:var(--color-text-muted);text-transform:uppercase}
+.project-page-tastebuds .tastebuds-performance-strip>article>b{margin-top:.7rem;font-size:.82rem}
+.project-page-tastebuds .tastebuds-mini-chart{display:grid;gap:.55rem;margin-top:.8rem}
+.project-page-tastebuds .tastebuds-mini-chart>div{display:grid;grid-template-columns:5rem minmax(0,1fr);align-items:center;gap:.55rem}
+.project-page-tastebuds .tastebuds-mini-chart span{font-size:.62rem;font-weight:800;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.035em}
+.project-page-tastebuds .tastebuds-mini-chart i{display:block;width:100%;height:.42rem;overflow:hidden;border-radius:999px;background:color-mix(in srgb,var(--color-border) 80%,transparent)}
+.project-page-tastebuds .tastebuds-mini-chart i::after{display:block;width:var(--bar-width);height:100%;border-radius:inherit;background:#b7bb18;content:""}
+.project-page-tastebuds .tastebuds-evidence-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(14rem,.5fr);gap:.75rem}
+.project-page-tastebuds .tastebuds-carousel-evidence{display:grid;align-content:start;justify-items:center;gap:0;overflow:hidden;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card)}
+.project-page-tastebuds .tastebuds-instagram-carousel{display:grid;justify-items:center;width:100%;padding:1.25rem;background:color-mix(in srgb,var(--color-surface-2) 72%,var(--color-card))}
+.project-page-tastebuds .tastebuds-instagram-carousel-post{width:min(100%,27rem);box-shadow:0 18px 48px rgba(20,16,13,.16)}
+.project-page-tastebuds .tastebuds-instagram-avatar{background:#050505;color:#eff52d}
+.project-page-tastebuds .tastebuds-carousel-image{background-color:#111;background-repeat:no-repeat;background-size:400% auto}
+.project-page-tastebuds .tastebuds-carousel-evidence>p{width:100%;margin:0;padding:.75rem .9rem;color:var(--color-text-muted);font-size:.75rem;line-height:1.45}
+.project-page-tastebuds .tastebuds-evidence-grid figure{overflow:hidden;border:1px solid var(--color-border);border-radius:.65rem;background:#111}
+.project-page-tastebuds .tastebuds-evidence-grid img{display:block;width:100%;height:27rem;object-fit:contain;background:#111}
+.project-page-tastebuds .tastebuds-evidence-grid figcaption{padding:.75rem .9rem;background:var(--color-card);font-size:.75rem;line-height:1.45;color:var(--color-text-muted)}
+.project-page-tastebuds .tastebuds-milestone img{background:#f5f5f5}
+.project-page-tastebuds>.deliverables-section .case-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.7rem 2rem;margin:0}
+.project-page-tastebuds .project-gallery{grid-template-columns:repeat(2,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds .gallery-item{overflow:hidden;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card)}
+.project-page-tastebuds .gallery-item img{width:100%;height:clamp(18rem,30vw,30rem);object-fit:contain;background:#111}
+.project-page-tastebuds .gallery-item figcaption{padding:.85rem 1rem}
+.project-page-tastebuds .poster-notes{grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem}
+.project-page-tastebuds>.reflection-section{grid-template-columns:minmax(13rem,.36fr) minmax(0,1fr);align-items:start;column-gap:clamp(3rem,7vw,6rem);row-gap:1.5rem;border-top:1px solid var(--color-border);padding-top:clamp(2rem,4vw,3rem);padding-bottom:1.75rem}
+.project-page-tastebuds>.reflection-section .case-section-head h2{margin-top:1rem}
+.project-page-tastebuds .reflection-copy{max-width:none}
+.project-page-tastebuds .reflection-next-step{grid-column:1/-1;width:100%;max-width:none;margin-top:0;padding:1.25rem 1.5rem}
+.project-page-tastebuds .project-detail-actions{grid-column:1/-1}
+.project-page-tastebuds>.project-pagination{margin-top:0}
+.project-page-tastebuds .project-pagination-link{padding:1.25rem}
+@media (max-width:1100px){
+  .project-page-tastebuds .project-page-hero{grid-template-columns:1fr}
+  .project-page-tastebuds .brand-showcase-process .editorial-row{grid-template-columns:1fr}
+  .project-page-tastebuds .brand-showcase-visual{justify-self:start}
+  .project-page-tastebuds>.case-study-grid,
+  .project-page-tastebuds .concept-grid,
+  .project-page-tastebuds .metric-grid,
+  .project-page-tastebuds .process-timeline{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .project-page-tastebuds .process-timeline .process-step:nth-child(odd){border-left:0}
+  .project-page-tastebuds .process-timeline .process-step:nth-child(n+3){border-top:1px solid var(--color-border)}
+  .project-page-tastebuds .tastebuds-operations-grid{grid-template-columns:1fr}
+  .project-page-tastebuds .tastebuds-performance-strip{grid-template-columns:1fr 1fr}
+  .project-page-tastebuds .tastebuds-insights{grid-column:1/-1}
+  .project-page-tastebuds>.reflection-section{grid-template-columns:1fr}
+}
+@media (max-width:700px){
+  .project-page-tastebuds{width:calc(100% - 2rem);padding-top:2rem}
+  .project-page-tastebuds .case-meta{min-height:0;padding:1rem}
+  .project-page-tastebuds .case-meta>div{grid-template-columns:1fr;gap:.25rem}
+  .project-page-tastebuds .brand-principles,
+  .project-page-tastebuds>.case-study-grid,
+  .project-page-tastebuds .concept-grid,
+  .project-page-tastebuds .metric-grid,
+  .project-page-tastebuds .research-grid,
+  .project-page-tastebuds .process-timeline,
+  .project-page-tastebuds>.deliverables-section .case-list,
+  .project-page-tastebuds .project-gallery,
+  .project-page-tastebuds .poster-notes{grid-template-columns:1fr}
+  .project-page-tastebuds .design-process-section .case-section-head>div{grid-template-columns:1fr;justify-items:start}
+  .project-page-tastebuds .process-timeline .process-step{min-height:0;border-top:1px solid var(--color-border);border-left:0}
+  .project-page-tastebuds .process-timeline .process-step:first-child{border-top:0}
+  .project-page-tastebuds .tastebuds-performance-strip,.project-page-tastebuds .tastebuds-insights,.project-page-tastebuds .tastebuds-evidence-grid{grid-template-columns:1fr}
+  .project-page-tastebuds .tastebuds-insights{grid-column:auto}
+  .project-page-tastebuds .tastebuds-evidence-grid img{height:auto;max-height:24rem}
+  .project-page-tastebuds .brand-showcase-logo-grid{grid-template-columns:repeat(2,minmax(0,1fr));min-height:0}
+  .project-page-tastebuds .brand-showcase-logo-grid img{height:10rem;min-height:0}
+  .project-page-tastebuds>.case-brief,
+  .project-page-tastebuds>.deliverables-section{grid-template-columns:1fr}
+  .project-page-tastebuds .gallery-item img{height:auto;max-height:28rem}
+}
+
+/* Keep every case-study hero image at one balanced landscape height. */
+.project-page > .case-image img,
+.project-page-mera-sparkling-tea-launch > .case-image img,
+.project-page-mitsubishi-motors-website-redesign > .case-image img,
+.project-page-tastebuds > .case-image img,
+.project-page-hair-by-athraa > .case-image img {
+  width: 100%;
+  height: clamp(22rem, 38vw, 36rem);
+  max-height: none;
+  object-fit: contain;
+  object-position: center;
+}
+
+@media (max-width:700px) {
+  .project-page > .case-image img,
+  .project-page-mera-sparkling-tea-launch > .case-image img,
+  .project-page-mitsubishi-motors-website-redesign > .case-image img,
+  .project-page-tastebuds > .case-image img,
+  .project-page-hair-by-athraa > .case-image img {
+    height: clamp(16rem, 72vw, 26rem);
+  }
+}
+
+/* Presentation mode: readable from a TV or large 16:9 display. */
+@media (min-width:1600px) {
+  :root,
+  [data-theme="light"] {
+    --content-wide: min(88vw, 1760px);
+    --text-xs: clamp(.9rem, .62vw, 1.08rem);
+    --text-sm: clamp(1rem, .72vw, 1.22rem);
+    --text-base: clamp(1.08rem, .82vw, 1.35rem);
+    --text-lg: clamp(1.3rem, 1vw, 1.7rem);
+    --text-xl: clamp(2rem, 1.65vw, 3rem);
+    --text-2xl: clamp(3rem, 3vw, 5.25rem);
+    --text-3xl: clamp(4rem, 4.5vw, 7rem);
+  }
+
+  .container {
+    width: min(88vw, var(--content-wide));
+  }
+
+  .nav-wrap {
+    min-height: 6rem;
+  }
+
+  .brand-logo {
+    width: clamp(13rem, 12vw, 18rem);
+    max-height: 5rem;
+  }
+
+  .nav-links a,
+  .work-view-switcher button,
+  .work-layout-toggle {
+    font-size: clamp(.82rem, .62vw, 1rem);
+  }
+
+  .icon-btn,
+  .social-logo-btn,
+  .pill-btn,
+  .project-link {
+    min-height: 54px;
+  }
+
+  .project-page,
+  .project-page-mera-sparkling-tea-launch,
+  .project-page-mitsubishi-motors-website-redesign,
+  .project-page-tastebuds,
+  .project-page-hair-by-athraa {
+    width: min(86vw, 1760px);
+    padding-top: clamp(2.5rem, 3vh, 4rem);
+  }
+
+  .project-page .display-heading {
+    font-size: clamp(4rem, 4vw, 6.5rem);
+  }
+
+  .project-page .project-lede {
+    max-width: 54ch;
+    font-size: clamp(1.35rem, 1.15vw, 1.85rem);
+  }
+
+  .project-page .project-intro,
+  .project-page .case-meta dd,
+  .project-page .brief-deliverable-card .reflection-copy {
+    font-size: clamp(1.05rem, .8vw, 1.35rem);
+  }
+
+  .project-page .case-section-head h2,
+  .project-page-brand .case-section-head h2,
+  .project-page .section-head h2 {
+    font-size: clamp(2.6rem, 2.5vw, 4rem);
+  }
+
+  .project-page .case-section-head > p,
+  .project-page .section-head > p,
+  .project-page .concept-card p,
+  .project-page .decision-card p,
+  .project-page .metric-card p,
+  .project-page .case-study-grid p,
+  .project-page .process-step p {
+    font-size: clamp(1rem, .72vw, 1.25rem);
+  }
+
+  .project-page .concept-card h3,
+  .project-page .decision-card h3,
+  .project-page .process-step h3 {
+    font-size: clamp(1.35rem, 1.05vw, 1.75rem);
+  }
+
+  .project-page > .case-image img,
+  .project-page-mera-sparkling-tea-launch > .case-image img,
+  .project-page-mitsubishi-motors-website-redesign > .case-image img,
+  .project-page-tastebuds > .case-image img,
+  .project-page-hair-by-athraa > .case-image img {
+    height: clamp(34rem, 55vh, 48rem);
+  }
+
+  .project-page .gallery-item figcaption,
+  .project-page .case-meta dt,
+  .project-page .project-tools-large span {
+    font-size: clamp(.82rem, .58vw, 1rem);
+  }
+}
+
+@media (min-width:2400px) {
+  :root,
+  [data-theme="light"] {
+    --content-wide: min(88vw, 2240px);
+  }
+
+  .project-page,
+  .project-page-mera-sparkling-tea-launch,
+  .project-page-mitsubishi-motors-website-redesign,
+  .project-page-tastebuds,
+  .project-page-hair-by-athraa {
+    width: min(84vw, 2200px);
+  }
+
+  .project-page > .case-image img,
+  .project-page-mera-sparkling-tea-launch > .case-image img,
+  .project-page-mitsubishi-motors-website-redesign > .case-image img,
+  .project-page-tastebuds > .case-image img,
+  .project-page-hair-by-athraa > .case-image img {
+    height: clamp(42rem, 54vh, 62rem);
+  }
+}
+
+/* Subtle portfolio motion */
+@keyframes portfolio-fade-up {
+  from { opacity: 0; transform: translateY(18px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes portfolio-soft-reveal {
+  from { opacity: 0; transform: scale(.985); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+.hero-copy {
+  animation: portfolio-fade-up 700ms cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.project-widget {
+  opacity: 0;
+  transform: translateY(14px);
+  animation: portfolio-fade-up 620ms cubic-bezier(.16, 1, .3, 1) both;
+  transition: transform 320ms cubic-bezier(.16, 1, .3, 1), filter 260ms, box-shadow 320ms ease;
+}
+
+.project-widget:nth-child(1) { animation-delay: 100ms; }
+.project-widget:nth-child(2) { animation-delay: 180ms; }
+.project-widget:nth-child(3) { animation-delay: 260ms; }
+.project-widget:nth-child(4) { animation-delay: 340ms; }
+
+.project-widget:hover {
+  transform: translateY(-6px) scale(1.012);
+  box-shadow: 0 20px 48px rgba(20, 16, 13, .14);
+}
+
+.project-widget:hover .widget-project-mark {
+  transform: scale(1.025);
+}
+
+.widget-project-mark {
+  transition: transform 420ms cubic-bezier(.16, 1, .3, 1);
+}
+
+.project-page > .project-page-hero,
+.project-page > .case-image {
+  animation: portfolio-soft-reveal 650ms cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.project-page > .case-image { animation-delay: 90ms; }
+
+.work-page .project-card {
+  animation: portfolio-fade-up 560ms cubic-bezier(.16, 1, .3, 1) both;
+}
+
+.work-page .project-card:nth-child(2) { animation-delay: 70ms; }
+.work-page .project-card:nth-child(3) { animation-delay: 140ms; }
+.work-page .project-card:nth-child(4) { animation-delay: 210ms; }
+
+@media (prefers-reduced-motion: reduce) {
+  .hero-copy,
+  .project-widget,
+  .project-page > .project-page-hero,
+  .project-page > .case-image,
+  .work-page .project-card {
+    opacity: 1;
+    transform: none;
+    animation: none;
+  }
+
+  .project-widget,
+  .widget-project-mark,
+  .work-page .project-card,
+  .work-page .project-card-media img,
+  .project-page > .case-image img {
+    transition: none;
+  }
+}

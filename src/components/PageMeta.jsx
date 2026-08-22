@@ -31,7 +31,6 @@ const socialImages = {
   "mera-sparkling-tea-launch": "/social/mera-case-study.png",
   tastebuds: "/social/tastebuds-case-study.png",
   "hair-by-athraa": "/social/hair-by-athraa-case-study.png",
-  "group-fitness-app": "/social/fitarray-case-study.png",
   "mitsubishi-motors-website-redesign": "/social/mitsubishi-case-study.png",
 };
 
