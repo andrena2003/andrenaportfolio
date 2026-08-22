@@ -132,10 +132,10 @@ const allProjects = [
       title: "Ditch the 3 PM Coffee Crash.",
       eyebrow: "9-second vertical ad",
       description:
-        "A fast, beat-synced problem-to-solution edit built with authentic vertical footage, kinetic type, and MERA’s campaign imagery to move from afternoon fatigue to a clear product offer.",
+        "A fast, music-led problem-to-solution edit built with authentic vertical footage, kinetic type, and a full-bleed MERA product finish that moves from afternoon fatigue to a clear offer.",
       video: "/videos/mera-pattern-interrupt.mp4",
       poster: "/videos/mera-pattern-interrupt-poster.jpg",
-      caption: "Concept edit · Licensed real-world footage + MERA brand art direction · 9:16 · 9 seconds",
+      caption: "Concept edit · Licensed real-world footage and Mixkit music + MERA brand art direction · 9:16 · 9 seconds",
       specs: [
         { label: "Hook Strategy", detail: "Pattern Interrupt — addressing afternoon fatigue (0:00–0:01)" },
         { label: "Visual Style", detail: "Beat-synced kinetic typography, warm botanical colour grading, a liquid-pour macro shot, and staggered benefit reveals" },
