@@ -128,6 +128,22 @@ const allProjects = [
       takeaway:
         "The new direction shaped the visual identity, social creative, and sampling-led launch.",
     },
+    patternInterruptAd: {
+      title: "Ditch the 3 PM Coffee Crash.",
+      eyebrow: "10-second vertical ad",
+      description:
+        "A fast problem-to-solution concept designed to stop the scroll, position MERA as the energizing alternative, and convert attention into a starter-bundle offer.",
+      video: "/videos/mera-pattern-interrupt.mp4",
+      poster: "/videos/mera-pattern-interrupt-poster.jpg",
+      phases: [
+        { time: "0.0–1.5s", title: "The hook", body: "A desaturated office slump is interrupted by sharp kinetic type and a high-contrast shift into MERA’s campaign palette." },
+        { time: "1.5–4.0s", title: "Product reveal", body: "The three-flavour lineup becomes the hero, supported by floating botanicals, warm light, and a direct brand introduction." },
+        { time: "4.0–7.0s", title: "Value proposition", body: "Three benefit callouts land in quick, scannable beats: real organic tea, zero sugar and calories, and sustained natural focus." },
+        { time: "7.0–10.0s", title: "Conversion CTA", body: "A clean end card presents the starter-bundle offer, then fades back to the opening scene for a seamless social loop." },
+      ],
+      strategyNote:
+        "Designed with a 1.5-second visual hook, safe-zone text placement for sound-off mobile scrolling, and an end frame matched to the start frame for infinite looping.",
+    },
     designProcess: [
       { phase: "01 · Diagnose", title: "Map the category", body: "Compared sparkling water, functional drinks, and zero-proof beverages to find an ownable role based on social confidence rather than restriction." },
       { phase: "02 · Position", title: "Choose one memorable promise", body: "Built the campaign around staying present for the whole night, supported by premium flavour, visual energy, and an optimistic voice." },

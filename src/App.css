@@ -2391,6 +2391,7 @@ footer {
 .project-page-mera-sparkling-tea-launch>.iteration-section{order:6}
 .project-page-mera-sparkling-tea-launch>.editorial-process{order:7}
 .project-page-mera-sparkling-tea-launch>.paid-preview-section{order:8}
+.project-page-mera-sparkling-tea-launch>.pattern-interrupt-section{order:8}
 .project-page-mera-sparkling-tea-launch>.channel-mix-section{order:8}
 .project-page-mera-sparkling-tea-launch>.marketing-execution{order:9}
 .project-page-mera-sparkling-tea-launch>#results{order:10}
@@ -2585,6 +2586,27 @@ footer {
 .mera-carousel-dots button.is-active{width:1.35rem;border-radius:999px;background:var(--case-accent)}
 @media (max-width:980px){.paid-preview-grid>.mera-instagram-carousel{justify-self:start}.project-page-mera-sparkling-tea-launch .paid-preview-section{display:grid;grid-template-columns:1fr}.project-page-mera-sparkling-tea-launch .paid-preview-section>.section-head,.project-page-mera-sparkling-tea-launch .paid-preview-section .paid-preview-search,.project-page-mera-sparkling-tea-launch .paid-preview-section .mera-instagram-carousel{grid-column:1;grid-row:auto}.project-page-mera-sparkling-tea-launch .paid-preview-section>.section-head{padding-top:0}.project-page-mera-sparkling-tea-launch .paid-preview-section>.paid-preview-grid{display:grid}}
 @media (max-width:600px){.mera-instagram-carousel-post{width:100%}.mera-carousel-arrow{width:2rem;height:2rem}.mera-carousel-previous{left:.5rem}.mera-carousel-next{right:.5rem}}
+
+/* MERA 10-second pattern-interrupt ad */
+.pattern-interrupt-section{display:grid;gap:clamp(1.5rem,3vw,2.5rem)}
+.pattern-interrupt-heading{display:grid;grid-template-columns:minmax(0,.9fr) minmax(18rem,.7fr);align-items:end;gap:clamp(1.5rem,4vw,4rem);margin-bottom:0}
+.pattern-interrupt-heading>p{max-width:58ch;margin:0;color:var(--color-text-muted);line-height:1.7}
+.pattern-interrupt-layout{display:grid;grid-template-columns:minmax(17rem,.66fr) minmax(0,1.34fr);align-items:start;gap:clamp(1.5rem,4vw,4rem)}
+.pattern-interrupt-video-frame{width:min(100%,25rem);overflow:hidden;margin:0;border:1px solid color-mix(in srgb,var(--case-accent) 28%,var(--color-border));border-radius:1rem;background:#190a12;box-shadow:0 1.25rem 3.5rem rgba(39,11,25,.2)}
+.pattern-interrupt-video-frame video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#190a12}
+.pattern-interrupt-video-frame figcaption{padding:.75rem 1rem;background:var(--color-card);color:var(--color-text-muted);font-size:.72rem;font-weight:700;letter-spacing:.04em;text-align:center;text-transform:uppercase}
+.pattern-interrupt-storyboard{display:grid;gap:1.1rem}
+.pattern-interrupt-storyboard ol{display:grid;margin:0;padding:0;border-top:1px solid var(--color-border);list-style:none}
+.pattern-interrupt-storyboard li{display:grid;grid-template-columns:3rem minmax(0,1fr);gap:1rem;padding:1.1rem 0;border-bottom:1px solid var(--color-border)}
+.pattern-interrupt-storyboard li>span{color:var(--case-accent);font-family:var(--font-display);font-size:1.5rem;font-weight:700;line-height:1}
+.pattern-interrupt-storyboard li div{display:grid;grid-template-columns:6rem minmax(0,1fr);gap:.15rem 1rem}
+.pattern-interrupt-storyboard li small{grid-row:1/3;color:var(--color-text-muted);font-size:.72rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase}
+.pattern-interrupt-storyboard li h3{margin:0;font-size:1.05rem}
+.pattern-interrupt-storyboard li p{grid-column:2;margin:.35rem 0 0;color:var(--color-text-muted);font-size:.88rem;line-height:1.6}
+.pattern-interrupt-note{display:grid;gap:.5rem;padding:1.1rem 1.25rem;border-left:3px solid var(--case-accent);background:color-mix(in srgb,var(--case-accent) 7%,var(--color-card))}
+.pattern-interrupt-note p{max-width:68ch;margin:0;line-height:1.65}
+@media (max-width:900px){.pattern-interrupt-heading,.pattern-interrupt-layout{grid-template-columns:1fr}.pattern-interrupt-video-frame{justify-self:center}.pattern-interrupt-heading>p{max-width:65ch}}
+@media (max-width:600px){.pattern-interrupt-storyboard li{grid-template-columns:2.35rem minmax(0,1fr)}.pattern-interrupt-storyboard li div{grid-template-columns:1fr}.pattern-interrupt-storyboard li small,.pattern-interrupt-storyboard li p{grid-column:1;grid-row:auto}}
 
 /* Compact MERA landing-page transition */
 .project-page-mera-sparkling-tea-launch .mera-landing-section{padding-top:1.25rem;border-top:0}
@@ -2894,7 +2916,7 @@ footer {
 .project-page-tastebuds .tastebuds-mini-chart span{font-size:.62rem;font-weight:800;color:var(--color-text-muted);text-transform:uppercase;letter-spacing:.035em}
 .project-page-tastebuds .tastebuds-mini-chart i{display:block;width:100%;height:.42rem;overflow:hidden;border-radius:999px;background:color-mix(in srgb,var(--color-border) 80%,transparent)}
 .project-page-tastebuds .tastebuds-mini-chart i::after{display:block;width:var(--bar-width);height:100%;border-radius:inherit;background:#b7bb18;content:""}
-.project-page-tastebuds .tastebuds-evidence-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(14rem,.5fr);gap:.75rem}
+.project-page-tastebuds .tastebuds-evidence-grid{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(14rem,.5fr);align-items:start;gap:.75rem}
 .project-page-tastebuds .tastebuds-carousel-evidence{display:grid;align-content:start;justify-items:center;gap:0;overflow:hidden;border:1px solid var(--color-border);border-radius:.65rem;background:var(--color-card)}
 .project-page-tastebuds .tastebuds-instagram-carousel{display:grid;justify-items:center;width:100%;padding:1.25rem;background:color-mix(in srgb,var(--color-surface-2) 72%,var(--color-card))}
 .project-page-tastebuds .tastebuds-instagram-carousel-post{width:min(100%,27rem);box-shadow:0 18px 48px rgba(20,16,13,.16)}

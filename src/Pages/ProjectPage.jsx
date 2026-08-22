@@ -411,6 +411,41 @@ export default function ProjectPage() {
         </section>
       )}
 
+      {project.patternInterruptAd && (
+        <section className="case-section pattern-interrupt-section" aria-labelledby="pattern-interrupt-title">
+          <div className="section-head case-section-head pattern-interrupt-heading">
+            <div>
+              <span className="eyebrow">{project.patternInterruptAd.eyebrow}</span>
+              <h2 id="pattern-interrupt-title">{project.patternInterruptAd.title}</h2>
+            </div>
+            <p>{project.patternInterruptAd.description}</p>
+          </div>
+          <div className="pattern-interrupt-layout">
+            <figure className="pattern-interrupt-video-frame">
+              <video autoPlay loop muted playsInline controls preload="metadata" poster={project.patternInterruptAd.poster} aria-label="MERA Ditch the 3 PM Coffee Crash vertical advertisement">
+                <source src={project.patternInterruptAd.video} type="video/mp4" />
+                Your browser does not support embedded video.
+              </video>
+              <figcaption>Vertical social ad · 9:16 · 10 seconds</figcaption>
+            </figure>
+            <div className="pattern-interrupt-storyboard">
+              <ol>
+                {project.patternInterruptAd.phases.map((phase, index) => (
+                  <li key={phase.time}>
+                    <span>{String(index + 1).padStart(2, "0")}</span>
+                    <div><small>{phase.time}</small><h3>{phase.title}</h3><p>{phase.body}</p></div>
+                  </li>
+                ))}
+              </ol>
+              <aside className="pattern-interrupt-note">
+                <span className="eyebrow">Strategy note</span>
+                <p>{project.patternInterruptAd.strategyNote}</p>
+              </aside>
+            </div>
+          </div>
+        </section>
+      )}
+
       {project.keyConcepts?.length > 0 && (
         <div className="case-section" id="strategy" data-case-section>
           <div className="section-head case-section-head">
