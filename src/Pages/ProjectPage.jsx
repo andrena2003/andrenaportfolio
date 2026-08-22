@@ -426,17 +426,17 @@ export default function ProjectPage() {
                 <source src={project.patternInterruptAd.video} type="video/mp4" />
                 Your browser does not support embedded video.
               </video>
-              <figcaption>{project.patternInterruptAd.caption || "Vertical social ad · 9:16 · 10 seconds"}</figcaption>
+              <figcaption>{project.patternInterruptAd.caption || "Vertical social ad · 9:16"}</figcaption>
             </figure>
             <div className="pattern-interrupt-storyboard">
-              <ol>
-                {project.patternInterruptAd.phases.map((phase, index) => (
-                  <li key={phase.time}>
-                    <span>{String(index + 1).padStart(2, "0")}</span>
-                    <div><small>{phase.time}</small><h3>{phase.title}</h3><p>{phase.body}</p></div>
-                  </li>
-                ))}
-              </ol>
+              <table className="pattern-interrupt-specs">
+                <thead><tr><th>Motion Ad Spec</th><th>Details</th></tr></thead>
+                <tbody>
+                  {project.patternInterruptAd.specs.map((spec) => (
+                    <tr key={spec.label}><th scope="row">{spec.label}</th><td>{spec.detail}</td></tr>
+                  ))}
+                </tbody>
+              </table>
               <aside className="pattern-interrupt-note">
                 <span className="eyebrow">Strategy note</span>
                 <p>{project.patternInterruptAd.strategyNote}</p>

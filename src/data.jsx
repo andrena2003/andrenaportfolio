@@ -130,17 +130,17 @@ const allProjects = [
     },
     patternInterruptAd: {
       title: "Ditch the 3 PM Coffee Crash.",
-      eyebrow: "10-second vertical ad",
+      eyebrow: "9-second vertical ad",
       description:
         "A polished problem-to-solution edit built with authentic vertical footage, restrained motion, and MERA’s campaign imagery to move from afternoon fatigue to a clear product offer.",
       video: "/videos/mera-pattern-interrupt.mp4",
       poster: "/videos/mera-pattern-interrupt-poster.jpg",
-      caption: "Concept edit · Licensed real-world footage + MERA brand art direction · 9:16 · 10 seconds",
-      phases: [
-        { time: "0.0–1.8s", title: "The hook", body: "Real office footage establishes the afternoon slump before clean kinetic type lands the coffee-crash problem." },
-        { time: "1.8–3.6s", title: "Product reveal", body: "A fast colour hit shifts into MERA’s three-flavour lineup with a slow editorial push-in." },
-        { time: "3.6–7.4s", title: "Value proposition", body: "A real sparkling pour and minimal callouts deliver the core benefits without covering the product story." },
-        { time: "7.4–10.0s", title: "Conversion CTA", body: "A clean end card presents the starter-bundle offer, then fades back to the opening scene for a seamless social loop." },
+      caption: "Concept edit · Licensed real-world footage + MERA brand art direction · 9:16 · 9 seconds",
+      specs: [
+        { label: "Hook Strategy", detail: "Pattern Interrupt — addressing afternoon fatigue (0:00–0:01)" },
+        { label: "Visual Style", detail: "High-contrast kinetic typography, warm botanical colour grading, and a liquid-pour macro shot" },
+        { label: "Duration & Format", detail: "9-second vertical video (9:16) optimized for Instagram Reels and TikTok ads" },
+        { label: "Core Conversion Goal", detail: "Direct-to-consumer starter-bundle purchase through the end-card CTA" },
       ],
       strategyNote:
         "Designed with an under-two-second visual hook, safe-zone text placement for sound-off mobile scrolling, and an end frame matched to the start frame for infinite looping.",
