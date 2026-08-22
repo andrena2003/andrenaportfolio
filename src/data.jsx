@@ -128,23 +128,6 @@ const allProjects = [
       takeaway:
         "The new direction shaped the visual identity, social creative, and sampling-led launch.",
     },
-    patternInterruptAd: {
-      title: "Ditch the 3 PM Coffee Crash.",
-      eyebrow: "9-second vertical ad",
-      description:
-        "A fast, music-led problem-to-solution edit built with authentic vertical footage, kinetic type, and a full-bleed MERA product finish that moves from afternoon fatigue to a clear offer.",
-      video: "/videos/mera-pattern-interrupt.mp4",
-      poster: "/videos/mera-pattern-interrupt-poster.jpg",
-      caption: "Concept edit · Licensed real-world footage and Mixkit music + MERA brand art direction · 9:16 · 9 seconds",
-      specs: [
-        { label: "Hook Strategy", detail: "Pattern Interrupt — addressing afternoon fatigue (0:00–0:01)" },
-        { label: "Visual Style", detail: "Beat-synced kinetic typography, warm botanical colour grading, a liquid-pour macro shot, and staggered benefit reveals" },
-        { label: "Duration & Format", detail: "9-second vertical video (9:16) optimized for Instagram Reels and TikTok ads" },
-        { label: "Core Conversion Goal", detail: "Direct-to-consumer starter-bundle purchase through the end-card CTA" },
-      ],
-      strategyNote:
-        "Designed with an under-two-second visual hook, safe-zone text placement for sound-off mobile scrolling, and an end frame matched to the start frame for infinite looping.",
-    },
     designProcess: [
       { phase: "01 · Diagnose", title: "Map the category", body: "Compared sparkling water, functional drinks, and zero-proof beverages to find an ownable role based on social confidence rather than restriction." },
       { phase: "02 · Position", title: "Choose one memorable promise", body: "Built the campaign around staying present for the whole night, supported by premium flavour, visual energy, and an optimistic voice." },
