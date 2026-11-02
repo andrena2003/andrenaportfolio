@@ -41,7 +41,7 @@ export const site = {
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
-  intro: "I connect campaign strategy, digital experiences, and social content so every touchpoint tells the same story.",
+  intro: "I create hospitality marketing that turns place, service, and story into reasons to visit.",
 };
 
 const allProjects = [
@@ -49,15 +49,15 @@ const allProjects = [
     slug: "mera-sparkling-tea-launch",
     title: "MERA Sparkling Tea",
     discipline: "marketing",
-    disciplineLabel: "Marketing / Brand Strategy",
+    disciplineLabel: "Hospitality / F&B Campaign",
     type: "Integrated marketing campaign",
     summary:
-      "A 90-day launch campaign for a premium zero-proof sparkling tea.",
+      "A 90-day F&B-style launch campaign for a premium zero-proof sparkling tea.",
     hideCaseStudySummary: true,
     projectNote:
       "MERA is a fictional brand created for this portfolio. Budgets and targets are planning estimates, not real results.",
     projectIntro:
-      "This concept connects brand strategy, advertising, SEO, email, and measurement in one launch plan.",
+      "This concept connects hospitality-style campaign planning, advertising, SEO, email, and measurement in one launch plan.",
     tools: ["Google Ads", "Meta Ads Manager", "Google Analytics 4", "Google Search Console", "Looker Studio", "Google Business Profile"],
     skillsDemonstrated: ["Paid media strategy", "SEO & local search", "Landing-page CRO", "Email marketing", "Brand positioning", "Campaign measurement & reporting"],
     image: meraCampaignHero,
@@ -92,7 +92,7 @@ const allProjects = [
         },
       ],
     },
-    role: "Marketing strategist & creative lead",
+    role: "Hospitality marketing strategist & creative lead",
     timeline: "90-day campaign plan",
     context:
       "MERA is a fictional zero-proof sparkling tea for adults seeking a premium alternative to alcohol.",
@@ -397,12 +397,12 @@ const allProjects = [
     imageAlt: "TasteBuds Vancouver branding and social campaign presented across two phone mockups.",
     discipline: "social",
     disciplines: ["social", "marketing", "web"],
-    disciplineLabel: "Content / Social",
+    disciplineLabel: "Hospitality / F&B Content",
     type: "Social media brand launch — Instagram, TikTok & website",
     summary:
       "A Vancouver foodie brand built from zero across Instagram, TikTok, and a custom website through authentic local content and performance-led iteration.",
     tools: ["Meta Business Suite", "CapCut", "Final Cut Pro", "Custom website"],
-    skillsDemonstrated: ["Content strategy", "Social analytics", "Brand voice", "Short-form video", "Team coordination", "SEO & Open Graph"],
+    skillsDemonstrated: ["Restaurant content", "Content calendar", "Social analytics", "Brand voice", "Short-form video", "Team coordination", "SEO & Open Graph"],
     brandShowcase: {
       title: "A bright, friendly identity made for local discovery.",
       description: "The smiling wordmark and high-energy yellow palette gave TasteBuds an approachable presence across social posts and the website. Black added clarity and contrast, while cream softened the system so recommendations felt personal rather than promotional.",
@@ -590,12 +590,12 @@ const allProjects = [
     slug: "hair-by-athraa",
     title: "Hair By Athra'a",
     discipline: "design",
-    disciplineLabel: "UI/UX Case Study",
+    disciplineLabel: "Service Experience / UI/UX",
     type: "UI/UX Strategy case study",
     summary:
       "A clear, elegant mobile booking experience that helps salon clients choose services and schedule with confidence.",
     tools: ["Figma", "Mobile UI", "Service design", "User flows"],
-    skillsDemonstrated: ["Information architecture", "Mobile UI design", "Interaction design", "User flows", "Wireframing & prototyping", "Service design", "Accessible hierarchy", "Booking UX"],
+    skillsDemonstrated: ["Service design", "Information architecture", "Mobile UI design", "Interaction design", "User flows", "Wireframing & prototyping", "Accessible hierarchy", "Booking UX"],
     skillsTitle: "Mobile product and interaction design skills.",
     figmaUrl: "https://www.figma.com/design/QN3SMXzMllgkNYZtsZbN52/UI---UX-Strategy-1---Term-Project--Done-?node-id=0-1&t=kuYJzHssiU0DArAq-1",
     image: hairByAthraaProjectCard,
@@ -816,8 +816,8 @@ const allProjects = [
 export const projects = allProjects.filter((project) => project.slug !== "group-fitness-app");
 export const skillGroups = [
   {
-    title: "Marketing & Branding",
-    skills: ["Social Media Content Creation", "Brand Strategy", "Content Marketing", "Visual Identity Design"],
+    title: "Hospitality Marketing",
+    skills: ["Social Media Content Creation", "F&B Campaigns", "Brand Communications", "Guest-first Storytelling", "Content Marketing", "Visual Identity Design"],
   },
   {
     title: "Design",

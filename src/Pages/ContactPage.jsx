@@ -11,8 +11,7 @@ export default function ContactPage() {
           </div>
           <h1>Let’s work together.</h1>
           <p className="contact-lede">
-            I’m open to roles and projects across marketing, UI/UX, and content.
-            Email is the best place to reach me.
+            I’m open to hospitality marketing, social content, brand communications, and digital experience opportunities. Email is the best place to reach me.
           </p>
           <a className="contact-email" href={`mailto:${site.email}`}>
             <span>Email me</span>
@@ -29,7 +28,7 @@ export default function ContactPage() {
             </div>
             <div className="contact-detail">
               <dt>Focus</dt>
-              <dd>Marketing / UI/UX / Content</dd>
+              <dd>Hospitality marketing / Social / Content</dd>
             </div>
           </dl>
           <a className="contact-social" href={site.linkedin} target="_blank" rel="noreferrer">

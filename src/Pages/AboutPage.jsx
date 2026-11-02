@@ -12,9 +12,9 @@ export default function AboutPage() {
       <div className="about-hero">
         <div className="about-hero-copy">
           <span className="eyebrow">About</span>
-          <h2>I connect strategy, digital experiences, and content into one consistent story.</h2>
-          <p>I’m a New Media Design &amp; Web Development graduate from BCIT with experience across UI/UX design, brand strategy, digital marketing, and social content creation.</p>
-          <p className="about-philosophy">My approach: understand the real need, make the path easier to follow, then test that it actually works.</p>
+          <h2>I build guest-first marketing stories for hotels, restaurants, and service brands.</h2>
+          <p>I’m a BCIT New Media Design &amp; Web Development graduate and current Digital Marketing Intern at Sheraton Vancouver Guildford Hotel. My work sits at the intersection of hospitality marketing, social content, brand systems, and digital experience.</p>
+          <p className="about-philosophy">I translate the feeling of a place into clear content, consistent collateral, and useful digital journeys.</p>
         </div>
         <figure className="about-portrait">
           <img src={andrenaProfile} alt="Portrait of Andrena Yacoub" />
@@ -23,14 +23,14 @@ export default function AboutPage() {
 
       <section className="about-process" aria-labelledby="about-process-heading">
         <div className="section-head case-section-head">
-          <div><span className="eyebrow">My process</span><h2 id="about-process-heading">From uncertainty to a clear, testable direction.</h2></div>
-          <p>The exact methods change with the project, but the work follows one practical rhythm.</p>
+          <div><span className="eyebrow">My process</span><h2 id="about-process-heading">From a hospitality brief to a clear, useful campaign.</h2></div>
+          <p>The exact methods change with the channel, but the work follows one practical rhythm.</p>
         </div>
         <ol className="about-process-grid">
-          <li><span>01</span><h3>Discover</h3><p>Frame the problem through context, research, and competitive review.</p></li>
-          <li><span>02</span><h3>Define</h3><p>Synthesize findings into priorities, IA, and a clear success measure.</p></li>
-          <li><span>03</span><h3>Design</h3><p>Explore flows, then build a high-fidelity system and prototype.</p></li>
-          <li><span>04</span><h3>Validate</h3><p>Review usability, accessibility, and responsive behavior; flag what needs formal testing.</p></li>
+          <li><span>01</span><h3>Discover</h3><p>Understand the guest, occasion, offer, and channel.</p></li>
+          <li><span>02</span><h3>Define</h3><p>Turn the brief into a clear message, calendar, and success measure.</p></li>
+          <li><span>03</span><h3>Create</h3><p>Produce brand-consistent social, print, web, photo, and video assets.</p></li>
+          <li><span>04</span><h3>Learn</h3><p>Review engagement, campaign results, and guest response; improve the next iteration.</p></li>
         </ol>
       </section>
 
@@ -38,21 +38,18 @@ export default function AboutPage() {
         <article className="story-card about-story-card">
           <p className="case-label">My perspective</p>
           <h3 className="story-heading">
-            I bring creative thinking and practical execution together.
+            I connect hospitality context with practical creative execution.
           </h3>
           <p className="muted">
-            My work moves between campaign strategy, visual identity, social
-            content, and digital products. I enjoy shaping the idea, designing
-            the experience, and thinking about how the final work will reach and
-            connect with its audience.
+            In my Sheraton practicum, I support hotel and F&amp;B marketing across social content, print and digital collateral, website updates, SEO, campaign reporting, and event coverage. I enjoy shaping the idea, producing the assets, and thinking about how the final work helps a guest choose a stay, meal, or gathering.
           </p>
-          <p className="muted">I care about clear hierarchy, accessible interactions, consistent brand systems, and measurable marketing decisions. I’m especially interested in roles where design and digital marketing strengthen each other.</p>
+          <p className="muted">I care about clear hierarchy, Marriott brand standards, consistent guest-facing touchpoints, and measurable marketing decisions. My service experience also keeps me close to the real moments that shape a guest’s impression.</p>
         </article>
 
         <aside className="about-story-card" aria-label="Beyond the screen">
           <span className="eyebrow">Beyond the screen</span>
-          <h2>Coffee runs, trail walks, and fantasizing about cars.</h2>
-          <p>Outside of work: coffee, hiking, cars, fashion, and probably a Netflix show. The same eye for detail and aesthetics shows up in how I design.</p>
+          <h2>Local food, thoughtful details, and the places people remember.</h2>
+          <p>Outside of work: coffee, local restaurants, hiking, cars, fashion, and probably a Netflix show. I’m always noticing the details that make a place feel welcoming and worth sharing.</p>
           <div className="about-life-strip" aria-label="Andrena outside of work">
             <img src={aboutLifeCar} alt="Andrena beside her car at night" loading="lazy" />
             <img src={aboutLifeHiking} alt="Andrena hiking a forest trail" loading="lazy" />
@@ -70,9 +67,9 @@ export default function AboutPage() {
         </article>
         <article className="story-card">
           <p className="case-label">Work experience</p>
-          <h3>Server · Red Robin</h3>
-          <p className="muted">2024 - Present</p>
-          <p>Delivering thoughtful customer service in a fast-paced environment while building strong communication, teamwork, problem-solving, and prioritization skills.</p>
+          <h3>Digital Marketing Intern · Sheraton Vancouver Guildford</h3>
+          <p className="muted">2026 - Present</p>
+          <p>Supporting social, print, web, SEO, event content, and campaign reporting for the hotel and MIXT Lobby Lounge.</p>
         </article>
         <article className="story-card">
           <p className="case-label">Contact</p>
@@ -86,11 +83,10 @@ export default function AboutPage() {
         <div className="section-head case-section-head">
           <div>
             <span className="eyebrow">Skills</span>
-            <h2 id="skills-heading">I lead with strategy, then build it out with design and content.</h2>
+            <h2 id="skills-heading">A hospitality-ready toolkit for content, campaigns, and guest experience.</h2>
           </div>
           <p>
-            A practical toolkit spanning visual design, brand storytelling,
-            content creation, and front-end development.
+            A practical toolkit spanning hotel and F&amp;B storytelling, brand communications, social content, visual design, and digital production.
           </p>
         </div>
 
@@ -112,19 +108,19 @@ export default function AboutPage() {
         <div className="timeline-item">
           <h3>Past</h3>
           <p className="muted">
-            I started with layout, typography, and storytelling—learning how visual choices change the way people feel.
+            I started with layout, typography, and storytelling—learning how visual choices change the way people feel about a place and a brand.
           </p>
         </div>
         <div className="timeline-item">
           <h3>Present</h3>
           <p className="muted">
-            I’m graduating from BCIT and building portfolio work that connects UI/UX, brand strategy, content, and marketing.
+            I’m completing BCIT and building experience in hotel and F&amp;B marketing through my Sheraton practicum.
           </p>
         </div>
         <div className="timeline-item">
           <h3>Future</h3>
           <p className="muted">
-            I want a collaborative team where marketing, brand, product, and content work together—not in silos.
+            I want to grow in hospitality marketing with a collaborative team where brand, content, partnerships, and guest experience work together.
           </p>
         </div>
       </div>
