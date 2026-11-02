@@ -58,6 +58,20 @@ export default function AboutPage() {
         </aside>
       </div>
 
+      <section className="story-card sheraton-practicum-card" aria-labelledby="sheraton-practicum-heading">
+        <p className="case-label">Current hospitality experience</p>
+        <h3 id="sheraton-practicum-heading" className="story-heading">Sheraton Vancouver Guildford Hotel · Digital Marketing Intern</h3>
+        <p className="muted">
+          My practicum connects the hospitality experience I built in restaurants with the design and marketing skills I developed at BCIT. I support the hotel and MIXT Lobby Lounge across social content, F&amp;B storytelling, print and digital collateral, website and email copy, SEO, campaign planning, paid-media fundamentals, analytics, and performance reporting.
+        </p>
+        <div className="studio-meta" aria-label="Sheraton practicum work completed">
+          <span>Content calendar + scheduling</span>
+          <span>Photo, video + Reels</span>
+          <span>Flyers, email + social assets</span>
+          <span>Campaigns + reporting</span>
+        </div>
+      </section>
+
       <section className="resume-highlights" aria-label="Education, experience, and contact">
         <article className="story-card">
           <p className="case-label">Education</p>
@@ -67,9 +81,9 @@ export default function AboutPage() {
         </article>
         <article className="story-card">
           <p className="case-label">Work experience</p>
-          <h3>Digital Marketing Intern · Sheraton Vancouver Guildford</h3>
-          <p className="muted">2026 - Present</p>
-          <p>Supporting social, print, web, SEO, event content, and campaign reporting for the hotel and MIXT Lobby Lounge.</p>
+          <h3>Hospitality foundation</h3>
+          <p className="muted">Red Robin · Denny’s · White Spot</p>
+          <p>Guest service, food safety, order accuracy, front- and back-of-house communication, and the fast-paced teamwork that shaped my design perspective.</p>
         </article>
         <article className="story-card">
           <p className="case-label">Contact</p>
