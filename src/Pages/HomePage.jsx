@@ -18,22 +18,22 @@ export default function HomePage() {
       <section className="hero container" id="home">
         <div className="hero-grid">
           <div className="hero-copy">
-            <p className="hero-kicker">Hospitality marketing &amp; digital content</p>
+            <p className="hero-kicker">Junior graphic designer · hospitality brand production</p>
 
             <h1 className="hero-title">
               <SlotText
-                words={["Hospitality", "Social", "Content", "Brand"]}
+                words={["Graphic Design", "Hospitality", "Brand", "Content"]}
                 interval={3000}
               />
-              <span>Marketing</span>
+              <span>Designer</span>
             </h1>
 
             <p className="hero-description">{site.intro}</p>
 
             <div className="studio-meta" aria-label="Focus areas">
-              <span>Hotel &amp; F&amp;B marketing</span>
-              <span>Social &amp; content</span>
-              <span>Guest experience</span>
+              <span>Print + digital production</span>
+              <span>Brand systems</span>
+              <span>Hospitality content</span>
             </div>
 
             <div className="intro-row" aria-label="Contact links">
@@ -72,21 +72,21 @@ export default function HomePage() {
       <section className="section container" aria-label="Hospitality marketing focus">
         <article className="story-card">
           <p className="case-label">Hospitality focus</p>
-          <h2>Marketing that makes a stay, meal, or gathering feel worth choosing.</h2>
+          <h2>Designing the details that make hospitality brands feel consistent.</h2>
           <p className="muted">
-            I’m currently completing a digital marketing practicum at Sheraton Vancouver Guildford Hotel, supporting social content, print and digital collateral, website updates, SEO, and campaign reporting for the hotel and MIXT Lobby Lounge.
+            At Sheraton Vancouver Guildford Hotel, I design and adapt print, digital, email, social, event, and F&amp;B assets for the hotel and MIXT Lobby Lounge while working within Marriott, Sheraton, and MIXT brand standards.
           </p>
           <div className="studio-meta" aria-label="Hospitality marketing strengths">
-            <span>Social content</span>
-            <span>F&amp;B campaigns</span>
-            <span>Brand standards</span>
-            <span>Guest-first storytelling</span>
+            <span>Adobe + Canva</span>
+            <span>Print + digital QA</span>
+            <span>Brand guidelines</span>
+            <span>Asset organization</span>
           </div>
         </article>
       </section>
 
       <section className="section container studio-strip" aria-label="Studio approach">
-        <p>Guest-first</p><p>Detail-oriented</p><p>Brand-consistent</p><p>Performance-aware</p>
+        <p>Brand-consistent</p><p>Production-ready</p><p>Detail-oriented</p><p>Collaborative</p>
       </section>
     </>
   );

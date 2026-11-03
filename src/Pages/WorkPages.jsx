@@ -23,10 +23,10 @@ export default function WorkPages() {
       <div className="section-head work-page-head">
         <div>
           <span className="eyebrow">Selected work</span>
-          <h1>Hospitality-minded strategy, content, and digital experiences.</h1>
+          <h1>Hospitality-minded graphic design, brand systems, and content.</h1>
         </div>
         <p>
-          I’m building toward hotel and F&amp;B marketing roles, with work spanning local restaurant content, campaign strategy, brand systems, and service journeys.
+          I’m building toward in-house hospitality design roles, with work spanning brand systems, print and digital production, local restaurant content, and service experiences.
         </p>
       </div>
 

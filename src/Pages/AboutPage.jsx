@@ -12,9 +12,9 @@ export default function AboutPage() {
       <div className="about-hero">
         <div className="about-hero-copy">
           <span className="eyebrow">About</span>
-          <h2>I build guest-first marketing stories for hotels, restaurants, and service brands.</h2>
-          <p>I’m a BCIT New Media Design &amp; Web Development graduate and current Digital Marketing Intern at Sheraton Vancouver Guildford Hotel. My work sits at the intersection of hospitality marketing, social content, brand systems, and digital experience.</p>
-          <p className="about-philosophy">I translate the feeling of a place into clear content, consistent collateral, and useful digital journeys.</p>
+          <h2>I design brand-consistent creative for hotels, restaurants, and guest-facing brands.</h2>
+          <p>I’m a BCIT New Media Design &amp; Web Development graduate and current Digital Marketing Intern at Sheraton Vancouver Guildford Hotel. My work sits at the intersection of graphic design, hospitality brand systems, print and digital production, and content.</p>
+          <p className="about-philosophy">I translate a brief into clear, polished, production-ready creative that feels right wherever a guest sees it.</p>
         </div>
         <figure className="about-portrait">
           <img src={andrenaProfile} alt="Portrait of Andrena Yacoub" />
@@ -23,14 +23,14 @@ export default function AboutPage() {
 
       <section className="about-process" aria-labelledby="about-process-heading">
         <div className="section-head case-section-head">
-          <div><span className="eyebrow">My process</span><h2 id="about-process-heading">From a hospitality brief to a clear, useful campaign.</h2></div>
-          <p>The exact methods change with the channel, but the work follows one practical rhythm.</p>
+          <div><span className="eyebrow">My process</span><h2 id="about-process-heading">From a brief to polished, production-ready creative.</h2></div>
+          <p>The exact deliverable changes with the channel, but the work follows one practical rhythm.</p>
         </div>
         <ol className="about-process-grid">
-          <li><span>01</span><h3>Discover</h3><p>Understand the guest, occasion, offer, and channel.</p></li>
-          <li><span>02</span><h3>Define</h3><p>Turn the brief into a clear message, calendar, and success measure.</p></li>
-          <li><span>03</span><h3>Create</h3><p>Produce brand-consistent social, print, web, photo, and video assets.</p></li>
-          <li><span>04</span><h3>Learn</h3><p>Review engagement, campaign results, and guest response; improve the next iteration.</p></li>
+          <li><span>01</span><h3>Understand</h3><p>Clarify the brief, audience, channel, environment, and required specifications.</p></li>
+          <li><span>02</span><h3>Design</h3><p>Build a clear hierarchy using the right type, colour, imagery, and layout.</p></li>
+          <li><span>03</span><h3>Produce</h3><p>Adapt the concept across print, digital, social, email, signage, and web formats.</p></li>
+          <li><span>04</span><h3>Check</h3><p>Proofread, apply feedback, confirm technical details, and organize the final handoff.</p></li>
         </ol>
       </section>
 
@@ -38,12 +38,12 @@ export default function AboutPage() {
         <article className="story-card about-story-card">
           <p className="case-label">My perspective</p>
           <h3 className="story-heading">
-            I connect hospitality context with practical creative execution.
+            I connect hospitality context with practical graphic design execution.
           </h3>
           <p className="muted">
-            In my Sheraton practicum, I support hotel and F&amp;B marketing across social content, print and digital collateral, website updates, SEO, campaign reporting, and event coverage. I enjoy shaping the idea, producing the assets, and thinking about how the final work helps a guest choose a stay, meal, or gathering.
+            In my Sheraton practicum, I design hotel and F&amp;B creative across social content, print and digital collateral, email, web, and event materials. I enjoy shaping the idea, adapting it to the right format, and thinking about how the final work makes a guest-facing brand feel clear and welcoming.
           </p>
-          <p className="muted">I care about clear hierarchy, Marriott brand standards, consistent guest-facing touchpoints, and measurable marketing decisions. My service experience also keeps me close to the real moments that shape a guest’s impression.</p>
+          <p className="muted">I care about typography, visual hierarchy, Marriott brand standards, organized working files, and polished final details. My service experience also keeps me close to the real moments that shape a guest’s impression.</p>
         </article>
 
         <aside className="about-story-card" aria-label="Beyond the screen">
@@ -62,13 +62,13 @@ export default function AboutPage() {
         <p className="case-label">Current hospitality experience</p>
         <h3 id="sheraton-practicum-heading" className="story-heading">Sheraton Vancouver Guildford Hotel · Digital Marketing Intern</h3>
         <p className="muted">
-          My practicum connects the hospitality experience I built in restaurants with the design and marketing skills I developed at BCIT. I support the hotel and MIXT Lobby Lounge across social content, F&amp;B storytelling, print and digital collateral, website and email copy, SEO, campaign planning, paid-media fundamentals, analytics, and performance reporting.
+          My practicum connects the hospitality experience I built in restaurants with the graphic design and production skills I developed at BCIT. I support the hotel and MIXT Lobby Lounge across social graphics, print flyers, email banners, event materials, web and email copy, photography, short-form video, brand standards, quality checks, and organized asset handoff.
         </p>
         <div className="studio-meta" aria-label="Sheraton practicum work completed">
-          <span>Content calendar + scheduling</span>
+          <span>Print + digital assets</span>
           <span>Photo, video + Reels</span>
-          <span>Flyers, email + social assets</span>
-          <span>Campaigns + reporting</span>
+          <span>Brand standards + QA</span>
+          <span>Asset handoff</span>
         </div>
       </section>
 
@@ -97,10 +97,10 @@ export default function AboutPage() {
         <div className="section-head case-section-head">
           <div>
             <span className="eyebrow">Skills</span>
-            <h2 id="skills-heading">A hospitality-ready toolkit for content, campaigns, and guest experience.</h2>
+            <h2 id="skills-heading">A graphic-design toolkit for hospitality brands and guest experience.</h2>
           </div>
           <p>
-            A practical toolkit spanning hotel and F&amp;B storytelling, brand communications, social content, visual design, and digital production.
+            A practical toolkit spanning visual systems, print and digital production, hospitality storytelling, social content, and web.
           </p>
         </div>
 

@@ -6,23 +6,23 @@ const baseUrl = "https://andrenayacoub.vercel.app";
 
 const pageMeta = {
   "/": {
-    title: "Andrena Yacoub — Hospitality Marketing & Content",
-    description: "Hospitality marketing, social content, brand communications, and digital experience work by Andrena Yacoub in Vancouver.",
+    title: "Andrena Yacoub — Junior Graphic Designer",
+    description: "Junior graphic design, hospitality brand production, print, digital, and content work by Andrena Yacoub in Vancouver.",
     image: "/social/andrena-portfolio.png",
   },
   "/about": {
-    title: "About Andrena Yacoub — Hospitality Marketing",
-    description: "Meet Andrena Yacoub, a Vancouver hospitality marketer connecting guest-first storytelling, social content, and digital experience.",
+    title: "About Andrena Yacoub — Graphic Designer",
+    description: "Meet Andrena Yacoub, a Vancouver graphic designer focused on hospitality brands, production, and guest-facing content.",
     image: "/social/andrena-portfolio.png",
   },
   "/work": {
     title: "Selected Work — Andrena Yacoub",
-    description: "Explore hospitality marketing, F&B content, brand strategy, service design, and digital campaigns by Andrena Yacoub.",
+    description: "Explore graphic design, hospitality brand systems, print and digital production, F&B content, and service design by Andrena Yacoub.",
     image: "/social/andrena-portfolio.png",
   },
   "/contact": {
     title: "Contact Andrena Yacoub",
-    description: "Connect with Andrena Yacoub about hospitality marketing, social content, brand communications, and digital experience opportunities in Vancouver.",
+    description: "Connect with Andrena Yacoub about junior graphic design, hospitality brand production, and digital content opportunities in Vancouver.",
     image: "/social/andrena-portfolio.png",
   },
 };

@@ -41,7 +41,7 @@ export const site = {
   location: "Burnaby, British Columbia",
   linkedin: "https://www.linkedin.com/in/andrena-yacoub-67b8a2211/",
   linkedinUsername: "andrena-yacoub-67b8a2211",
-  intro: "I create hospitality marketing that turns place, service, and story into reasons to visit.",
+  intro: "I design clear, brand-consistent creative for hospitality, food, and guest-facing experiences.",
 };
 
 const allProjects = [
@@ -816,8 +816,8 @@ const allProjects = [
 export const projects = allProjects.filter((project) => project.slug !== "group-fitness-app");
 export const skillGroups = [
   {
-    title: "Hospitality Marketing",
-    skills: ["Social Media Content Creation", "F&B Campaigns", "Brand Communications", "Guest-first Storytelling", "Content Marketing", "Visual Identity Design"],
+    title: "Graphic Design & Brand Production",
+    skills: ["Adobe Creative Suite", "Print & Digital Production", "Brand Guidelines", "Typography & Layout", "Social & Email Design", "Visual Identity Design"],
   },
   {
     title: "Design",
